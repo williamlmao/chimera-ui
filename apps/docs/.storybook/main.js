@@ -14,11 +14,8 @@ module.exports = {
       resolve: {
         alias: [
           {
-            find: "@acme/core",
-            replacement: path.resolve(
-              __dirname,
-              "../../../packages/acme-core/"
-            ),
+            find: "core",
+            replacement: path.resolve(__dirname, "../../../packages/ui/"),
           },
         ],
       },
