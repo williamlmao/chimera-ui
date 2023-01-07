@@ -16,12 +16,16 @@
     "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist"
   },
   "devDependencies": {
-    "tsconfig": "workspace:*",
     "@types/react": "^18.0.9",
     "@types/react-dom": "^18.0.4",
+    "autoprefixer": "^10.4.13",
     "eslint": "^8.15.0",
     "eslint-config-chimera": "workspace:*",
+    "postcss": "^8.4.20",
     "react": "^18.1.0",
+    "tailwind-config": "workspace:*",
+    "tailwindcss": "^3.2.4",
+    "tsconfig": "workspace:*",
     "tsup": "^5.10.1",
     "typescript": "^4.5.3"
   },
