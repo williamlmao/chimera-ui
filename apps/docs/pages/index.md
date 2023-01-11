@@ -1,5 +1,4 @@
-import {ChimeraMainExample} from "../examples/ChimeraMainExample.tsx"
-import {ShowCode} from "../examples/ShowCode.tsx"
+import {ShowCode} from "../components/ShowCode.tsx"
 
 # About Chimera
 
