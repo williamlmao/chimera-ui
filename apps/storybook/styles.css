@@ -1,0 +1,92 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root,
+  .light {
+    /* primary */
+    --primary: hsl(195, 100%, 44%);
+    --primary-lighter: hsl(195, 100%, 72%);
+    --primary-darker: hsl(195, 94%, 38%);
+    /* secondary */
+    --secondary: hsl(0, 0%, 14%);
+    --secondary-lighter: hsl(0, 0%, 22%);
+    --secondary-darker: hsl(0, 0%, 3%);
+    /* info */
+    --info: hsl(180, 2%, 98%);
+    --info-lighter: hsl(180, 2%, 94%);
+    --info-darker: hsl(180, 2%, 90%);
+    /* success */
+    --success: hsl(142, 71%, 45%);
+    --success-lighter: hsl(141, 75%, 73%);
+    --success-darker: hsl(142, 71%, 29%);
+    /* warning */
+    --warning: hsl(180, 2%, 98%);
+    --warning-lighter: hsl(180, 2%, 94%);
+    --warning-darker: hsl(180, 2%, 90%);
+    /* danger */
+    --danger: hsl(180, 2%, 98%);
+    --danger-lighter: hsl(180, 2%, 94%);
+    --danger-darker: hsl(180, 2%, 90%);
+    /* surfaces */
+    --base: hsl(43, 64%, 98%);
+    --base-1: hsl(45, 36%, 96%);
+    --base-2: hsl(0, 0%, 20%);
+    --base-3: hsl(45, 36%, 96%);
+    --overlay: hsl(43, 64%, 98%);
+    --input: hsl(180, 2%, 98%);
+
+    /* borders & outlines & divide */
+    --line: hsl(0, 0%, 0%);
+    --line-1: hsl(0, 0%, 30%);
+    --line-2: hsl(180, 2%, 89%);
+
+    /* on surface */
+    --on-surface: hsl(0, 0%, 14%);
+    --on-surface-1: hsl(0, 0%, 22%);
+    --on-surface-2: hsl(0, 0%, 43%);
+    --on-surface-3: hsl(0, 0%, 69%);
+    --clickable: hsl(0, 3%, 7%);
+    --clickable-hover: hsl(195, 100%, 44%);
+
+    --on-primary: hsl(180, 2%, 98%);
+    --on-primary-contrast: hsl(0, 0%, 3%);
+
+    --on-info: hsl(0, 2%, 8%);
+    --on-info-contrast: hsl(180, 2%, 70%);
+
+    --on-success: hsl(0, 0%, 100%);
+    --on-success-contrast: hsl(144, 61%, 20%);
+
+    --on-warning: hsl(180, 2%, 98%);
+    --on-warning-contrast: hsl(180, 2%, 70%);
+
+    --on-danger: hsl(180, 2%, 98%);
+    --on-danger-contrast: hsl(180, 2%, 70%);
+
+    /* Other styles */
+    --theme-rounded: 0.2rem;
+    --theme-rounded-sm: 0.3rem;
+    --theme-rounded-md: 0.4rem;
+    --theme-rounded-lg: 0.5rem;
+    --theme-rounded-xl: 0.6rem;
+    --theme-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1),
+      0 1px 2px -1px rgb(0 0 0 / 0.1);
+    --theme-shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    --theme-shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1),
+      0 2px 4px -2px rgb(0 0 0 / 0.1);
+    --theme-shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1),
+      0 4px 6px -4px rgb(0 0 0 / 0.1);
+    --theme-shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1),
+      0 8px 10px -6px rgb(0 0 0 / 0.1);
+    --theme-shadow-inner: inset 0 2px 4px 0 rgb(0 0 0 / 0.05);
+  }
+}
+@layer utilities {
+  .flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

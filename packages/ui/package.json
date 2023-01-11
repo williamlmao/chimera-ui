@@ -1,6 +1,6 @@
 {
   "name": "chimera-tw",
-  "version": "0.0.0",
+  "version": "0.0.2",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
@@ -31,5 +31,10 @@
   },
   "publishConfig": {
     "access": "public"
+  },
+  "dependencies": {
+    "@headlessui/react": "^1.7.7",
+    "@radix-ui/react-popover": "1.0.2",
+    "tailwind-merge": "^1.8.1"
   }
 }

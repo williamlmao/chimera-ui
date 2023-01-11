@@ -1,7 +1,8 @@
-import { Button } from "chimera-tw/src";
+import { Button } from "chimera-tw";
 import { Meta, Story, Canvas, ArgsTable } from "@storybook/addon-docs";
+import "../styles.css";
 
-{/* <Meta title="Components/Button" component={Button} />; */}
+{/_ <Meta title="Components/Button" component={Button} />; _/}
 
 # Button
 
@@ -15,6 +16,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisl ege
 
 <Canvas>
   <Story name="Default">
-    <Button>hi</Button>
+    <Button className="bg-pink-500">Button</Button>
+    
   </Story>
 </Canvas>

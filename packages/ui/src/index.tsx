@@ -1,2 +1,4 @@
 import * as React from "react";
-export { Button, type ButtonProps } from "./Button";
+export { Button } from "./Button";
+export { Select } from "./Select";
+export { Popover } from "./Popover";
