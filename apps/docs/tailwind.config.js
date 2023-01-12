@@ -1,3 +1,95 @@
-const config = require("tailwind-config/tailwind.config.js");
-
-module.exports = config;
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: [
+    "./pages/**/*.{js,ts,jsx,tsx,md,mdx}",
+    "./components/**/*.{js,ts,jsx,tsx}",
+    "./examples/**/*.{js,ts,jsx,tsx}",
+    "./nextra-theme-docs/**/*.{js,tsx}",
+    "./theme.config.js",
+    "../../packages/ui/**/*{.js,.ts,.jsx,.tsx}",
+  ],
+  theme: {
+    extend: {
+      transitionProperty: {
+        width: "width",
+      },
+      colors: {
+        test: "var(--primary)",
+        primary: "var(--primary)",
+        "primary-lighter": "var(--primary-lighter)",
+        "primary-darker": "var(--primary-darker)",
+        secondary: "var(--secondary)",
+        "secondary-lighter": "var(--secondary-lighter)",
+        "secondary-darker": "var(--secondary-darker)",
+        info: "var(--info)",
+        "info-lighter": "var(--info-lighter)",
+        "info-darker": "var(--info-darker)",
+        success: "var(--success)",
+        "success-lighter": "var(--success-lighter)",
+        "success-darker": "var(--success-darker)",
+        warning: "var(--warning)",
+        "warning-lighter": "var(--warning-lighter)",
+        "warning-darker": "var(--warning-darker)",
+        danger: "var(--danger)",
+        "danger-lighter": "var(--danger-lighter)",
+        "danger-darker": "var(--danger-darker)",
+        base: "var(--base)",
+        "base-1": "var(--base-1)",
+        "base-2": "var(--base-2)",
+        "base-3": "var(--base-3)",
+        overlay: "var(--overlay)",
+        input: "var(--input)",
+        line: "var(--line)",
+        "line-1": "var(--line-1)",
+        "line-2": "var(--line-2)",
+        "on-surface": "var(--on-surface)",
+        "on-surface-1": "var(--on-surface-1)",
+        "on-surface-2": "var(--on-surface-2)",
+        "on-surface-3": "var(--on-surface-3)",
+        clickable: "var(--clickable)",
+        "clickable-hover": "var(--clickable-hover)",
+        "on-primary": "var(--on-primary)",
+        "on-primary-contrast": "var(--on-primary-contrast)",
+        "on-info": "var(--on-info)",
+        "on-info-contrast": "var(--on-info-contrast)",
+        "on-success": "var(--on-success)",
+        "on-success-contrast": "var(--on-success-contrast)",
+        "on-warning": "var(--on-warning)",
+        "on-warning-contrast": "var(--on-warning-contrast)",
+        "on-danger": "var(--on-danger)",
+        "on-danger-contrast": "var(--on-danger-contrast)",
+      },
+      borderWidth: {
+        "width-theme": "var(--theme-border-width)",
+      },
+      borderColor: {
+        "color-theme": "var(--line)",
+      },
+      borderRadius: {
+        theme: "var(--theme-rounded)",
+        "theme-md": "var(--theme-rounded-md)",
+        "theme-lg": "var(--theme-rounded-lg)",
+      },
+      boxShadow: {
+        theme: "var(--theme-shadow)",
+        "theme-lg": "var(--theme-shadow-lg)",
+        "theme-sm": "var(--theme-shadow-sm)",
+        "theme-xs": "var(--theme-shadow-xs)",
+        "theme-md": "var(--theme-shadow-md)",
+      },
+      outlineWidth: {
+        "width-theme": "var(--theme-border-width)",
+      },
+      outlineColor: {
+        "color-theme": "var(--line)",
+      },
+      divideWidth: {
+        theme: "var(--theme-border-width)",
+      },
+      divideColor: {
+        theme: "var(--theme-border-color)",
+      },
+    },
+  },
+  plugins: [],
+};

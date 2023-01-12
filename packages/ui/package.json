@@ -34,7 +34,10 @@
   },
   "dependencies": {
     "@headlessui/react": "^1.7.7",
+    "@radix-ui/react-icons": "^1.1.1",
     "@radix-ui/react-popover": "1.0.2",
+    "@radix-ui/react-select": "^1.1.2",
+    "jsx-to-string": "^1.4.0",
     "tailwind-merge": "^1.8.1"
   }
 }

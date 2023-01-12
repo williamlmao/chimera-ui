@@ -1,12 +1,15 @@
-import {ShowCode} from "../components/ShowCode.tsx"
+import {Button, Showcase} from "chimera-tw"
 
 # About Chimera
 
-Chimera is a React component library built for Tailwind.
+Chimera is an opinionated UI library made for React and Tailwind.
 
-- Accessible - many of them are extensions of Headless UI
-- Themeable - using a color system inspired by Daisy UI
-- Easily and fully customizable - overwrite defaults with Tailwind. No need to memorize library specific props.
-- Controlled components, ready to receive data - Pass your data in from a parent component as props.
+- **Accessible** - Chimera uses Radix Primitives under the hood for interactive components like accordions and selects
+- **Themeable & Reusable** - Chimera components come pre-styled with a semantic color system (such as bg-primary). This makes it easy to switch themes and re-use components across apps. Similar to Daisy UI.
+- **Customizable** - Components come with sensible default styles that look great out of the box, but can be completely customized with Tailwind utility classes (we use tailwind-merge under the hood to handle this). The result is faster development and cleaner code!
 
-<ShowCode/>
+<Showcase>
+  <Showcase.Preview>
+    <Button>Hi</Button>
+  </Showcase.Preview>
+</Showcase>
