@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  important: true,
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,md,mdx}",
     "./components/**/*.{js,ts,jsx,tsx}",
@@ -38,6 +39,8 @@ module.exports = {
         "base-2": "var(--base-2)",
         "base-3": "var(--base-3)",
         overlay: "var(--overlay)",
+        "overlay-1": "var(--overlay-1)",
+        "overlay-2": "var(--overlay-2)",
         input: "var(--input)",
         line: "var(--line)",
         "line-1": "var(--line-1)",

@@ -1,0 +1,38 @@
+import { Button, Showcase } from "chimera-tw";
+
+# Button
+
+## Basic
+
+<Showcase>
+  <Showcase.Preview>
+    <Button>Button</Button>
+    <Button disabled>Button</Button>
+  </Showcase.Preview>
+</Showcase>
+
+## Colors
+
+Notice how the theme switcher will not affect the button colors. The themes will still affect the border radius though!
+
+<Showcase>
+  <Showcase.Preview>
+    <Button className="bg-green-700">Button</Button>
+    <Button className="bg-purple-700">Button</Button>
+    <Button className="bg-teal-700">Button</Button>
+  </Showcase.Preview>
+</Showcase>
+
+## Sizes
+
+<Showcase>
+  <Showcase.Preview>
+    <div className="flex flex-col gap-4 w-full">
+      <Button className="p-1 text-xs">Button</Button>
+      <Button className="w-24">Button</Button>
+      <Button className="w-36">Button</Button>
+      <Button className="w-56">Button</Button>
+      <Button className="w-full">Button</Button>
+    </div>
+  </Showcase.Preview>
+</Showcase>

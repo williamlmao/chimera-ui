@@ -8,5 +8,4 @@ export default {
   toc: {
     extraContent: <Fragment></Fragment>,
   },
-  // ...
 };

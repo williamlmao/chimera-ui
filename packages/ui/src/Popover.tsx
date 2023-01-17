@@ -1,39 +1,122 @@
-import * as React from "react";
 import * as RadixPopover from "@radix-ui/react-popover";
+import * as React from "react";
 import { twMerge } from "tailwind-merge";
 
+// Pattern: Extract all of the subcomponents from RadixComponent -> Component i.e RadixPopover.Root -> Popover.Root
+// Handle twMerge in the subcomponents
+// In the parent component, use the Chimera subcomponents instead of the Radix subcomponents, this way the Tailwind classes are merged
 export const Popover = ({
-  buttonChildren,
-  buttonClassName,
-  popoverChildren,
-  popoverClassName,
-  popoverArrowClassName,
+  buttonContent,
+  children,
+  onClick,
 }: {
-  buttonChildren: React.ReactNode;
-  buttonClassName?: string;
-  popoverChildren: React.ReactNode;
-  popoverClassName?: string;
-  popoverArrowClassName?: string;
-}) => (
-  <RadixPopover.Root>
+  buttonContent: React.ReactNode;
+  children: React.ReactNode | React.ReactNode[];
+  onClick?: () => void;
+}) => {
+  return (
+    <Popover.Root>
+      <Popover.Trigger
+        onClick={() => {
+          if (onClick) {
+            onClick();
+          }
+        }}
+      >
+        {buttonContent}
+      </Popover.Trigger>
+      <Popover.Portal>
+        <Popover.Content>
+          {children}
+          <Popover.Arrow />
+        </Popover.Content>
+      </Popover.Portal>
+    </Popover.Root>
+  );
+};
+
+Popover.displayName = "Popover";
+
+const Root = ({ children }: { children: React.ReactNode }) => {
+  return <RadixPopover.Root>{children}</RadixPopover.Root>;
+};
+Root.displayName = "Popover.Root";
+Popover.Root = Root;
+
+/**
+ *
+ * @param className Default: `px-2 py-1 w-fit bg-primary hover:bg-primary-darker text-on-primary rounded-theme`
+ * @returns
+ */
+
+const Trigger = React.forwardRef<
+  React.ElementRef<typeof RadixPopover.Trigger>,
+  React.ComponentPropsWithoutRef<typeof RadixPopover.Trigger>
+>((props, forwardedRef) => {
+  return (
     <RadixPopover.Trigger
       className={twMerge(
         "px-2 py-1 w-fit bg-primary hover:bg-primary-darker text-on-primary rounded-theme",
-        buttonClassName
+        props.className
+      )}
+      onClick={props.onClick}
+      ref={forwardedRef}
+    >
+      {props.children}
+    </RadixPopover.Trigger>
+  );
+});
+
+Trigger.displayName = "Popover.Trigger";
+Popover.Trigger = Trigger;
+
+const Portal = ({ children }: { children: React.ReactNode }) => {
+  return <RadixPopover.Portal>{children}</RadixPopover.Portal>;
+};
+Portal.displayName = "Popover.Portal";
+Popover.Portal = Portal;
+
+const Content = React.forwardRef<
+  React.ElementRef<typeof RadixPopover.Content>,
+  React.ComponentPropsWithoutRef<typeof RadixPopover.Content>
+>((props, forwardedRef) => {
+  return (
+    <RadixPopover.Content
+      {...props}
+      ref={forwardedRef}
+      className={twMerge(
+        "p-4 flex items-center justify-center bg-overlay text-on-surface mx-2 max-w-[300px] rounded-theme",
+        props.className
       )}
     >
-      {buttonChildren}
-    </RadixPopover.Trigger>
-    <RadixPopover.Portal>
-      <RadixPopover.Content
-        className={twMerge(
-          "p-4 flex items-center justify-center bg-overlay mx-2 max-w-[300px] rounded-theme",
-          popoverClassName
-        )}
-      >
-        {popoverChildren}
-        <RadixPopover.Arrow className="fill-overlay" />
-      </RadixPopover.Content>
-    </RadixPopover.Portal>
-  </RadixPopover.Root>
-);
+      {props.children}
+    </RadixPopover.Content>
+  );
+});
+Content.displayName = "Popover.Content";
+Popover.Content = Content;
+
+const Arrow = ({ className }: { className?: string }) => {
+  return <RadixPopover.Arrow className={twMerge("fill-overlay", className)} />;
+};
+
+Arrow.displayName = "Popover.Arrow";
+Popover.Arrow = Arrow;
+
+const Close = React.forwardRef<
+  React.ElementRef<typeof RadixPopover.Close>,
+  React.ComponentPropsWithoutRef<typeof RadixPopover.Close>
+>((props, forwardedRef) => {
+  return (
+    <RadixPopover.Close
+      {...props}
+      ref={forwardedRef}
+      className={twMerge("absolute top-1 right-3", props.className)}
+    >
+      {props.children}
+    </RadixPopover.Close>
+  );
+});
+
+Close.displayName = "Popover.Close";
+Popover.Close = Close;

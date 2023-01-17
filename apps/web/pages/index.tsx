@@ -1,4 +1,4 @@
-import { Button } from "chimera-tw";
+import { Button, Popover } from "chimera-tw";
 
 export default function Web() {
   return (
@@ -47,6 +47,9 @@ export default function Web() {
           Shop now
         </Button>
       </div>
+      <Popover>
+        <>hello</>
+      </Popover>
     </div>
   );
 }

@@ -63,7 +63,7 @@ export const Select = ({
             {items ? (
               items?.map((item, itemIdx) => (
                 <Listbox.Option
-                  key={itemIdx}
+                  key={item.value + itemIdx}
                   className={({ active }) => {
                     return twMerge(
                       `relative cursor-default hover:cursor-pointer select-none py-2 pl-10 pr-4 ${

@@ -2,14 +2,14 @@
 // @ts-ignore
 // Leaving this here as a reference for using raw-loader
 // import ButtonRaw from "!!raw-loader!../../../packages/ui/src/Button.tsx";
-import React from "react";
+import React, { useEffect } from "react";
 import { Button } from "./Button";
 // @ts-ignore
-import jsxToString from "jsx-to-string";
-import { findSubcomponent } from "../utils/utils";
+import reactElementToJSXString from "react-element-to-jsx-string";
 import { twMerge } from "tailwind-merge";
+import { findSubcomponent } from "../utils/utils";
+import { Item } from "./RadixSelect";
 import { ThemePicker } from "./ThemePicker";
-import { RadixSelect } from "./RadixSelect";
 
 export const Showcase = ({
   children,
@@ -45,25 +45,45 @@ const Preview = ({
   codePreviewClassName: string;
 }) => {
   const [copied, setCopied] = React.useState(false);
+
   const childrenArray = Array.isArray(children) ? children : [children];
   const childrenCode = childrenArray
     .map((child) => {
       if (React.isValidElement(child)) {
-        return jsxToString(child);
+        return reactElementToJSXString(child, {
+          displayName: (element) => {
+            if (React.isValidElement(element)) {
+              // Check if type of element is a string
+              if (typeof element?.type === "string") {
+                return element?.type;
+              }
+              // @ts-ignore
+              if (typeof element?.type?.displayName === "string") {
+                // @ts-ignore
+                return element?.type.displayName;
+              }
+              if (typeof element?.type.name === "string") {
+                return element?.type.name;
+              }
+
+              return "NoDisplayName";
+            }
+          },
+        });
       }
     })
     .join("\n");
 
   return (
-    <div className="">
+    <div>
       <div
         className={twMerge(
-          "bg-gradient-to-tr from-pink-300 via-orange-200 to-red-300 text-on-surface p-4 rounded-theme flex items-center justify-center gap-4 mb-4 relative",
+          "bg-gradient-to-tr from-base-2 via-base to-base-1 text-on-surface p-4 rounded-theme flex items-center justify-center gap-4 mb-4 relative",
           componentPreviewClassName
         )}
       >
         <div className="absolute top-2 right-2">
-          <RadixSelect />
+          <ThemePicker />
         </div>
         {children}
       </div>

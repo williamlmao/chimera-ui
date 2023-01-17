@@ -44,7 +44,7 @@
 
     /* on surface */
     --on-surface: hsl(0, 0%, 14%);
-    --on-surface-1: hsl(0, 0%, 22%);
+    --on-surface-1: hsl(0, 0%, 35%);
     --on-surface-2: hsl(0, 0%, 43%);
     --on-surface-3: hsl(0, 0%, 69%);
     --clickable: hsl(0, 3%, 7%);
@@ -67,7 +67,7 @@
 
     /* Other styles */
     --theme-border-width: 10px;
-    --theme-rounded: 0rem;
+    --theme-rounded: 0.25rem;
     --theme-rounded-sm: 0rem;
     --theme-rounded-md: 0rem;
     --theme-rounded-lg: 0rem;
