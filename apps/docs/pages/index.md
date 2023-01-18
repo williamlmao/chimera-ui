@@ -33,3 +33,7 @@ import { ExampleComponent } from "chimera-tw";
 <ExampleComponent className="p-4" />;
 // p-4 will override the p-2 in the block above, final style resulting in "p-4 bg-base"
 ```
+
+<button>hello there</button>
+
+<div className="bg-red-500 p-20">testing if tw is working</div>
