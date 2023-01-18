@@ -2,13 +2,12 @@
 // @ts-ignore
 // Leaving this here as a reference for using raw-loader
 // import ButtonRaw from "!!raw-loader!../../../packages/ui/src/Button.tsx";
-import React, { useEffect } from "react";
+import React from "react";
 import { Button } from "./Button";
 // @ts-ignore
 import reactElementToJSXString from "react-element-to-jsx-string";
 import { twMerge } from "tailwind-merge";
 import { findSubcomponent } from "../utils/utils";
-import { Item } from "./RadixSelect";
 import { ThemePicker } from "./ThemePicker";
 
 export const Showcase = ({
@@ -17,9 +16,10 @@ export const Showcase = ({
   children: React.ReactNode | React.ReactNode[];
 }) => {
   const childrenArray = Array.isArray(children) ? children : [children];
+  console.log(childrenArray);
   // Get the individual subcomponents, Preview, Code, Children by checking name property
-  const title = findSubcomponent(childrenArray, "Title");
-  const preview = findSubcomponent(childrenArray, "Preview");
+  const title = findSubcomponent(childrenArray, "Showcase.Title");
+  const preview = findSubcomponent(childrenArray, "Showcase.Preview");
 
   return (
     <div className="my-4">
@@ -28,6 +28,8 @@ export const Showcase = ({
     </div>
   );
 };
+
+Showcase.displayName = "Showcase";
 
 /**
  *
@@ -110,7 +112,7 @@ const Preview = ({
     </div>
   );
 };
-
+Preview.displayName = "Showcase.Preview";
 Showcase.Preview = Preview;
 
 const Code = ({ children }: { children: React.ReactNode }) => {
@@ -118,11 +120,12 @@ const Code = ({ children }: { children: React.ReactNode }) => {
     <div className="bg-base text-on-surface p-2 rounded-theme">{children}</div>
   );
 };
-
+Code.displayName = "Showcase.Code";
 Showcase.Code = Code;
 
 const Title = ({ children }: { children: React.ReactNode }) => {
   return <div className="text-2xl">{children}</div>;
 };
 
+Title.displayName = "Showcase.Title";
 Showcase.Title = Title;
