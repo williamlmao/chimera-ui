@@ -8,7 +8,7 @@ Chimera is an opinionated UI library designed for React and Tailwind. This libra
 
 ## How Chimera Works Under the Hood
 
-In order to provide out of the box styles and full Tailwind customization, Chimera components all use tailwind-merge.
+In order to provide out of the box styles and full Tailwind customization, Chimera components use tailwind-merge to allow you to write new styles and overide the defaults in one go.
 
 ```typescript
 import { twMerge } from "tailwind-merge";
