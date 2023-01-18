@@ -6,6 +6,12 @@ Chimera is an opinionated UI library designed for React and Tailwind. This libra
 - **Themeable & Reusable** - Chimera components come pre-styled with a semantic color system (such as bg-primary). This makes it easy to switch themes and re-use components across apps. Similar to Daisy UI.
 - **Customizable** - Components come with sensible default styles that look great out of the box, but can be completely customized with Tailwind utility classes (we use tailwind-merge under the hood to handle this). The result is faster development and cleaner code!
 
+### Benefits
+
+- Cleaner JSX
+- Build faster
+- Use the same components across apps and styles
+
 ## How Chimera Works Under the Hood
 
 In order to provide out of the box styles and full Tailwind customization, Chimera components use tailwind-merge to allow you to write new styles and overide the defaults in one go.

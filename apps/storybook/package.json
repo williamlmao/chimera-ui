@@ -16,6 +16,9 @@
     "react-dom": "^18.2.0",
     "ts-dedent": "^2.2.0"
   },
+  "engines": {
+    "node": "16"
+  },
   "devDependencies": {
     "@storybook/addon-actions": "^6.5.14",
     "@storybook/addon-docs": "^6.5.15",
