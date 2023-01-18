@@ -47,9 +47,6 @@ export default function Web() {
           Shop now
         </Button>
       </div>
-      <Popover>
-        <>hello</>
-      </Popover>
     </div>
   );
 }

@@ -1,7 +1,6 @@
 {
   "index": "About",
-  "install": "Installation",
-  "use": "Usage",
-  "customization": "Customization",
+  "use": "Installation & Usage",
+  "colors": "Color System",
   "components": "Components"
 }

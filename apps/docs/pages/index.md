@@ -5,3 +5,25 @@ Chimera is an opinionated UI library designed for React and Tailwind. This libra
 - **Accessible** - Chimera uses Radix Primitives under the hood for interactive components like accordions and selects
 - **Themeable & Reusable** - Chimera components come pre-styled with a semantic color system (such as bg-primary). This makes it easy to switch themes and re-use components across apps. Similar to Daisy UI.
 - **Customizable** - Components come with sensible default styles that look great out of the box, but can be completely customized with Tailwind utility classes (we use tailwind-merge under the hood to handle this). The result is faster development and cleaner code!
+
+## How Chimera Works Under the Hood
+
+In order to provide out of the box styles and full Tailwind customization, Chimera components all use tailwind-merge.
+
+```typescript
+import { twMerge } from "tailwind-merge";
+
+export const ExampleComponent = ({className}:{className:string}) => {
+  return <div className={twMerge("p-2 bg-base", className)>I'm an example!</div>
+}
+
+```
+
+When you use the component
+
+```typescript
+import { ExampleComponent } from "chimera-tw";
+
+<ExampleComponent className="p-4" />;
+// p-4 will override the p-2 in the block above, final style resulting in "p-4 bg-base"
+```
