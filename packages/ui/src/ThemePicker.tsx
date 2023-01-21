@@ -74,7 +74,7 @@ const themes = [
   },
 ];
 
-export const ThemePicker = ({ className }: { className: string }) => {
+export const ThemePicker = ({ className }: { className?: string }) => {
   const [selectedTheme, setSelectedTheme] = useState(themes[0]);
 
   useEffect(() => {
