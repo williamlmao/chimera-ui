@@ -9,10 +9,12 @@ export const Popover = ({
   buttonContent,
   children,
   onClick,
+  className,
 }: {
   buttonContent: React.ReactNode;
   children: React.ReactNode | React.ReactNode[];
   onClick?: () => void;
+  className?: string;
 }) => {
   return (
     <Popover.Root>
@@ -22,6 +24,7 @@ export const Popover = ({
             onClick();
           }
         }}
+        className={className}
       >
         {buttonContent}
       </Popover.Trigger>
@@ -56,7 +59,7 @@ const Trigger = React.forwardRef<
   return (
     <RadixPopover.Trigger
       className={twMerge(
-        "px-2 py-1 w-fit bg-primary hover:bg-primary-darker text-on-primary rounded-theme",
+        "px-2 py-1 w-fit bg-primary hover:bg-primary-focus text-primary-content rounded-theme",
         props.className
       )}
       onClick={props.onClick}
@@ -85,7 +88,7 @@ const Content = React.forwardRef<
       {...props}
       ref={forwardedRef}
       className={twMerge(
-        "p-4 flex items-center justify-center bg-overlay text-on-surface mx-2 max-w-[300px] rounded-theme",
+        "p-4 flex items-center justify-center bg-overlay-1 text-overlay-content mx-2 max-w-[300px] rounded-theme",
         props.className
       )}
     >

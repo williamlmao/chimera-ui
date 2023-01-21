@@ -4,69 +4,120 @@
 
 @layer base {
   :root,
+  html[data-theme="tresleches"] {
+    --base-1: hsl(60, 20%, 98%);
+    --base-2: hsl(54, 38%, 95%);
+    --base-3: hsl(51, 59%, 93%);
+    --base-content-1: hsl(0, 0%, 25%);
+    --base-content-2: hsl(0, 0%, 45%);
+    --base-content-3: hsl(0, 0%, 75%);
+    --base-content-contrast: hsl(0, 0%, 100%);
+    --overlay-1: hsl(60, 20%, 95%);
+    --overlay-2: hsl(60, 5%, 96%);
+    --overlay-3: hsl(49, 50%, 94%);
+    --overlay-content-1: hsl(0, 0%, 25%);
+    --overlay-content-2: hsl(0, 0%, 40%);
+    --overlay-content-3: hsl(0, 0%, 60%);
+    --overlay-content-contrast: hsl(0, 0%, 100%);
+    --input: hsl(0, 0%, 100%);
+    --input-content: hsl(0, 0%, 45%);
+    --line: hsl(0, 0%, 80%);
+    --primary: hsl(0, 57%, 36%);
+    --primary-focus: hsl(0, 68%, 28%);
+    --primary-subtle: hsl(0, 27%, 76%);
+    --primary-content: hsl(0, 0%, 100%);
+    --primary-content-contrast: hsl(0, 0%, 0%);
+    --secondary: hsl(210, 64%, 36%);
+    --secondary-focus: hsl(210, 76%, 26%);
+    --secondary-subtle: hsl(210, 41%, 73%);
+    --secondary-content: hsl(0, 0%, 100%);
+    --secondary-content-contrast: hsl(0, 0%, 0%);
+    --info: hsl(212, 50%, 40%);
+    --info-focus: hsl(212, 77%, 31%);
+    --info-subtle: hsl(212, 75%, 75%);
+    --info-content: hsl(0, 0%, 100%);
+    --info-content-contrast: hsl(212, 98%, 16%);
+    --success: hsl(159, 61%, 41%);
+    --success-focus: hsl(159, 90%, 24%);
+    --success-subtle: hsl(159, 42%, 72%);
+    --success-content: hsl(0, 0%, 100%);
+    --success-content-contrast: hsl(159, 76%, 16%);
+    --error: hsl(0, 75%, 42%);
+    --error-focus: hsl(354, 90%, 27%);
+    --error-subtle: hsl(355, 80%, 81%);
+    --error-content: hsl(0, 0%, 100%);
+    --error-content-contrast: hsl(355, 93%, 17%);
+    --warning: hsl(47, 95%, 55%);
+    --warning-focus: hsl(47, 100%, 45%);
+    --warning-subtle: hsl(48, 42%, 84%);
+    --warning-content: hsl(0, 0%, 15%);
+    --warning-content-contrast: hsl(0, 0%, 15%);
+    --theme-border-width: 10px;
+    --theme-rounded: 0.25rem;
+    --theme-rounded-sm: 0rem;
+    --theme-rounded-md: 0rem;
+    --theme-rounded-lg: 0rem;
+    --theme-rounded-xl: 0rem;
+    --theme-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1),
+      0 1px 2px -1px rgb(0 0 0 / 0.1);
+    --theme-shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    --theme-shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1),
+      0 2px 4px -2px rgb(0 0 0 / 0.1);
+    --theme-shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1),
+      0 4px 6px -4px rgb(0 0 0 / 0.1);
+    --theme-shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1),
+      0 8px 10px -6px rgb(0 0 0 / 0.1);
+    --theme-shadow-inner: inset 0 2px 4px 0 rgb(0 0 0 / 0.05);
+  }
+
   html[data-theme="granola"] {
-    /* primary */
-    --primary: hsl(33, 60%, 53%);
-    --primary-lighter: hsl(195, 100%, 72%);
-    --primary-darker: hsl(195, 94%, 38%);
-    /* secondary */
-    --secondary: hsl(0, 0%, 14%);
-    --secondary-lighter: hsl(0, 0%, 22%);
-    --secondary-darker: hsl(0, 0%, 3%);
-    /* info */
-    --info: hsl(180, 2%, 98%);
-    --info-lighter: hsl(180, 2%, 94%);
-    --info-darker: hsl(180, 2%, 90%);
-    /* success */
-    --success: hsl(142, 71%, 45%);
-    --success-lighter: hsl(141, 75%, 73%);
-    --success-darker: hsl(142, 71%, 29%);
-    /* warning */
-    --warning: hsl(180, 2%, 98%);
-    --warning-lighter: hsl(180, 2%, 94%);
-    --warning-darker: hsl(180, 2%, 90%);
-    /* danger */
-    --danger: hsl(180, 2%, 98%);
-    --danger-lighter: hsl(180, 2%, 94%);
-    --danger-darker: hsl(180, 2%, 90%);
-    /* surfaces */
-    --base: hsl(54, 69%, 81%);
-    --base-1: hsl(51, 70%, 82%);
-    --base-2: hsl(39, 76%, 77%);
-    --overlay: hsl(42, 80%, 85%);
-    --overlay-1: hsl(42, 68%, 67%);
-    --overlay-2: hsl(42, 79%, 61%);
-    --input: hsl(180, 2%, 98%);
-
-    /* borders */
-    --line: hsl(0, 0%, 1%);
-    --line-1: hsl(0, 0%, 30%);
-    --line-2: hsl(180, 2%, 89%);
-
-    /* on surface */
-    --on-surface: hsl(0, 0%, 14%);
-    --on-surface-1: hsl(0, 0%, 22%);
-    --on-surface-2: hsl(0, 0%, 43%);
-    --on-surface-3: hsl(0, 0%, 69%);
-    --clickable: hsl(0, 3%, 7%);
-    --clickable-hover: hsl(195, 100%, 44%);
-
-    --on-primary: hsl(180, 2%, 98%);
-    --on-primary-contrast: hsl(0, 0%, 3%);
-
-    --on-info: hsl(0, 2%, 8%);
-    --on-info-contrast: hsl(180, 2%, 70%);
-
-    --on-success: hsl(0, 0%, 100%);
-    --on-success-contrast: hsl(144, 61%, 20%);
-
-    --on-warning: hsl(180, 2%, 98%);
-    --on-warning-contrast: hsl(180, 2%, 70%);
-
-    --on-danger: hsl(180, 2%, 98%);
-    --on-danger-contrast: hsl(180, 2%, 70%);
-
-    /* Other styles */
+    --base-1: hsl(200, 100%, 25%);
+    --base-2: hsl(200, 95%, 40%);
+    --base-3: hsl(200, 90%, 55%);
+    --base-content-1: hsl(200, 100%, 15%);
+    --base-content-2: hsl(200, 95%, 30%);
+    --base-content-3: hsl(200, 90%, 45%);
+    --base-content-contrast: hsl(200, 100%, 95%);
+    --overlay-1: hsl(220, 100%, 25%);
+    --overlay-2: hsl(220, 95%, 40%);
+    --overlay-3: hsl(220, 90%, 55%);
+    --overlay-content-1: hsl(220, 100%, 15%);
+    --overlay-content-2: hsl(220, 95%, 30%);
+    --overlay-content-3: hsl(220, 90%, 45%);
+    --overlay-content-contrast: hsl(220, 100%, 95%);
+    --input: hsl(240, 100%, 25%);
+    --input-content: hsl(240, 100%, 15%);
+    --line: hsl(0, 0%, 80%);
+    --primary: hsl(260, 100%, 25%);
+    --primary-focus: hsl(260, 95%, 40%);
+    --primary-subtle: hsl(260, 90%, 55%);
+    --primary-content: hsl(260, 100%, 15%);
+    --primary-content-contrast: hsl(260, 100%, 95%);
+    --secondary: hsl(280, 100%, 25%);
+    --secondary-focus: hsl(280, 95%, 40%);
+    --secondary-subtle: hsl(280, 90%, 55%);
+    --secondary-content: hsl(280, 100%, 15%);
+    --secondary-content-contrast: hsl(280, 100%, 95%);
+    --info: hsl(300, 100%, 25%);
+    --info-focus: hsl(300, 95%, 40%);
+    --info-subtle: hsl(300, 90%, 55%);
+    --info-content: hsl(300, 100%, 15%);
+    --info-content-contrast: hsl(300, 100%, 95%);
+    --success: hsl(320, 100%, 25%);
+    --success-focus: hsl(320, 95%, 40%);
+    --success-subtle: hsl(320, 90%, 55%);
+    --success-content: hsl(320, 100%, 15%);
+    --success-content-contrast: hsl(320, 100%, 95%);
+    --error: hsl(340, 100%, 25%);
+    --error-focus: hsl(340, 95%, 40%);
+    --error-subtle: hsl(340, 90%, 55%);
+    --error-content: hsl(340, 100%, 15%);
+    --error-content-contrast: hsl(340, 100%, 95%);
+    --warning: hsl(360, 100%, 25%);
+    --warning-focus: hsl(360, 95%, 40%);
+    --warning-subtle: hsl(360, 90%, 55%);
+    --warning-content: hsl(360, 100%, 15%);
+    --warning-content-contrast: hsl(360, 100%, 95%);
     --theme-border-width: 10px;
     --theme-rounded: 0.25rem;
     --theme-rounded-sm: 0rem;
@@ -87,28 +138,28 @@
   html[data-theme="cool"] {
     /* primary */
     --primary: hsl(195, 100%, 44%);
-    --primary-lighter: hsl(195, 100%, 72%);
-    --primary-darker: hsl(195, 94%, 38%);
+    --primary-subtle: hsl(195, 100%, 72%);
+    --primary-focus: hsl(195, 94%, 38%);
     /* secondary */
     --secondary: hsl(0, 0%, 14%);
-    --secondary-lighter: hsl(0, 0%, 22%);
-    --secondary-darker: hsl(0, 0%, 3%);
+    --secondary-subtle: hsl(0, 0%, 22%);
+    --secondary-focus: hsl(0, 0%, 3%);
     /* info */
     --info: hsl(180, 2%, 98%);
-    --info-lighter: hsl(180, 2%, 94%);
-    --info-darker: hsl(180, 2%, 90%);
+    --info-subtle: hsl(180, 2%, 94%);
+    --info-focus: hsl(180, 2%, 90%);
     /* success */
     --success: hsl(142, 71%, 45%);
-    --success-lighter: hsl(141, 75%, 73%);
-    --success-darker: hsl(142, 71%, 29%);
+    --success-subtle: hsl(141, 75%, 73%);
+    --success-focus: hsl(142, 71%, 29%);
     /* warning */
     --warning: hsl(180, 2%, 98%);
-    --warning-lighter: hsl(180, 2%, 94%);
-    --warning-darker: hsl(180, 2%, 90%);
+    --warning-subtle: hsl(180, 2%, 94%);
+    --warning-focus: hsl(180, 2%, 90%);
     /* danger */
     --danger: hsl(180, 2%, 98%);
-    --danger-lighter: hsl(180, 2%, 94%);
-    --danger-darker: hsl(180, 2%, 90%);
+    --danger-subtle: hsl(180, 2%, 94%);
+    --danger-focus: hsl(180, 2%, 90%);
     /* surfaces */
     --base: hsl(43, 64%, 98%);
     --base-1: hsl(45, 36%, 96%);
@@ -150,87 +201,6 @@
     /* Other styles */
     --theme-border-width: 10px;
     --theme-rounded: 0.25rem;
-    --theme-rounded-sm: 0rem;
-    --theme-rounded-md: 0rem;
-    --theme-rounded-lg: 0rem;
-    --theme-rounded-xl: 0rem;
-    --theme-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1),
-      0 1px 2px -1px rgb(0 0 0 / 0.1);
-    --theme-shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
-    --theme-shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1),
-      0 2px 4px -2px rgb(0 0 0 / 0.1);
-    --theme-shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1),
-      0 4px 6px -4px rgb(0 0 0 / 0.1);
-    --theme-shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1),
-      0 8px 10px -6px rgb(0 0 0 / 0.1);
-    --theme-shadow-inner: inset 0 2px 4px 0 rgb(0 0 0 / 0.05);
-  }
-  html[data-theme="elegant"] {
-    /* primary */
-    --primary: hsl(35, 30%, 64%);
-    --primary-lighter: hsl(49, 52%, 93.8%);
-    --primary-darker: hsl(36, 19.6%, 35.1%);
-    /* secondary */
-    --secondary: hsl(0, 0%, 67%);
-    --secondary-lighter: hsl(0, 0%, 57%);
-    --secondary-darker: hsl(0, 0%, 49%);
-    /* info */
-    --info: hsl(180, 2%, 98%);
-    --info-lighter: hsl(180, 2%, 94%);
-    --info-darker: hsl(180, 2%, 90%);
-    /* success */
-    --success: hsl(142, 71%, 45%);
-    --success-lighter: hsl(141, 75%, 73%);
-    --success-darker: hsl(142, 71%, 29%);
-    /* warning */
-    --warning: hsl(180, 2%, 98%);
-    --warning-lighter: hsl(180, 2%, 94%);
-    --warning-darker: hsl(180, 2%, 90%);
-    /* danger */
-    --danger: hsl(180, 2%, 98%);
-    --danger-lighter: hsl(180, 2%, 94%);
-    --danger-darker: hsl(180, 2%, 90%);
-    /* surfaces */
-    --base: hsl(0, 0%, 5%);
-    --base-1: hsl(60, 2%, 9%);
-    --base-2: hsl(0, 2%, 10%);
-    --base-3: hsl(45, 5%, 16%);
-    --overlay: hsl(0, 1%, 17%);
-    --overlay-1: hsl(45, 3%, 27%);
-    --overlay-2: hsl(60, 1%, 42%);
-    --input: hsl(0, 0%, 14%);
-
-    /* borders */
-    --line: hsl(0, 0%, 1%);
-    --line-1: hsl(0, 0%, 30%);
-    --line-2: hsl(180, 2%, 89%);
-
-    /* on surface */
-    --on-surface: hsl(0, 0%, 99%);
-    --on-surface-1: hsl(0, 3%, 92%);
-    --on-surface-2: hsl(0, 1%, 71%);
-    --on-surface-3: hsl(0, 1%, 65%);
-    --clickable: #ffccb8;
-    --clickable-hover: #ffbfa8;
-
-    --on-primary: hsl(0, 0%, 0%);
-    --on-primary-contrast: hsl(0, 0%, 100%);
-
-    --on-info: hsl(0, 2%, 8%);
-    --on-info-contrast: hsl(180, 2%, 70%);
-
-    --on-success: hsl(0, 0%, 100%);
-    --on-success-contrast: hsl(144, 61%, 20%);
-
-    --on-warning: hsl(180, 2%, 98%);
-    --on-warning-contrast: hsl(180, 2%, 70%);
-
-    --on-danger: hsl(180, 2%, 98%);
-    --on-danger-contrast: hsl(180, 2%, 70%);
-
-    /* Other styles */
-    --theme-border-width: 10px;
-    --theme-rounded: 0rem;
     --theme-rounded-sm: 0rem;
     --theme-rounded-md: 0rem;
     --theme-rounded-lg: 0rem;

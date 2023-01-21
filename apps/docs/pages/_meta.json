@@ -1,6 +1,8 @@
 {
-  "index": "About",
-  "use": "Installation & Usage",
+  "index": "Introduction",
   "colors": "Color System",
+  "customization": "Customization",
+  "accessibility": "Accessibility",
+  "use": "Installation & Usage",
   "components": "Components"
 }

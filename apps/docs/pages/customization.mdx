@@ -1,0 +1,46 @@
+# Customization
+
+In order to provide out of the box styles and full Tailwind customization, Chimera components use tailwind-merge to allow you to write new styles and overide the defaults in one go.
+
+## Basic Example
+
+```typescript
+import { twMerge } from "tailwind-merge";
+
+
+export const ExampleComponent = ({className}:{className:string}) => {
+  return <div className={twMerge("p-2 bg-base", className)>I'm an example!</div>
+}
+
+```
+
+When you use the component
+
+```typescript
+import { ExampleComponent } from "chimera-tw";
+
+<ExampleComponent className="p-4" />;
+// p-4 will override the p-2 in the block above, final style resulting in "p-4 bg-base"
+```
+
+## Styling components with subcomponents
+
+Chimera seeks to give you as much control as possible via a single `className` prop. However, it is not always possible to customize a component with a single prop, especially in cases where there are subcomponents (e.g., a `<Select.Item>` inside of `<Select>`). In these cases, Chimera exposes all of the same subcomponents that Radix does and you can use the `className` props on the subcomponents to customize them.
+
+```typescript
+// The default classes will be exposed in the intellisense for each component,
+// so you will be able to see what styles you are overwriting.
+<Popover.Root>
+  <Popover.Trigger className="text-teal-600">
+    <InfoCircledIcon />
+  </Popover.Trigger>
+  <Popover.Portal>
+    <Popover.Content className="p-8 bg-teal-600 text-white">
+      <Popover.Arrow className="fill-teal-600/>
+      <div className="text-sm">
+        `This is an example of a popover with custom styles!`
+      </div>
+    </Popover.Content>
+  </Popover.Portal>
+</Popover.Root>
+```

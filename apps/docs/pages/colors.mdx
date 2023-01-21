@@ -1,9 +1,124 @@
+import { ColorTable, colorSystem } from "@/components/ColorTables";
+import { ThemePicker } from "chimera-tw";
+
 # Color System
 
-## On Colors
+## Overview
 
-There are a lot of colors to define, but many of the colors can be re-used
+This semantic color system was designed so that a single class makes sense for themes that go from lighter to darker colors, as well as themes that go from darker to lighter colors. This is why Chimera does not use the 100-900 scale for colors, since those signify a fixed light->dark scale.
 
-## Surfaces
+The choices for the semantic color names came from studying the color/element patterns on many websites. It allows for a lot of flexibility but at the same time, but makes it really easy to change specific groups of colors on your site.
+
+This color system was heavily inspired by [DaisyUI's color system](https://daisyui.com/docs/colors).
+
+## Color Modifiers
+
+<details>
+  <summary>**1-3 (prominence)** (e.g., base-2 or base-3)</summary>
+  
+  1 being the most prominent color and 3 being least prominent color Used for backgrounds,
+  text, or other elements where you need to create subtle contrast.
+
+![Prominence Example](/prominence-example.png)
+
+So why don't
+we use 100-900 for these colors too? Let's say your background is base-100 and
+a card on the background is base-200. This makes total sense in light mode,
+where white is the background and a light grey layers on top of that. It no
+longer makes sense if you want to switch to a dark mode where the background
+is black and the card is supposed to be dark grey.
+
+</details>
+
+<details>
+  <summary>**100-900 (light to dark)** (e.g., primary-100, secondary-800)</summary>
+  100 is the lightest color and 900 is the darkest color. This is the scale that Tailwind uses for colors. The components in Chimera **do not** use these for default styles, but they are available for use from the default Tailwind theme. I suggest keeping these in your arsenal for when you really need to use a color that is not in the color system!
+
+Fun thing I stumbled upon while researching, [this is the Tweet thread](https://twitter.com/adamwathan/status/920706866283364352?lang=en) Adam Wathan started when he was researching the same thing!
+
+![100-900 Example](/100-900-example.png)
+[From Tailwind's Customizing Colors](https://tailwindcss.com/docs/customizing-colors)
+
+</details>
+<details>
+  <summary>**content, content-contrast** (e.g.,  primary-content, text-base-content-) </summary>
+  This is used for text or other content that is on top of a background color.
+
+The `-contrast` modifier is used when the content color does not provide enough contrast. For example, if primary-content is white and does not have enough contrast on a `bg-primary-subtle`. In this case, you would use `primary-content-contrast`. However, `-contrast` is not always needed. For example, if your warning, warning-focus, and warning-subtle are all yellows that would be better with dark text, you should set both `warning-content` and `warning-content-contrast` to the same color.
+
+The content modifier can be used with either the prominence modifier or a contrast modifier. Examples:
+
+- `primary-content`
+- `primary-content-contrast`
+- `primary-content-2`
+
+![On Example](/example-content.jpeg)
+
+</details>
+
+<details>
+  <summary>**focus** (e.g., secondary-focus, success-focus)</summary>
+  Focus colors are used for elements like buttons, alerts, icons, etc. They are used
+  when the element is focused or hovered.
+</details>
+
+<details>
+  <summary>**subtle** (e.g., hover:bg-secondary-subtle)</summary>
+  Subtle colors are used for elements like buttons, alerts, icons, etc. They are
+  often used for background colors when the element is hovered or focused. ![Subtle
+  Example](/subtle-example.png)
+</details>
 
 ## Colors
+
+This system was designed to work for themes that go from lighter background colors to darker foreground colors, as well as themes that do the inverse. This is why Chimera does not use the 100-900 scale for colors, since those signify a fixed light->dark scale.
+
+You'll notice there are a LOT of colors in this color system. Don't be afraid! Most of these colors, you won't need to change. A lot of these colors will also be the same. For example, you might use the same color for primary-content and secondary-content.
+
+### Base
+
+Base colors are used for backgrounds.
+
+<ColorTable colors={colorSystem.base} />
+
+### Overlay
+
+Overlay colors are used for background colors of floating elements like modals, dropdowns, menus, etc. They should be similar but distinct from base colors that they will be on top of.
+
+<ColorTable colors={colorSystem.overlay} />
+
+### Primary
+
+Primary colors are used for the main actions in your interface, think call to action buttons, links, etc. Primary should be distinct, and is most likely one of your brand colors.
+
+<ColorTable colors={colorSystem.primary} />
+
+### Secondary
+
+Secondary colors are used for actions of lower priority than primary. Secondary is also good for other elements that you want to highlight, such as tags, less important buttons, icons, etc.
+
+<ColorTable colors={colorSystem.secondary} />
+
+### Info
+
+Info colors are used for informational elements, such as alerts, icons, etc.
+
+<ColorTable colors={colorSystem.info} />
+
+### Success
+
+Success colors are used for success elements, such as alerts, icons, etc.
+
+<ColorTable colors={colorSystem.success} />
+
+### Error
+
+Error colors are used for error elements, such as alerts, icons, etc.
+
+<ColorTable colors={colorSystem.error} />
+
+### Warning
+
+Warning colors are used for warning elements, such as alerts, icons, etc.
+
+<ColorTable colors={colorSystem.warning} />

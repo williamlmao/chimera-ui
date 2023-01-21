@@ -8,5 +8,9 @@ export default {
   toc: {
     extraContent: <Fragment></Fragment>,
   },
+  banner: {
+    key: "pre-alpha",
+    text: "This is just an MVP to get feedback. Please poke holes in the idea!",
+  },
   // ...
 };

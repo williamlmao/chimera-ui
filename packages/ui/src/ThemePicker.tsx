@@ -2,6 +2,7 @@ import { CheckIcon } from "@radix-ui/react-icons";
 import { useEffect, useState } from "react";
 import { Popover } from "./Popover";
 import * as RadioGroup from "@radix-ui/react-radio-group";
+import { twMerge } from "tailwind-merge";
 // This component is super hacky.. using local storage to store the theme, and then using useEffect to set the theme on mount
 
 export type Item = {
@@ -21,16 +22,21 @@ const ThemeButton = ({
   theme,
   setSelectedTheme,
   selectedTheme,
+  className,
 }: {
   theme: Item;
   setSelectedTheme: Function;
   selectedTheme: Item;
+  className?: string;
 }) => {
   return (
     <RadioGroup.Item
-      className={`text-sm rounded-theme relative text-left hover:bg-overlay-1 w-full pl-4 ${
-        theme.value === selectedTheme.value ? "bg-overlay-2 font-bold" : ""
-      }`}
+      className={twMerge(
+        `text-sm rounded-theme relative text-left hover:bg-primary-subtle w-full pl-4 ${
+          theme.value === selectedTheme.value ? "bg-overlay-2 font-bold" : ""
+        }`,
+        className
+      )}
       value={theme.value}
       type="button"
       onClick={() => {
@@ -47,6 +53,10 @@ const ThemeButton = ({
 
 const themes = [
   {
+    value: "tresleches",
+    label: "Tres Leches",
+  },
+  {
     value: "granola",
     label: "Granola",
   },
@@ -58,9 +68,13 @@ const themes = [
     value: "cool",
     label: "Cool",
   },
+  {
+    value: "chimeratheme",
+    label: "Chimera",
+  },
 ];
 
-export const ThemePicker = () => {
+export const ThemePicker = ({ className }: { className: string }) => {
   const [selectedTheme, setSelectedTheme] = useState(themes[0]);
 
   useEffect(() => {
@@ -113,6 +127,7 @@ export const ThemePicker = () => {
           />
         </svg>
       }
+      className={className}
     >
       <RadioGroup.Root>
         {themes.map((theme) => {
@@ -122,6 +137,7 @@ export const ThemePicker = () => {
               theme={theme}
               setSelectedTheme={setSelectedTheme}
               selectedTheme={selectedTheme}
+              className={className}
             />
           );
         })}
