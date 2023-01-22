@@ -119,7 +119,7 @@ plugins: [],
 ````
 
 3. Define and add your theme to a global css file like so:
-<Callout emoji="🔧">
+<Callout emoji="🔨">
  The plan is to create a theme builder tool!
 </Callout>
 
