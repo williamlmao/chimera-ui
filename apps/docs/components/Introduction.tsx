@@ -108,7 +108,9 @@ const Hero = () => {
   return (
     <div className="flex flex-col items-center justify-center text-center mt-24">
       <div className="text-5xl font-extrabold">
-        Fully customizable components that you probably won't need to customize
+        {
+          "Fully customizable components that you probably won't need to customize"
+        }
       </div>
     </div>
   );
