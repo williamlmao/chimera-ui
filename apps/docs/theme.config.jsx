@@ -92,7 +92,7 @@ c-8 -87 -31 -216 -56 -319 -24 -98 -78 -255 -94 -275 -7 -8 -16 -26 -20 -40
   },
   banner: {
     key: "pre-alpha",
-    text: "This is still a WIP but please use the vercel comment system to poke all as many holes into this idea as you can!",
+    text: "Looking for thoughts and discussion! Tell me if you think another library/approach solves the same problems. Tell me why this library shouldn't exist!",
   },
   useNextSeoProps() {
     return {

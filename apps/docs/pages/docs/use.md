@@ -18,10 +18,7 @@ important: true,
 content: [
 "./pages/**/*.{js,ts,jsx,tsx,md,mdx}",
 "./components/**/*.{js,ts,jsx,tsx}",
-"./examples/**/*.{js,ts,jsx,tsx}",
-"./nextra-theme-docs/**/*.{js,tsx}",
-"./theme.config.jsx",
-"../../packages/ui/**/*{.js,.ts,.jsx,.tsx}",
+"./node_modules/chimera-tw/dist/**/*.{js,ts,jsx,tsx}",
 ],
 theme: {
 extend: {
@@ -118,7 +115,7 @@ plugins: [],
 
 ````
 
-3. Define and add your theme to a global css file like so:
+1. Define and add your theme to a global css file like so:
 <Callout emoji="🧰">
  The plan is to create a theme builder tool!
 </Callout>

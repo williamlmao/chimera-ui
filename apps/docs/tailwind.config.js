@@ -2,7 +2,6 @@
 
 module.exports = {
   important: true,
-  jit: true,
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,md,mdx}",
     "./components/**/*.{js,ts,jsx,tsx}",
