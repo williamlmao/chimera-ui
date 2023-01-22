@@ -32,7 +32,7 @@ export const Button = ({
 }) => {
   const [pressed, setPressed] = useState(false);
   const mergedClassNames = twMerge(
-    `w-fit flex items-center justify-center relative group px-4 py-2 tracking-wide bg-primary text-on-primary rounded-theme transition duration-100 ease-in-out`,
+    `w-fit flex items-center justify-center relative group px-4 py-2 tracking-wide bg-primary text-primary-content rounded-theme transition duration-100 ease-in-out`,
     className
   );
   const mergedPressedClassNames = twMerge(

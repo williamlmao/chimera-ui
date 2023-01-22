@@ -371,7 +371,7 @@ const ColorTableItem = ({ color }: { color: Color }) => {
       </div>
       <div className="p-2 col-span-3">
         <div className="">
-          <div className="font-semibold">{color.name}</div>
+          <div className="font-semibold text-base-content">{color.name}</div>
           <div className="text-xs text-base-content-2">{color.usage}</div>
         </div>
       </div>
@@ -383,7 +383,7 @@ const ColorTableItem = ({ color }: { color: Color }) => {
 
 export const ColorTable = ({ colors }: { colors: Color[] }) => {
   return (
-    <div className="w-full text-left border-[1px] border-line rounded-lg border-separate bg-base-1 relative px-4 py-2">
+    <div className="w-full text-left border-[1px] border-line rounded-lg border-separate bg-base-1 text-base-content relative px-4 py-2 my-4">
       <div className="absolute top-4 right-4">
         <ThemePicker className="" />
       </div>
@@ -396,7 +396,7 @@ export const ColorTable = ({ colors }: { colors: Color[] }) => {
           <div className="p-2 col-span-3">CSS Variable</div>
         </div>
       </div>
-      <div className="divide-y-2">
+      <div className="divide-y-[1px] divide-line">
         {colors.map((color) => (
           <ColorTableItem color={color} />
         ))}

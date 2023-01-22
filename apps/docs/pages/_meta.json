@@ -1,8 +1,11 @@
 {
-  "index": "Introduction",
-  "colors": "Color System",
-  "customization": "Customization",
-  "accessibility": "Accessibility",
-  "use": "Installation & Usage",
-  "components": "Components"
+  "docs": {
+    "title": "Documentation",
+    "type": "page"
+  },
+  "index": {
+    "title": "Introduction",
+    "type": "page",
+    "display": "hidden"
+  }
 }

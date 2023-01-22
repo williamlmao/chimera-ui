@@ -70,54 +70,54 @@
     --theme-shadow-inner: inset 0 2px 4px 0 rgb(0 0 0 / 0.05);
   }
 
-  html[data-theme="granola"] {
-    --base-1: hsl(200, 100%, 25%);
-    --base-2: hsl(200, 95%, 40%);
-    --base-3: hsl(200, 90%, 55%);
-    --base-content-1: hsl(200, 100%, 15%);
-    --base-content-2: hsl(200, 95%, 30%);
-    --base-content-3: hsl(200, 90%, 45%);
+  html[data-theme="zookeper"] {
+    --base-1: #d6c5aa;
+    --base-2: #c3b091;
+    --base-3: #b09d7e;
+    --base-content-1: hsl(99, 26%, 13%);
+    --base-content-2: hsl(128, 37%, 15%);
+    --base-content-3: hsl(128, 42%, 18%);
     --base-content-contrast: hsl(200, 100%, 95%);
-    --overlay-1: hsl(220, 100%, 25%);
-    --overlay-2: hsl(220, 95%, 40%);
-    --overlay-3: hsl(220, 90%, 55%);
-    --overlay-content-1: hsl(220, 100%, 15%);
-    --overlay-content-2: hsl(220, 95%, 30%);
-    --overlay-content-3: hsl(220, 90%, 45%);
+    --overlay-1: #c8b28e;
+    --overlay-2: #cab187;
+    --overlay-3: #ae946b;
+    --overlay-content-1: hsl(120, 25%, 14%);
+    --overlay-content-2: hsl(116, 22%, 14%);
+    --overlay-content-3: hsl(127, 48%, 25%);
     --overlay-content-contrast: hsl(220, 100%, 95%);
-    --input: hsl(240, 100%, 25%);
-    --input-content: hsl(240, 100%, 15%);
-    --line: hsl(0, 0%, 80%);
-    --primary: hsl(260, 100%, 25%);
-    --primary-focus: hsl(260, 95%, 40%);
-    --primary-subtle: hsl(260, 90%, 55%);
-    --primary-content: hsl(260, 100%, 15%);
-    --primary-content-contrast: hsl(260, 100%, 95%);
-    --secondary: hsl(280, 100%, 25%);
-    --secondary-focus: hsl(280, 95%, 40%);
-    --secondary-subtle: hsl(280, 90%, 55%);
+    --input: #ddccae;
+    --input-content: #322d25;
+    --line: #a4844d;
+    --primary: hsl(104, 17%, 32%);
+    --primary-focus: hsl(104, 17%, 32%);
+    --primary-subtle: hsl(103, 6%, 45%);
+    --primary-content: hsl(0, 0%, 100%);
+    --primary-content-contrast: hsl(0, 0%, 0%);
+    --secondary: hsl(25, 81%, 35%);
+    --secondary-focus: hsl(25, 90%, 24%);
+    --secondary-subtle: hsl(25, 50%, 53%);
     --secondary-content: hsl(280, 100%, 15%);
     --secondary-content-contrast: hsl(280, 100%, 95%);
-    --info: hsl(300, 100%, 25%);
-    --info-focus: hsl(300, 95%, 40%);
-    --info-subtle: hsl(300, 90%, 55%);
-    --info-content: hsl(300, 100%, 15%);
-    --info-content-contrast: hsl(300, 100%, 95%);
-    --success: hsl(320, 100%, 25%);
-    --success-focus: hsl(320, 95%, 40%);
-    --success-subtle: hsl(320, 90%, 55%);
-    --success-content: hsl(320, 100%, 15%);
-    --success-content-contrast: hsl(320, 100%, 95%);
-    --error: hsl(340, 100%, 25%);
-    --error-focus: hsl(340, 95%, 40%);
-    --error-subtle: hsl(340, 90%, 55%);
-    --error-content: hsl(340, 100%, 15%);
-    --error-content-contrast: hsl(340, 100%, 95%);
-    --warning: hsl(360, 100%, 25%);
-    --warning-focus: hsl(360, 95%, 40%);
-    --warning-subtle: hsl(360, 90%, 55%);
-    --warning-content: hsl(360, 100%, 15%);
-    --warning-content-contrast: hsl(360, 100%, 95%);
+    --info: hsl(212, 50%, 40%);
+    --info-focus: hsl(212, 77%, 31%);
+    --info-subtle: hsl(212, 75%, 75%);
+    --info-content: hsl(0, 0%, 100%);
+    --info-content-contrast: hsl(212, 98%, 16%);
+    --success: hsl(159, 61%, 41%);
+    --success-focus: hsl(159, 90%, 24%);
+    --success-subtle: hsl(159, 42%, 72%);
+    --success-content: hsl(0, 0%, 100%);
+    --success-content-contrast: hsl(159, 76%, 16%);
+    --error: hsl(0, 75%, 42%);
+    --error-focus: hsl(354, 90%, 27%);
+    --error-subtle: hsl(355, 80%, 81%);
+    --error-content: hsl(0, 0%, 100%);
+    --error-content-contrast: hsl(355, 93%, 17%);
+    --warning: hsl(47, 95%, 55%);
+    --warning-focus: hsl(47, 100%, 45%);
+    --warning-subtle: hsl(48, 42%, 84%);
+    --warning-content: hsl(0, 0%, 15%);
+    --warning-content-contrast: hsl(0, 0%, 15%);
     --theme-border-width: 10px;
     --theme-rounded: 0.25rem;
     --theme-rounded-sm: 0rem;
@@ -135,72 +135,59 @@
       0 8px 10px -6px rgb(0 0 0 / 0.1);
     --theme-shadow-inner: inset 0 2px 4px 0 rgb(0 0 0 / 0.05);
   }
-  html[data-theme="cool"] {
+
+  html[data-theme="gunmetal"] {
     /* primary */
-    --primary: hsl(195, 100%, 44%);
-    --primary-subtle: hsl(195, 100%, 72%);
-    --primary-focus: hsl(195, 94%, 38%);
-    /* secondary */
-    --secondary: hsl(0, 0%, 14%);
-    --secondary-subtle: hsl(0, 0%, 22%);
-    --secondary-focus: hsl(0, 0%, 3%);
-    /* info */
-    --info: hsl(180, 2%, 98%);
-    --info-subtle: hsl(180, 2%, 94%);
-    --info-focus: hsl(180, 2%, 90%);
-    /* success */
-    --success: hsl(142, 71%, 45%);
-    --success-subtle: hsl(141, 75%, 73%);
-    --success-focus: hsl(142, 71%, 29%);
-    /* warning */
-    --warning: hsl(180, 2%, 98%);
-    --warning-subtle: hsl(180, 2%, 94%);
-    --warning-focus: hsl(180, 2%, 90%);
-    /* danger */
-    --danger: hsl(180, 2%, 98%);
-    --danger-subtle: hsl(180, 2%, 94%);
-    --danger-focus: hsl(180, 2%, 90%);
-    /* surfaces */
-    --base: hsl(43, 64%, 98%);
-    --base-1: hsl(45, 36%, 96%);
-    --base-2: hsl(0, 0%, 20%);
-    --base-3: hsl(45, 36%, 96%);
-    --overlay: hsl(43, 64%, 98%);
-    --overlay-1: hsl(42, 81%, 82%);
-    --overlay-2: hsl(42, 81%, 75%);
-    --input: hsl(180, 2%, 98%);
-
-    /* borders */
-    --line: hsl(0, 0%, 1%);
-    --line-1: hsl(0, 0%, 30%);
-    --line-2: hsl(180, 2%, 89%);
-
-    /* on surface */
-    --on-surface: hsl(0, 0%, 14%);
-    --on-surface-1: hsl(0, 0%, 22%);
-    --on-surface-2: hsl(0, 0%, 43%);
-    --on-surface-3: hsl(0, 0%, 69%);
-    --clickable: hsl(0, 3%, 7%);
-    --clickable-hover: hsl(195, 100%, 44%);
-
-    --on-primary: hsl(180, 2%, 98%);
-    --on-primary-contrast: hsl(0, 0%, 3%);
-
-    --on-info: hsl(0, 2%, 8%);
-    --on-info-contrast: hsl(180, 2%, 70%);
-
-    --on-success: hsl(0, 0%, 100%);
-    --on-success-contrast: hsl(144, 61%, 20%);
-
-    --on-warning: hsl(180, 2%, 98%);
-    --on-warning-contrast: hsl(180, 2%, 70%);
-
-    --on-danger: hsl(180, 2%, 98%);
-    --on-danger-contrast: hsl(180, 2%, 70%);
-
+    --base-1: hsl(0, 2%, 10%);
+    --base-2: hsl(0, 0%, 21%);
+    --base-3: hsl(180, 3%, 19%);
+    --base-content-1: hsl(0, 0%, 100%);
+    --base-content-2: hsl(195, 4%, 81%);
+    --base-content-3: hsl(240, 1%, 58%);
+    --base-content-contrast: hsl(0, 0%, 0%);
+    --overlay-1: hsl(160, 3%, 20%);
+    --overlay-2: hsl(60, 2%, 19%);
+    --overlay-3: hsl(120, 1%, 19%);
+    --overlay-content-1: hsl(0, 0%, 100%);
+    --overlay-content-2: hsl(0, 0%, 40%);
+    --overlay-content-3: hsl(0, 1%, 44%);
+    --overlay-content-contrast: hsl(0, 0%, 100%);
+    --input: hsl(0, 0%, 100%);
+    --input-content: hsl(0, 0%, 45%);
+    --line: hsl(0, 0%, 51%);
+    --primary: hsl(0, 0%, 67%);
+    --primary-focus: hsl(210, 2%, 44%);
+    --primary-subtle: hsl(0, 4%, 22%);
+    --primary-content: hsl(0, 0%, 0%);
+    --primary-content-contrast: hsl(0, 0%, 89%);
+    --secondary: hsl(210, 64%, 36%);
+    --secondary-focus: hsl(210, 76%, 26%);
+    --secondary-subtle: hsl(210, 41%, 73%);
+    --secondary-content: hsl(0, 0%, 100%);
+    --secondary-content-contrast: hsl(0, 0%, 0%);
+    --info: hsl(212, 50%, 40%);
+    --info-focus: hsl(212, 77%, 31%);
+    --info-subtle: hsl(212, 75%, 75%);
+    --info-content: hsl(0, 0%, 100%);
+    --info-content-contrast: hsl(212, 98%, 16%);
+    --success: hsl(159, 61%, 41%);
+    --success-focus: hsl(159, 90%, 24%);
+    --success-subtle: hsl(159, 42%, 72%);
+    --success-content: hsl(0, 0%, 100%);
+    --success-content-contrast: hsl(159, 76%, 16%);
+    --error: hsl(0, 75%, 42%);
+    --error-focus: hsl(354, 90%, 27%);
+    --error-subtle: hsl(355, 80%, 81%);
+    --error-content: hsl(0, 0%, 100%);
+    --error-content-contrast: hsl(355, 93%, 17%);
+    --warning: hsl(47, 95%, 55%);
+    --warning-focus: hsl(47, 100%, 45%);
+    --warning-subtle: hsl(48, 42%, 84%);
+    --warning-content: hsl(0, 0%, 15%);
+    --warning-content-contrast: hsl(0, 0%, 15%);
     /* Other styles */
     --theme-border-width: 10px;
-    --theme-rounded: 0.25rem;
+    --theme-rounded: 0rem;
     --theme-rounded-sm: 0rem;
     --theme-rounded-md: 0rem;
     --theme-rounded-lg: 0rem;

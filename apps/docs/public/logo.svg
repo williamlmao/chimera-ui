@@ -1,28 +1,15 @@
-import { Fragment } from "react";
-import { useRouter } from "next/router";
-import { useConfig } from "nextra-theme-docs";
-
-export default {
-  logo: (
-    <div className="flex items-center gap-1">
-      <div className=" w-8 h-8">
-        <svg
-          version="1.0"
-          xmlns="http://www.w3.org/2000/svg"
-          width="100%"
-          height="100%"
-          viewBox="0 0 465.891509 467.403733"
-        >
-          <metadata>
-            Created by potrace 1.12, written by Peter Selinger 2001-2015
-          </metadata>
-          <g
-            transform="translate(-17.058420,478.592578) scale(0.100000,-0.100000)"
-            fill="currentColor"
-            stroke="none"
-          >
-            <path
-              d="M2275 4784 c-187 -20 -349 -50 -458 -86 -670 -221 -1151 -641 -1426
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20010904//EN"
+ "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+<svg version="1.0" xmlns="http://www.w3.org/2000/svg"
+ width="465.891509pt" height="467.403733pt" viewBox="0 0 465.891509 467.403733"
+ preserveAspectRatio="xMidYMid meet">
+<metadata>
+Created by potrace 1.12, written by Peter Selinger 2001-2015
+</metadata>
+<g transform="translate(-17.058420,478.592578) scale(0.100000,-0.100000)"
+fill="currentColor" stroke="none">
+<path d="M2275 4784 c-187 -20 -349 -50 -458 -86 -670 -221 -1151 -641 -1426
 -1246 -61 -136 -161 -422 -161 -464 0 -13 -7 -36 -15 -52 -41 -78 -59 -542
 -30 -781 65 -550 290 -994 706 -1400 209 -204 282 -256 509 -370 400 -201 755
 -285 1150 -272 246 8 397 35 655 119 142 46 417 176 560 265 213 133 424 336
@@ -62,58 +49,6 @@ c-8 -87 -31 -216 -56 -319 -24 -98 -78 -255 -94 -275 -7 -8 -16 -26 -20 -40
 57 60 22 118 31 100 15z m313 -590 c0 -110 24 -161 105 -215 l57 -38 0 -62 c0
 -41 -7 -75 -21 -103 -19 -41 -156 -181 -166 -170 -3 2 1 29 7 59 8 34 11 94 8
 154 -4 84 -10 111 -42 188 -31 74 -37 98 -33 140 5 60 31 150 49 172 11 14 14
-12 25 -13 6 -16 11 -66 11 -112z"
-            />
-          </g>
-        </svg>
-      </div>
-
-      <div className="text-2xl font-semibold">Chimera UI</div>
-    </div>
-  ),
-  docsRepositoryBase:
-    "https://github.com/williamlmao/chimera-tw/tree/main/apps/docs",
-  project: {
-    link: "https://github.com/williamlmao/chimera-tw",
-  },
-  toc: {
-    extraContent: <Fragment></Fragment>,
-  },
-  footer: {
-    text: (
-      <span>
-        MIT {new Date().getFullYear()} ©{" "}
-        <a href="https://nextra.site" target="_blank">
-          chimera-tw
-        </a>
-        .
-      </span>
-    ),
-  },
-  banner: {
-    key: "pre-alpha",
-    text: "This is still a WIP but please use the vercel comment system to poke all as many holes into this idea as you can!",
-  },
-  useNextSeoProps() {
-    return {
-      titleTemplate: "%s – Chimera",
-    };
-  },
-  head: () => {
-    const { asPath } = useRouter();
-    const { frontMatter } = useConfig();
-    return (
-      <>
-        <meta
-          property="og:url"
-          content={`https://https://chimera-tw-docs.vercel.app/${asPath}`}
-        />
-        <meta
-          property="og:description"
-          content={frontMatter.description || "A UI library "}
-        />
-      </>
-    );
-  },
-  // ...
-};
+12 25 -13 6 -16 11 -66 11 -112z"/>
+</g>
+</svg>

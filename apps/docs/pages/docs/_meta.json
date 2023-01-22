@@ -1,0 +1,12 @@
+{
+  "introduction": "Introduction",
+  "colors": "Color System",
+  "customization": "Customization",
+  "accessibility": "Accessibility",
+  "use": "Installation & Usage",
+  "components": "Components",
+  "index": {
+    "title": "Home",
+    "display": "hidden"
+  }
+}

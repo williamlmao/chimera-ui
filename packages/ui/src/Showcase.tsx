@@ -80,7 +80,7 @@ const Preview = ({
     <div>
       <div
         className={twMerge(
-          "bg-gradient-to-tr from-base-2 via-base to-base-1 text-on-surface p-4 rounded-theme flex items-center justify-center gap-4 mb-4 relative",
+          "bg-gradient-to-tr from-base-2 via-base to-base-3 text-base-content p-4 rounded-theme flex items-center justify-center gap-4 mb-4 relative",
           componentPreviewClassName
         )}
       >
@@ -117,7 +117,9 @@ Showcase.Preview = Preview;
 
 const Code = ({ children }: { children: React.ReactNode }) => {
   return (
-    <div className="bg-base text-on-surface p-2 rounded-theme">{children}</div>
+    <div className="bg-base text-base-content p-2 rounded-theme">
+      {children}
+    </div>
   );
 };
 Code.displayName = "Showcase.Code";

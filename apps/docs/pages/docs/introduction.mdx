@@ -1,8 +1,12 @@
+---
+title: Introduction
+---
+
 import { Button, Showcase } from "chimera-tw";
 
 # About Chimera
 
-Chimera is an opinionated UI library designed for React and Tailwind. This library was created because I wanted to be able to use the same components across different projects, without having to re-style them over and over. At the same time, I didn't want to lock myself into any design decisions so any default styles can be overwritten with normal Tailwind utility classes.
+Chimera is a UI library designed for React and Tailwind. This library was created because I wanted to be able to use the same components across different projects, without having to re-style them over and over. At the same time, I didn't want to lock myself into any design decisions so any default styles can be overwritten with normal Tailwind utility classes.
 
 ### Why Chimera?
 
@@ -16,11 +20,12 @@ Chimera is an opinionated UI library designed for React and Tailwind. This libra
 ### Example
 
 Change the theme in the preview below. See how the Button can take on different styles with the same JSX? The second Button is an example of how the default styles can be easily overwritten.
+
 <Showcase>
-<Showcase.Preview>
-<Button>Click Me</Button>
-<Button className="text-xs w-64 rounded-full">Click Me</Button>
-</Showcase.Preview>
+  <Showcase.Preview>
+    <Button>Click Me</Button>
+    <Button className="text-xs w-64 rounded-full">Click Me</Button>
+  </Showcase.Preview>
 </Showcase>
 
 ## Key Features
