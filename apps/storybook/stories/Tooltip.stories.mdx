@@ -1,0 +1,19 @@
+import { Meta, Story, Canvas, ArgsTable } from "@storybook/addon-docs";
+
+import { Tooltip } from "chimera-tw";
+import "../styles.css";
+
+<Canvas>
+  <Story name="Default">
+    <Tooltip.Provider>
+      <Tooltip>
+        <Tooltip.Trigger asChild>
+          <button className="w-8">+</button>
+        </Tooltip.Trigger>
+        <Tooltip.Content>
+          <p>Add to library</p>
+        </Tooltip.Content>
+      </Tooltip>
+    </Tooltip.Provider>
+  </Story>
+</Canvas>

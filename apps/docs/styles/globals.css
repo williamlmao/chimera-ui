@@ -21,7 +21,7 @@
     --overlay-content-contrast: hsl(0, 0%, 100%);
     --input: hsl(0, 0%, 100%);
     --input-content: hsl(0, 0%, 45%);
-    --line: hsl(0, 0%, 80%);
+    --line: hsl(51, 59%, 83%);
     --primary: hsl(0, 57%, 36%);
     --primary-focus: hsl(0, 68%, 28%);
     --primary-subtle: hsl(0, 27%, 76%);
@@ -54,10 +54,10 @@
     --warning-content-contrast: hsl(0, 0%, 15%);
     --theme-border-width: 10px;
     --theme-rounded: 0.25rem;
-    --theme-rounded-sm: 0rem;
-    --theme-rounded-md: 0rem;
-    --theme-rounded-lg: 0rem;
-    --theme-rounded-xl: 0rem;
+    --theme-rounded-sm: 0.15rem;
+    --theme-rounded-md: 0.2rem;
+    --theme-rounded-lg: 0.4rem;
+    --theme-rounded-xl: 0.6rem;
     --theme-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1),
       0 1px 2px -1px rgb(0 0 0 / 0.1);
     --theme-shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);

@@ -2,9 +2,6 @@ import * as RadixPopover from "@radix-ui/react-popover";
 import * as React from "react";
 import { twMerge } from "tailwind-merge";
 
-// Pattern: Extract all of the subcomponents from RadixComponent -> Component i.e RadixPopover.Root -> Popover.Root
-// Handle twMerge in the subcomponents
-// In the parent component, use the Chimera subcomponents instead of the Radix subcomponents, this way the Tailwind classes are merged
 export const Popover = ({
   buttonContent,
   children,

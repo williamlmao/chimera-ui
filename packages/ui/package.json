@@ -1,6 +1,6 @@
 {
   "name": "chimera-tw",
-  "version": "0.0.3",
+  "version": "0.0.7",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
@@ -10,7 +10,7 @@
     "dist/**"
   ],
   "scripts": {
-    "build": "tsup src/index.tsx --format esm,cjs --dts --external react",
+    "build": "tsup src/index.tsx --treeshake --format esm,cjs --dts --external react ",
     "dev": "tsup src/index.tsx --format esm,cjs --watch --dts --external react",
     "lint": "TIMING=1 eslint \"src/**/*.ts*\"",
     "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist"
@@ -26,7 +26,7 @@
     "tailwind-config": "workspace:*",
     "tailwindcss": "^3.2.4",
     "tsconfig": "workspace:*",
-    "tsup": "^5.10.1",
+    "tsup": "^6.5.0",
     "typescript": "^4.5.3"
   },
   "publishConfig": {
@@ -34,12 +34,37 @@
   },
   "dependencies": {
     "@headlessui/react": "^1.7.7",
-    "@radix-ui/react-icons": "^1.1.1",
-    "@radix-ui/react-popover": "1.0.2",
+    "@radix-ui/react-accessible-icon": "^1.0.1",
+    "@radix-ui/react-accordion": "^1.1.0",
+    "@radix-ui/react-alert-dialog": "^1.0.2",
+    "@radix-ui/react-aspect-ratio": "^1.0.1",
+    "@radix-ui/react-avatar": "^1.0.1",
+    "@radix-ui/react-checkbox": "^1.0.1",
+    "@radix-ui/react-collapsible": "^1.0.1",
+    "@radix-ui/react-context-menu": "^2.1.1",
+    "@radix-ui/react-dialog": "^1.0.2",
+    "@radix-ui/react-dropdown-menu": "^2.0.1",
+    "@radix-ui/react-hover-card": "^1.0.3",
+    "@radix-ui/react-label": "^2.0.0",
+    "@radix-ui/react-menubar": "^1.0.0",
+    "@radix-ui/react-navigation-menu": "^1.1.1",
+    "@radix-ui/react-popover": "^1.0.2",
+    "@radix-ui/react-progress": "^1.0.1",
     "@radix-ui/react-radio-group": "^1.1.0",
-    "@radix-ui/react-select": "^1.1.2",
+    "@radix-ui/react-scroll-area": "^1.0.2",
+    "@radix-ui/react-select": "^1.2.0",
+    "@radix-ui/react-separator": "^1.0.1",
+    "@radix-ui/react-slider": "^1.1.0",
+    "@radix-ui/react-slot": "^1.0.1",
+    "@radix-ui/react-switch": "^1.0.1",
+    "@radix-ui/react-tabs": "^1.0.2",
+    "@radix-ui/react-toggle": "^1.0.1",
+    "@radix-ui/react-toggle-group": "^1.0.1",
+    "@radix-ui/react-tooltip": "^1.0.3",
+    "class-variance-authority": "^0.4.0",
     "clsx": "^1.2.1",
     "jsx-to-string": "^1.4.0",
+    "lucide-react": "^0.109.0",
     "tailwind-merge": "^1.8.1"
   }
 }

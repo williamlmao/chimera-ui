@@ -7,7 +7,7 @@ import { Button } from "./Button";
 // @ts-ignore
 import reactElementToJSXString from "react-element-to-jsx-string";
 import { twMerge } from "tailwind-merge";
-import { findSubcomponent } from "../utils/utils";
+import { findSubcomponent } from "../utils";
 import { ThemePicker } from "./ThemePicker";
 
 export const Showcase = ({
@@ -103,7 +103,7 @@ const Preview = ({
               setCopied(false);
             }, 1000);
           }}
-          className="absolute top-2 right-2 text-xs px-2 py-1 rounded-md"
+          className="absolute top-2 right-2 text-xs px-2 py-1 rounded-theme-md"
         >
           {copied ? "Copied!" : "Copy"}
         </Button>
