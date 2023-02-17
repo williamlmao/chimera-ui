@@ -1,9 +1,8 @@
 "use client";
-import { ChromePicker } from "react-color";
+import { ColorType } from "@/utils/colors";
 import { Popover } from "chimera-tw";
 import clsx from "clsx";
-import { ColorsType, ColorType } from "@/utils/colors";
-import { RefreshCw } from "lucide-react";
+import { ChromePicker } from "react-color";
 export const ColorSelector = ({
   color,
   handleColorChange,
@@ -24,7 +23,7 @@ export const ColorSelector = ({
           <Popover.Trigger
             className={clsx(
               "@[50px]:block h-6 w-6  border-line border-2 rounded-full",
-              `bg-${color.name} hover:bg-${color} hover:opacity-90`
+              `bg-${color.name} hover:bg-${color.name} hover:opacity-90`
             )}
           ></Popover.Trigger>
           <div

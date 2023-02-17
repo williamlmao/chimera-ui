@@ -142,7 +142,7 @@ const Sidebar = ({
   };
 
   const stepDescription = {
-    1: "Supporting colors will be automatically inferred from the main colors. You can tweak them in the next step.",
+    1: "Supporting colors will be automatically inferred from the main colors. They might look a little off at this stage, but don't worry. You can tweak them in step 2!",
     2: "Modifying main colors in this step will not automatically change supporting colors. Click the ⟲ button to update them.",
     3: "Make sure to update your tailwind config as well.",
   };
