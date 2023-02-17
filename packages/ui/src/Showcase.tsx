@@ -3,7 +3,7 @@
 // Leaving this here as a reference for using raw-loader
 // import ButtonRaw from "!!raw-loader!../../../packages/ui/src/Button.tsx";
 import React from "react";
-import { Button } from "./Button";
+import { Button } from "./ButtonOld";
 // @ts-ignore
 import reactElementToJSXString from "react-element-to-jsx-string";
 import { twMerge } from "tailwind-merge";
@@ -16,7 +16,6 @@ export const Showcase = ({
   children: React.ReactNode | React.ReactNode[];
 }) => {
   const childrenArray = Array.isArray(children) ? children : [children];
-  console.log(childrenArray);
   // Get the individual subcomponents, Preview, Code, Children by checking name property
   const title = findSubcomponent(childrenArray, "Showcase.Title");
   const preview = findSubcomponent(childrenArray, "Showcase.Preview");
@@ -24,7 +23,7 @@ export const Showcase = ({
   return (
     <div className="my-4">
       <div className="mb-4">{title}</div>
-      <div className="rounded-theme relative">{preview}</div>
+      <div className="rounded-md relative">{preview}</div>
     </div>
   );
 };
@@ -33,8 +32,8 @@ Showcase.displayName = "Showcase";
 
 /**
  *
- * @param componentPreviewClassName Default: bg-gradient-to-tr from-pink-300 via-orange-200 to-red-300 text-on-surface p-4 rounded-theme flex items-center justify-center gap-4 mb-4
- * @param codePreviewClassName Default: bg-gray-800 p-4 rounded-theme
+ * @param componentPreviewClassName Default: bg-gradient-to-tr from-pink-300 via-orange-200 to-red-300 text-on-surface p-4 rounded-md flex items-center justify-center gap-4 mb-4
+ * @param codePreviewClassName Default: bg-gray-800 p-4 rounded-md
  * @returns
  */
 const Preview = ({
@@ -80,7 +79,7 @@ const Preview = ({
     <div>
       <div
         className={twMerge(
-          "bg-gradient-to-tr from-base-2 via-base to-base-3 text-base-content p-4 rounded-theme flex items-center justify-center gap-4 mb-4 relative",
+          "bg-gradient-to-tr from-base-2 via-base to-base-3 text-base-content p-4 rounded-md flex items-center justify-center gap-4 mb-4 relative",
           componentPreviewClassName
         )}
       >
@@ -91,7 +90,7 @@ const Preview = ({
       </div>
       <pre
         className={twMerge(
-          "bg-gray-800 text-white p-4 rounded-theme",
+          "bg-gray-800 text-white p-4 rounded-md",
           codePreviewClassName
         )}
       >
@@ -103,7 +102,7 @@ const Preview = ({
               setCopied(false);
             }, 1000);
           }}
-          className="absolute top-2 right-2 text-xs px-2 py-1 rounded-theme-md"
+          className="absolute top-2 right-2 text-xs px-2 py-1 rounded-md"
         >
           {copied ? "Copied!" : "Copy"}
         </Button>
@@ -117,9 +116,7 @@ Showcase.Preview = Preview;
 
 const Code = ({ children }: { children: React.ReactNode }) => {
   return (
-    <div className="bg-base text-base-content p-2 rounded-theme">
-      {children}
-    </div>
+    <div className="bg-base text-base-content p-2 rounded-md">{children}</div>
   );
 };
 Code.displayName = "Showcase.Code";

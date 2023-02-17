@@ -1,19 +1,32 @@
-"use client";
-
 import * as React from "react";
 import * as CheckboxPrimitive from "@radix-ui/react-checkbox";
 import { Check } from "lucide-react";
 
 import { cn } from "../utils";
 
-const Checkbox = React.forwardRef<
+export const Checkbox = ({ className }: { className: string }) => {
+  return (
+    <Checkbox.Root
+      className={cn(
+        "peer h-4 w-4 shrink-0 rounded-sm border border-line focus:outline-none focus:ring-2 focus:ring-line-focus focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 ",
+        className
+      )}
+    >
+      <Checkbox.Indicator className={cn("flex items-center justify-center")}>
+        <Check className="h-4 w-4" />
+      </Checkbox.Indicator>
+    </Checkbox.Root>
+  );
+};
+
+const Root = React.forwardRef<
   React.ElementRef<typeof CheckboxPrimitive.Root>,
   React.ComponentPropsWithoutRef<typeof CheckboxPrimitive.Root>
 >(({ className, ...props }, ref) => (
   <CheckboxPrimitive.Root
     ref={ref}
     className={cn(
-      "peer h-4 w-4 shrink-0 rounded-sm border border-slate-300 focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 dark:border-slate-700 dark:text-slate-50 dark:focus:ring-slate-400 dark:focus:ring-offset-slate-900",
+      "peer h-4 w-4 shrink-0 rounded-sm border border-line focus:outline-none focus:ring-2 focus:ring-line-focus focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 ",
       className
     )}
     {...props}
@@ -25,6 +38,22 @@ const Checkbox = React.forwardRef<
     </CheckboxPrimitive.Indicator>
   </CheckboxPrimitive.Root>
 ));
-Checkbox.displayName = CheckboxPrimitive.Root.displayName;
 
-export { Checkbox };
+Root.displayName = "Checkbox.Root";
+Checkbox.Root = Root;
+
+const Indicator = React.forwardRef<
+  React.ElementRef<typeof CheckboxPrimitive.Indicator>,
+  React.ComponentPropsWithoutRef<typeof CheckboxPrimitive.Indicator>
+>(({ className, ...props }, ref) => (
+  <CheckboxPrimitive.Indicator
+    ref={ref}
+    className={cn("flex items-center justify-center")}
+    {...props}
+  >
+    <Check className="h-4 w-4" />
+  </CheckboxPrimitive.Indicator>
+));
+
+Indicator.displayName = "Checkbox.Indicator";
+Checkbox.Indicator = Indicator;

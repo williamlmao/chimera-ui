@@ -1,0 +1,22 @@
+import React from "react";
+import { AspectRatio, Showcase } from "chimera-tw";
+import { InfoCircledIcon } from "@radix-ui/react-icons";
+
+## Basic Example
+
+<Showcase>
+  <Showcase.Preview>
+
+    <div className="w-[300px]">
+        <AspectRatio.Root ratio={16 / 9}>
+          <img
+            src="https://images.unsplash.com/photo-1535025183041-0991a977e25b?w=300&dpr=2&q=80"
+            alt="Photo by Alvaro Pinot"
+
+            className="rounded-md object-cover w-full h-full"
+          />
+        </AspectRatio.Root>
+    </div>
+
+  </Showcase.Preview>
+</Showcase>

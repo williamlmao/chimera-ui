@@ -45,7 +45,7 @@ Popover.Root = Root;
 
 /**
  *
- * @param className Default: `px-2 py-1 w-fit bg-primary hover:bg-primary-darker text-on-primary rounded-theme`
+ * @param className Default: `px-2 py-1 w-fit bg-primary  text-on-primary rounded-md`
  * @returns
  */
 
@@ -56,7 +56,7 @@ const Trigger = React.forwardRef<
   return (
     <RadixPopover.Trigger
       className={twMerge(
-        "px-2 py-1 w-fit bg-primary hover:bg-primary-focus text-primary-content rounded-theme",
+        "px-2 py-1 w-fit bg-primary hover:bg-primary-focus text-primary-content rounded-md",
         props.className
       )}
       onClick={props.onClick}
@@ -85,7 +85,7 @@ const Content = React.forwardRef<
       {...props}
       ref={forwardedRef}
       className={twMerge(
-        "p-4 flex items-center justify-center bg-overlay-1 text-overlay-content mx-2 max-w-[300px] rounded-theme",
+        "p-4 flex items-center justify-center bg-overlay text-overlay-content mx-2 max-w-[300px] rounded-md",
         props.className
       )}
     >

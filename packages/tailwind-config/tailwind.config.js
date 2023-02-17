@@ -35,7 +35,7 @@ module.exports = {
         "danger-lighter": "var(--danger-lighter)",
         "danger-darker": "var(--danger-darker)",
         base: "var(--base)",
-        "base-1": "var(--base-1)",
+        "base-1": "var(--base)",
         "base-2": "var(--base-2)",
         "base-3": "var(--base-3)",
         overlay: "var(--overlay)",

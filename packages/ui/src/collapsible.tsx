@@ -1,11 +1,18 @@
-"use client"
+import * as CollapsiblePrimitive from "@radix-ui/react-collapsible";
+import { CrossIcon, ExpandIcon } from "lucide-react";
 
-import * as CollapsiblePrimitive from "@radix-ui/react-collapsible"
+export const Collapsible = () => {
+  return <></>;
+};
 
-const Collapsible = CollapsiblePrimitive.Root
+const Root = CollapsiblePrimitive.Root;
+Root.displayName = "Collapsible.Root";
+Collapsible.Root = Root;
 
-const CollapsibleTrigger = CollapsiblePrimitive.CollapsibleTrigger
+const Trigger = CollapsiblePrimitive.Trigger;
+Trigger.displayName = "Collapsible.Trigger";
+Collapsible.Trigger = Trigger;
 
-const CollapsibleContent = CollapsiblePrimitive.CollapsibleContent
-
-export { Collapsible, CollapsibleTrigger, CollapsibleContent }
+const Content = CollapsiblePrimitive.Content;
+Content.displayName = "Collapsible.Content";
+Collapsible.Content = Content;

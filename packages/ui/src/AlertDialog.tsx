@@ -1,5 +1,3 @@
-"use client";
-
 import * as React from "react";
 import * as AlertDialogPrimitive from "@radix-ui/react-alert-dialog";
 
@@ -10,11 +8,11 @@ const AlertDialog = () => {
 };
 
 const Root = AlertDialogPrimitive.Root;
-Root.displayName = AlertDialogPrimitive.Root.displayName;
+Root.displayName = "AlertDialog.Root";
 AlertDialog.Root = Root;
 
 const Trigger = AlertDialogPrimitive.Trigger;
-Trigger.displayName = AlertDialogPrimitive.Trigger.displayName;
+Trigger.displayName = "AlertDialog.Trigger";
 AlertDialog.Trigger = Trigger;
 
 const Portal = ({
@@ -28,7 +26,7 @@ const Portal = ({
     </div>
   </AlertDialogPrimitive.Portal>
 );
-Portal.displayName = AlertDialogPrimitive.Portal.displayName;
+Portal.displayName = "AlertDialog.Portal";
 AlertDialog.Portal = Portal;
 
 const Overlay = React.forwardRef<
@@ -44,7 +42,7 @@ const Overlay = React.forwardRef<
     ref={ref}
   />
 ));
-Overlay.displayName = AlertDialogPrimitive.Overlay.displayName;
+Overlay.displayName = "AlertDialog.Overlay";
 AlertDialog.Overlay = Overlay;
 
 const Content = React.forwardRef<
@@ -54,7 +52,7 @@ const Content = React.forwardRef<
   <AlertDialogPrimitive.Content
     ref={ref}
     className={cn(
-      "fixed z-50 grid w-full max-w-lg text-overlay-content-1 scale-100 bg-overlay-1 gap-4 p-6 opacity-100 animate-in fade-in-90 slide-in-from-bottom-10 sm:rounded-theme-lg sm:zoom-in-90 sm:slide-in-from-bottom-0 md:w-full",
+      "fixed z-50 grid w-full max-w-lg text-overlay-content scale-100 bg-overlay gap-4 p-6 opacity-100 animate-in fade-in-90 slide-in-from-bottom-10 sm:rounded-md rounded-lg sm:zoom-in-90 sm:slide-in-from-bottom-0 md:w-full",
 
       className
     )}
@@ -63,7 +61,7 @@ const Content = React.forwardRef<
     {children}
   </AlertDialogPrimitive.Content>
 ));
-Content.displayName = AlertDialogPrimitive.Content.displayName;
+Content.displayName = "AlertDialog.Content";
 AlertDialog.Content = Content;
 
 const Header = ({
@@ -78,7 +76,7 @@ const Header = ({
     {...props}
   />
 );
-Header.displayName = "AlertDialogHeader";
+Header.displayName = "AlertDialog.Header";
 AlertDialog.Header = Header;
 
 const Footer = ({
@@ -93,7 +91,7 @@ const Footer = ({
     {...props}
   />
 );
-Footer.displayName = "AlertDialogFooter";
+Footer.displayName = "AlertDialog.Footer";
 AlertDialog.Footer = Footer;
 
 const Title = React.forwardRef<
@@ -106,7 +104,7 @@ const Title = React.forwardRef<
     {...props}
   />
 ));
-Title.displayName = AlertDialogPrimitive.Title.displayName;
+Title.displayName = "AlertDialog.Title";
 AlertDialog.Title = Title;
 
 const Description = React.forwardRef<
@@ -115,11 +113,11 @@ const Description = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <AlertDialogPrimitive.Description
     ref={ref}
-    className={cn("text-sm text-overlay-content-1", className)}
+    className={cn("text-sm text-overlay-content", className)}
     {...props}
   />
 ));
-Description.displayName = AlertDialogPrimitive.Description.displayName;
+Description.displayName = "AlertDialog.Description";
 AlertDialog.Description = Description;
 
 const Action = React.forwardRef<
@@ -129,13 +127,13 @@ const Action = React.forwardRef<
   <AlertDialogPrimitive.Action
     ref={ref}
     className={cn(
-      "inline-flex h-10 items-center justify-center rounded-theme-md bg-primary text-primary-content py-2 px-4 text-sm font-semibold transition-colors hover:bg-primary-focus focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50",
+      "inline-flex h-10 items-center justify-center rounded-md bg-primary text-primary-content py-2 px-4 text-sm font-semibold transition-colors hover:bg-primary-focus focus:outline-none focus:ring-2 focus:ring-line-focus focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50",
       className
     )}
     {...props}
   />
 ));
-Action.displayName = AlertDialogPrimitive.Action.displayName;
+Action.displayName = "AlertDialog.Action";
 AlertDialog.Action = Action;
 
 const Cancel = React.forwardRef<
@@ -145,13 +143,13 @@ const Cancel = React.forwardRef<
   <AlertDialogPrimitive.Cancel
     ref={ref}
     className={cn(
-      "mt-2 inline-flex h-10 items-center justify-center rounded-theme-md border border-slate-200 py-2 px-4 text-sm font-semibold text-overlay-content-1 transition-colors hover:bg-overlay-3 focus:outline-none focus:ring-1 focus:ring-slate-400 focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50  sm:mt-0",
+      "mt-2 inline-flex h-10 items-center justify-center rounded-md border border-slate-200 py-2 px-4 text-sm font-semibold text-overlay-content transition-colors hover:bg-overlay-3 focus:outline-none focus:ring-1 focus:ring-line-focus focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50  sm:mt-0",
       className
     )}
     {...props}
   />
 ));
-Cancel.displayName = AlertDialogPrimitive.Cancel.displayName;
+Cancel.displayName = "AlertDialog.Cancel";
 AlertDialog.Cancel = Cancel;
 
 export { AlertDialog };

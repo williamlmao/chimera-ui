@@ -32,7 +32,7 @@ const ThemeButton = ({
   return (
     <RadioGroup.Item
       className={twMerge(
-        `text-sm rounded-theme relative text-overlay-content text-left hover:bg-primary-subtle hover:text-primary-content-contrast w-full pl-4 ${
+        `text-sm rounded-md relative text-overlay-content text-left hover:bg-primary-subtle hover:text-primary-content-inverse w-full pl-4 ${
           theme.value === selectedTheme.value ? "bg-overlay-2 font-bold" : ""
         }`,
         className
@@ -63,6 +63,10 @@ const themes = [
   {
     value: "gunmetal",
     label: "Gunmetal",
+  },
+  {
+    value: "custom-theme",
+    label: "Custom Theme",
   },
 ];
 

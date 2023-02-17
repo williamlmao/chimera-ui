@@ -29,8 +29,8 @@ transitionProperty: {
 width: "width",
 },
 colors: {
-base: "var(--base-1)",
-"base-1": "var(--base-1)",
+base: "var(--base)",
+"base-1": "var(--base)",
 "base-2": "var(--base-2)",
 "base-3": "var(--base-3)",
 "base-content": "var(--base-content-1)",
@@ -127,7 +127,7 @@ plugins: [],
 @layer base {
   :root,
   html[data-theme="tresleches"] {
-    --base-1: hsl(60, 20%, 98%);
+    --base: hsl(60, 20%, 98%);
     --base-2: hsl(54, 38%, 95%);
     --base-3: hsl(51, 59%, 93%);
     --base-content-1: hsl(0, 0%, 25%);

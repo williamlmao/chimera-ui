@@ -1,0 +1,37 @@
+import React from "react";
+import { Avatar, Showcase } from "chimera-tw";
+import { InfoCircledIcon } from "@radix-ui/react-icons";
+
+## Basic Example
+
+<Showcase>
+  <Showcase.Preview>
+
+    <div className="flex gap-8">
+       <Avatar.Root className="AvatarRoot">
+      <Avatar.Image
+        className="AvatarImage"
+        src="https://images.unsplash.com/photo-1492633423870-43d1cd2775eb?&w=128&h=128&dpr=2&q=80"
+        alt="Colm Tuite"
+      />
+      <Avatar.Fallback className="AvatarFallback" delayMs={600}>
+        CT
+      </Avatar.Fallback>
+    </Avatar.Root>
+    <Avatar.Root className="AvatarRoot">
+      <Avatar.Image
+        className="AvatarImage"
+        src="https://images.unsplash.com/photo-1511485977113-f34c92461ad9?ixlib=rb-1.2.1&w=128&h=128&dpr=2&q=80"
+        alt="Pedro Duarte"
+      />
+      <Avatar.Fallback className="AvatarFallback" delayMs={600}>
+        JD
+      </Avatar.Fallback>
+    </Avatar.Root>
+    <Avatar.Root className="AvatarRoot">
+      <Avatar.Fallback className="AvatarFallback">PD</Avatar.Fallback>
+    </Avatar.Root>
+    </div>
+
+  </Showcase.Preview>
+</Showcase>

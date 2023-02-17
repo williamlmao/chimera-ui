@@ -1,0 +1,16 @@
+import React from "react";
+import { Checkbox, Showcase, Label } from "chimera-tw";
+import { CheckIcon } from "@radix-ui/react-icons";
+
+## Basic Example
+
+<Showcase>
+  <Showcase.Preview>
+    <Checkbox.Root className="CheckboxRoot" defaultChecked id="c1">
+      <Checkbox.Indicator className="CheckboxIndicator">
+        <CheckIcon />
+      </Checkbox.Indicator>
+    </Checkbox.Root>
+    <Label.Root htmlFor="terms">Accept terms and conditions</Label.Root>
+  </Showcase.Preview>
+</Showcase>

@@ -1,9 +1,16 @@
 {
   "introduction": "Introduction",
-  "colors": "Color System",
-  "customization": "Customization",
-  "accessibility": "Accessibility",
-  "use": "Installation & Usage",
+  "use": "Installation",
+  "theme": {
+    "title": "Theme Generator",
+    "theme": {
+      "layout": "full",
+      "pagination": true,
+      "breadcrumb": true,
+      "sidebar": true
+    }
+  },
+  "key-concepts": "Key Concepts",
   "components": "Components",
   "index": {
     "title": "Home",

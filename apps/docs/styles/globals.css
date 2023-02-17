@@ -5,23 +5,26 @@
 @layer base {
   :root,
   html[data-theme="tresleches"] {
-    --base-1: hsl(60, 20%, 98%);
+    --base: hsl(60, 20%, 98%);
     --base-2: hsl(54, 38%, 95%);
     --base-3: hsl(51, 59%, 93%);
-    --base-content-1: hsl(0, 0%, 25%);
+    --base-content: hsl(0, 0%, 25%);
     --base-content-2: hsl(0, 0%, 45%);
     --base-content-3: hsl(0, 0%, 75%);
     --base-content-contrast: hsl(0, 0%, 100%);
     --overlay-1: hsl(60, 20%, 95%);
     --overlay-2: hsl(60, 5%, 96%);
     --overlay-3: hsl(49, 50%, 94%);
+    --overlay-focus: hsl(49, 50%, 94%);
     --overlay-content-1: hsl(0, 0%, 25%);
     --overlay-content-2: hsl(0, 0%, 40%);
     --overlay-content-3: hsl(0, 0%, 60%);
     --overlay-content-contrast: hsl(0, 0%, 100%);
     --input: hsl(0, 0%, 100%);
     --input-content: hsl(0, 0%, 45%);
+    --input-content-2: hsl(0, 0%, 30%);
     --line: hsl(51, 59%, 83%);
+    --line-focus: hsl(51, 59%, 83%);
     --primary: hsl(0, 57%, 36%);
     --primary-focus: hsl(0, 68%, 28%);
     --primary-subtle: hsl(0, 27%, 76%);
@@ -52,22 +55,6 @@
     --warning-subtle: hsl(48, 42%, 84%);
     --warning-content: hsl(0, 0%, 15%);
     --warning-content-contrast: hsl(0, 0%, 15%);
-    --theme-border-width: 10px;
-    --theme-rounded: 0.25rem;
-    --theme-rounded-sm: 0.15rem;
-    --theme-rounded-md: 0.2rem;
-    --theme-rounded-lg: 0.4rem;
-    --theme-rounded-xl: 0.6rem;
-    --theme-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1),
-      0 1px 2px -1px rgb(0 0 0 / 0.1);
-    --theme-shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
-    --theme-shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1),
-      0 2px 4px -2px rgb(0 0 0 / 0.1);
-    --theme-shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1),
-      0 4px 6px -4px rgb(0 0 0 / 0.1);
-    --theme-shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1),
-      0 8px 10px -6px rgb(0 0 0 / 0.1);
-    --theme-shadow-inner: inset 0 2px 4px 0 rgb(0 0 0 / 0.05);
   }
 
   html[data-theme="zookeper"] {
@@ -118,22 +105,6 @@
     --warning-subtle: hsl(48, 42%, 84%);
     --warning-content: hsl(0, 0%, 15%);
     --warning-content-contrast: hsl(0, 0%, 15%);
-    --theme-border-width: 10px;
-    --theme-rounded: 0.25rem;
-    --theme-rounded-sm: 0rem;
-    --theme-rounded-md: 0rem;
-    --theme-rounded-lg: 0rem;
-    --theme-rounded-xl: 0rem;
-    --theme-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1),
-      0 1px 2px -1px rgb(0 0 0 / 0.1);
-    --theme-shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
-    --theme-shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1),
-      0 2px 4px -2px rgb(0 0 0 / 0.1);
-    --theme-shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1),
-      0 4px 6px -4px rgb(0 0 0 / 0.1);
-    --theme-shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1),
-      0 8px 10px -6px rgb(0 0 0 / 0.1);
-    --theme-shadow-inner: inset 0 2px 4px 0 rgb(0 0 0 / 0.05);
   }
 
   html[data-theme="gunmetal"] {
@@ -185,23 +156,59 @@
     --warning-subtle: hsl(48, 42%, 84%);
     --warning-content: hsl(0, 0%, 15%);
     --warning-content-contrast: hsl(0, 0%, 15%);
-    /* Other styles */
-    --theme-border-width: 10px;
-    --theme-rounded: 0rem;
-    --theme-rounded-sm: 0rem;
-    --theme-rounded-md: 0rem;
-    --theme-rounded-lg: 0rem;
-    --theme-rounded-xl: 0rem;
-    --theme-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1),
-      0 1px 2px -1px rgb(0 0 0 / 0.1);
-    --theme-shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
-    --theme-shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1),
-      0 2px 4px -2px rgb(0 0 0 / 0.1);
-    --theme-shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1),
-      0 4px 6px -4px rgb(0 0 0 / 0.1);
-    --theme-shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1),
-      0 8px 10px -6px rgb(0 0 0 / 0.1);
-    --theme-shadow-inner: inset 0 2px 4px 0 rgb(0 0 0 / 0.05);
+  }
+
+  html[data-theme="custom-theme"] {
+    --base-1: hsl(0, 2%, 12%);
+    --base-2: hsl(0, 2%, 16%);
+    --base-3: hsl(0, 2%, 28%);
+    --base-content-1: hsl(0, 2%, 100%);
+    --base-content-2: hsl(0, 2%, 90%);
+    --base-content-3: hsl(0, 2%, 70%);
+    --base-content-contrast: hsl(0, 2%, 10%);
+    --overlay-1: hsl(0, 2%, 19%);
+    --overlay-2: hsl(0, 2%, 26%);
+    --overlay-3: hsl(0, 2%, 37%);
+    --overlay-focus: hsl(292, 91%, 50%);
+    --overlay-content-1: hsl(0, 2%, 100%);
+    --overlay-content-2: hsl(0, 2%, 90%);
+    --overlay-content-3: hsl(0, 2%, 80%);
+    --overlay-content-contrast: hsl(0, 0%, 100%);
+    --input: hsl(0, 2%, 15%);
+    --input-content-1: hsl(0, 2%, 100%);
+    --input-content-2: hsl(0, 2%, 80%);
+    --line: hsl(0, 2%, 0%);
+    --line-focus: hsl(0, 2%, 15%);
+    --primary: hsl(292, 91%, 50%);
+    --primary-focus: hsl(292, 91%, 45%);
+    --primary-subtle: hsl(292, 91%, 75%);
+    --primary-content: hsl(292, 91%, 100%);
+    --primary-content-contrast: hsl(292, 91%, 5%);
+    --secondary: hsl(119, 82%, 53%);
+    --secondary-focus: hsl(119, 82%, 48%);
+    --secondary-subtle: hsl(119, 82%, 78%);
+    --secondary-content: hsl(119, 82%, 0%);
+    --secondary-content-contrast: hsl(119, 82%, 95%);
+    --info: hsl(212, 50%, 40%);
+    --info-focus: hsl(212, 50%, 35%);
+    --info-subtle: hsl(212, 50%, 65%);
+    --info-content: hsl(212, 50%, 100%);
+    --info-content-contrast: hsl(212, 50%, 5%);
+    --success: hsl(159, 61%, 41%);
+    --success-focus: hsl(159, 61%, 36%);
+    --success-subtle: hsl(159, 61%, 16%);
+    --success-content: hsl(159, 61%, 0%);
+    --success-content-contrast: hsl(159, 61%, 95%);
+    --error: hsl(0, 75%, 42%);
+    --error-focus: hsl(0, 75%, 37%);
+    --error-subtle: hsl(0, 75%, 67%);
+    --error-content: hsl(0, 75%, 100%);
+    --error-content-contrast: hsl(0, 75%, 5%);
+    --warning: hsl(47, 95%, 55%);
+    --warning-focus: hsl(47, 95%, 50%);
+    --warning-subtle: hsl(47, 95%, 30%);
+    --warning-content: hsl(47, 95%, 0%);
+    --warning-content-contrast: hsl(47, 95%, 95%);
   }
 }
 @layer utilities {
@@ -210,4 +217,15 @@
     justify-content: center;
     align-items: center;
   }
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.no-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }

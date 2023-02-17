@@ -2,7 +2,7 @@ import { Fragment } from "react";
 import { useRouter } from "next/router";
 import { useConfig } from "nextra-theme-docs";
 
-export default {
+const config = {
   logo: (
     <div className="flex items-center gap-1">
       <div className=" w-8 h-8">
@@ -79,11 +79,25 @@ c-8 -87 -31 -216 -56 -319 -24 -98 -78 -255 -94 -275 -7 -8 -16 -26 -20 -40
   toc: {
     extraContent: <Fragment></Fragment>,
   },
+  main: ({ children }) => {
+    // eslint-disable-next-line react-hooks/rules-of-hooks
+    const { frontMatter } = useConfig();
+    console.log(frontMatter);
+    return (
+      <main className="">
+        <h1 className="nx-mt-2 nx-text-4xl nx-font-bold nx-tracking-tight">
+          {frontMatter?.title}
+        </h1>
+        <p>{frontMatter?.description}</p>
+        <div className="">{children}</div>
+      </main>
+    );
+  },
   footer: {
     text: (
       <span>
         MIT {new Date().getFullYear()} ©{" "}
-        <a href="https://nextra.site" target="_blank">
+        <a href="https://nextra.site" target="_blank" rel="noreferrer">
           chimera-tw
         </a>
         .
@@ -100,7 +114,9 @@ c-8 -87 -31 -216 -56 -319 -24 -98 -78 -255 -94 -275 -7 -8 -16 -26 -20 -40
     };
   },
   head: () => {
+    // eslint-disable-next-line react-hooks/rules-of-hooks
     const { asPath } = useRouter();
+    // eslint-disable-next-line react-hooks/rules-of-hooks
     const { frontMatter } = useConfig();
     return (
       <>
@@ -117,3 +133,5 @@ c-8 -87 -31 -216 -56 -319 -24 -98 -78 -255 -94 -275 -7 -8 -16 -26 -20 -40
   },
   // ...
 };
+
+export default config;

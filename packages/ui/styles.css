@@ -31,7 +31,7 @@
     --danger-darker: hsl(180, 2%, 90%);
     /* surfaces */
     --base: hsl(43, 64%, 98%);
-    --base-1: hsl(45, 36%, 96%);
+    --base: hsl(45, 36%, 96%);
     --base-2: hsl(0, 0%, 20%);
     --base-3: hsl(45, 36%, 96%);
     --overlay: hsl(43, 64%, 98%);
@@ -110,7 +110,7 @@
     --danger-darker: hsl(180, 2%, 90%);
     /* surfaces */
     --base: hsl(43, 64%, 98%);
-    --base-1: hsl(45, 36%, 96%);
+    --base: hsl(45, 36%, 96%);
     --base-2: hsl(0, 0%, 20%);
     --base-3: hsl(45, 36%, 96%);
     --overlay: hsl(43, 64%, 98%);

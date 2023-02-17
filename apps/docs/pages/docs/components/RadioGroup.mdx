@@ -1,0 +1,32 @@
+import React from "react";
+import { RadioGroup, Showcase, Label } from "chimera-tw";
+import { InfoCircledIcon } from "@radix-ui/react-icons";
+
+## Basic Example
+
+<Showcase>
+  <Showcase.Preview>
+    <form>
+      <RadioGroup.Root defaultValue="comfortable">
+        <div className="flex items-center space-x-2">
+          <RadioGroup.Item value="default" id="r1">
+            <RadioGroup.Indicator className="RadioGroupIndicator" />
+          </RadioGroup.Item>
+          <Label.Root htmlFor="r1">Default</Label.Root>
+        </div>
+        <div className="flex items-center space-x-2">
+          <RadioGroup.Item value="comfortable" id="r2">
+            <RadioGroup.Indicator className="RadioGroupIndicator" />
+          </RadioGroup.Item>
+          <Label.Root htmlFor="r2">Comfortable</Label.Root>
+        </div>
+        <div className="flex items-center space-x-2">
+          <RadioGroup.Item value="compact" id="r3">
+            <RadioGroup.Indicator className="RadioGroupIndicator" />
+          </RadioGroup.Item>
+          <Label.Root htmlFor="r3">Compact</Label.Root>
+        </div>
+      </RadioGroup.Root>
+    </form>
+  </Showcase.Preview>
+</Showcase>

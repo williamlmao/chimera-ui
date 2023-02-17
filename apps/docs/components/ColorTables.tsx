@@ -6,6 +6,7 @@ type Color = {
   cssVariable: string;
   example: string;
   usage: string;
+  contrast?: string[];
 };
 
 export const colorSystem = {
@@ -14,8 +15,9 @@ export const colorSystem = {
       name: "base / base-1",
       description: "Main background color",
       cssVariable: "--base",
-      example: "bg-base-1",
-      usage: "bg-base-1",
+      example: "bg-base",
+      usage: "bg-base",
+      contrast: ["base-content-1", "base-content-2", "base-content-3"],
     },
     {
       name: "base-2",
@@ -56,11 +58,11 @@ export const colorSystem = {
       usage: "bg-base-content-3",
     },
     {
-      name: "base-content-contrast",
+      name: "base-content-inverse",
       description: "Base content contrast color",
-      cssVariable: "--base-content-contrast",
-      example: "bg-base-content-contrast",
-      usage: "bg-base-content-contrast",
+      cssVariable: "--base-content-inverse",
+      example: "bg-base-content-inverse",
+      usage: "bg-base-content-inverse",
     },
     {
       name: "line",
@@ -75,8 +77,8 @@ export const colorSystem = {
       name: "overlay / overlay-1",
       description: "Overlay color one",
       cssVariable: "--overlay",
-      example: "bg-overlay-1",
-      usage: "bg-overlay-1",
+      example: "bg-overlay",
+      usage: "bg-overlay",
     },
     {
       name: "overlay-2",
@@ -96,8 +98,8 @@ export const colorSystem = {
       name: "overlay-content / overlay-content-1",
       description: "Overlay content color one",
       cssVariable: "--overlay-content",
-      example: "bg-overlay-content-1",
-      usage: "bg-overlay-content-1",
+      example: "bg-overlay",
+      usage: "bg-overlay",
     },
     {
       name: "overlay-content-2",
@@ -114,11 +116,11 @@ export const colorSystem = {
       usage: "bg-overlay-content-3",
     },
     {
-      name: "overlay-content-contrast",
+      name: "overlay-content-inverse",
       description: "Overlay content contrast color",
-      cssVariable: "--overlay-content-contrast",
-      example: "bg-overlay-content-contrast",
-      usage: "bg-overlay-content-contrast",
+      cssVariable: "--overlay-content-inverse",
+      example: "bg-overlay-content-inverse",
+      usage: "bg-overlay-content-inverse",
     },
   ],
   input: [
@@ -167,11 +169,11 @@ export const colorSystem = {
       usage: "bg-primary-content",
     },
     {
-      name: "primary-content-contrast",
+      name: "primary-content-inverse",
       description: "Primary content contrast color",
-      cssVariable: "--primary-content-contrast",
-      example: "bg-primary-content-contrast",
-      usage: "bg-primary-content-contrast",
+      cssVariable: "--primary-content-inverse",
+      example: "bg-primary-content-inverse",
+      usage: "bg-primary-content-inverse",
     },
   ],
   secondary: [
@@ -204,11 +206,11 @@ export const colorSystem = {
       usage: "bg-secondary-content",
     },
     {
-      name: "secondary-content-contrast",
+      name: "secondary-content-inverse",
       description: "Secondary content contrast color",
-      cssVariable: "--secondary-content-contrast",
-      example: "bg-secondary-content-contrast",
-      usage: "bg-secondary-content-contrast",
+      cssVariable: "--secondary-content-inverse",
+      example: "bg-secondary-content-inverse",
+      usage: "bg-secondary-content-inverse",
     },
   ],
   info: [
@@ -241,11 +243,11 @@ export const colorSystem = {
       usage: "bg-info-content",
     },
     {
-      name: "info-content-contrast",
+      name: "info-content-inverse",
       description: "Info content contrast color",
-      cssVariable: "--info-content-contrast",
-      example: "bg-info-content-contrast",
-      usage: "bg-info-content-contrast",
+      cssVariable: "--info-content-inverse",
+      example: "bg-info-content-inverse",
+      usage: "bg-info-content-inverse",
     },
   ],
   success: [
@@ -278,11 +280,11 @@ export const colorSystem = {
       usage: "bg-success-content",
     },
     {
-      name: "success-content-contrast",
+      name: "success-content-inverse",
       description: "Success content contrast color",
-      cssVariable: "--success-content-contrast",
-      example: "bg-success-content-contrast",
-      usage: "bg-success-content-contrast",
+      cssVariable: "--success-content-inverse",
+      example: "bg-success-content-inverse",
+      usage: "bg-success-content-inverse",
     },
   ],
   error: [
@@ -315,11 +317,11 @@ export const colorSystem = {
       usage: "bg-error-content",
     },
     {
-      name: "error-content-contrast",
+      name: "error-content-inverse",
       description: "Error content contrast color",
-      cssVariable: "--error-content-contrast",
-      example: "bg-error-content-contrast",
-      usage: "bg-error-content-contrast",
+      cssVariable: "--error-content-inverse",
+      example: "bg-error-content-inverse",
+      usage: "bg-error-content-inverse",
     },
   ],
   warning: [
@@ -352,11 +354,11 @@ export const colorSystem = {
       usage: "bg-warning-content",
     },
     {
-      name: "warning-content-contrast",
+      name: "warning-content-inverse",
       description: "Warning content contrast color",
-      cssVariable: "--warning-content-contrast",
-      example: "bg-warning-content-contrast",
-      usage: "bg-warning-content-contrast",
+      cssVariable: "--warning-content-inverse",
+      example: "bg-warning-content-inverse",
+      usage: "bg-warning-content-inverse",
     },
   ],
 };
@@ -383,12 +385,12 @@ const ColorTableItem = ({ color }: { color: Color }) => {
 
 export const ColorTable = ({ colors }: { colors: Color[] }) => {
   return (
-    <div className="w-full text-left border-[1px] border-line rounded-lg border-separate bg-base-1 text-base-content relative px-4 py-2 my-4">
+    <div className="w-full text-left border-[1px] border-line rounded-lg border-separate bg-base text-base-content relative px-4 py-2 my-4">
       <div className="absolute top-4 right-4">
         <ThemePicker className="" />
       </div>
 
-      <div className="border-[1px] border-base-1 w-full">
+      <div className="border-[1px] border-base w-full">
         <div className="grid grid-cols-12 justify-start">
           <div className="p-2 col-span-1"></div>
           <div className="p-2 col-span-3">Name & Usage</div>

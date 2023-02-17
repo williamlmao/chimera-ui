@@ -1,0 +1,22 @@
+import React from "react";
+import { Tooltip, Showcase, Button } from "chimera-tw";
+import { InfoCircledIcon } from "@radix-ui/react-icons";
+
+## Basic Example
+
+<Showcase>
+  <Showcase.Preview>
+    <Tooltip.Provider>
+      <Tooltip.Root>
+        <Tooltip.Trigger asChild>
+          <Button variant="outline" className="w-10 rounded-full p-0">
+            +<span className="sr-only">Add</span>
+          </Button>
+        </Tooltip.Trigger>
+        <Tooltip.Content>
+          <p>Add to library</p>
+        </Tooltip.Content>
+      </Tooltip.Root>
+    </Tooltip.Provider>
+  </Showcase.Preview>
+</Showcase>
