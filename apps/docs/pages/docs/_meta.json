@@ -1,6 +1,6 @@
 {
   "introduction": "Introduction",
-  "use": "Installation",
+  "install": "Installation",
   "theme": {
     "title": "Theme Generator",
     "theme": {
@@ -12,6 +12,11 @@
   },
   "key-concepts": "Key Concepts",
   "components": "Components",
+  "FAQ": {
+    "title": "FAQ"
+  },
+
+  "credits": "Credits",
   "index": {
     "title": "Home",
     "display": "hidden"

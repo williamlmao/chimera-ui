@@ -32,7 +32,7 @@ const ThemeButton = ({
   return (
     <RadioGroup.Item
       className={twMerge(
-        `text-sm rounded-md relative text-overlay-content text-left hover:bg-primary-subtle hover:text-primary-content-inverse w-full pl-4 ${
+        `text-sm rounded-md relative text-overlay-content text-left hover:bg-primary-subtle hover:text-primary-subtle-content w-full pl-4 ${
           theme.value === selectedTheme.value ? "bg-overlay-2 font-bold" : ""
         }`,
         className

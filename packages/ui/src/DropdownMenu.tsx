@@ -104,7 +104,7 @@ const Item = React.forwardRef<
   <DropdownMenuPrimitive.Item
     ref={ref}
     className={cn(
-      "relative flex cursor-default select-none items-center rounded-md-sm py-1.5 px-2 bg-overlay text-sm font-medium outline-none focus:bg-primary focus:text-primary-content data-[disabled]:pointer-events-none data-[disabled]:opacity-50",
+      "relative flex cursor-default select-none items-center rounded-md-sm py-1.5 px-2 bg-overlay text-sm font-medium outline-none focus:bg-primary focus:text-primary-content data-[disabled]:pointer-events-none data-[disabled]:opacity-50 group",
       inset && "pl-8",
       className
     )}
@@ -200,7 +200,7 @@ const Shortcut = ({
   return (
     <span
       className={cn(
-        "ml-auto text-xs tracking-widest text-overlay-content-3",
+        "ml-auto text-xs tracking-widest text-overlay-content-3 group-hover:text-primary-content",
         className
       )}
       {...props}

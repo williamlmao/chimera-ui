@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import { Button } from "chimera-tw";
 import { AlertDialogExample } from "./AlertDialogExample";
+import { Alerts } from "./Alerts";
 import { Buttons } from "./Buttons";
 import { Card } from "./Card";
 import { DropDownExample } from "./DropdownExample";
@@ -47,8 +48,10 @@ export const Preview = () => {
           <div className="text-xl font-bold mb-4 text-base-content">
             Overlays (Click them)
           </div>
-          <DropDownExample />
-          <AlertDialogExample />
+          <div className="flex gap-8 items-center">
+            <DropDownExample />
+            <AlertDialogExample />
+          </div>
         </div>
 
         <div className="py-8">
@@ -56,6 +59,13 @@ export const Preview = () => {
             Buttons
           </div>
           <Buttons />
+        </div>
+
+        <div className="py-8">
+          <div className="text-xl font-bold mb-4 text-base-content">
+            Callouts
+          </div>
+          <Alerts />
         </div>
       </div>
     </div>

@@ -22,7 +22,7 @@ export const DropDownExample = () => {
     <DropdownMenu.Root>
       <DropdownMenu.Trigger asChild>
         <Button className="bg-transparent hover:text-primary hover:bg-transparent text-base-content">
-          <HamburgerMenuIcon />
+          <HamburgerMenuIcon className="w-6 h-6" />
         </Button>
       </DropdownMenu.Trigger>
       <DropdownMenu.Content className="w-56">

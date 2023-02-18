@@ -27,6 +27,16 @@ export const ThemeGenerator = () => {
     });
   }, [themeColors]);
 
+  useEffect(
+    () => () => {
+      // Reset CSS variables on unmount
+      Object.keys(themeColors).forEach((key) => {
+        document.documentElement.style.setProperty(`--${key}`, "");
+      });
+    },
+    []
+  );
+
   // const handleSupportingColorUpdate = () => {
   //   const supportingColors = setSupportingColors(themeColors);
   //   setThemeColors(supportingColors);
@@ -165,7 +175,7 @@ const Sidebar = ({
       >
         <ChevronLeft
           className={clsx({
-            "h-4 w-4": true,
+            "h-4 w-4 text-base-content": true,
             "transform rotate-180": !sidebarExpanded,
           })}
         />
