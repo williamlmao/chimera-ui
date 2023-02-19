@@ -41,16 +41,14 @@ Fun thing I stumbled upon while researching, [this is the Tweet thread](https://
 
 </details>
 <details>
-  <summary>**content, content-contrast** (e.g.,  primary-content, text-base-content-) </summary>
+  <summary>**content** (e.g.,  primary-content, text-base-content-) </summary>
   This is used for text or other content that is on top of a background color.
+On background colors like `base` and `overlay`, a content modifier can be used with either the prominence modifier.
 
-The `-contrast` modifier is used when the content color does not provide enough contrast. For example, if primary-content is white and does not have enough contrast on a `bg-primary-subtle`. In this case, you would use `primary-content-contrast`. However, `-contrast` is not always needed. For example, if your warning, warning-focus, and warning-subtle are all yellows that would be better with dark text, you should set both `warning-content` and `warning-content-contrast` to the same color.
+Examples:
 
-The content modifier can be used with either the prominence modifier or a contrast modifier. Examples:
-
-- `primary-content`
-- `primary-content-contrast`
-- `primary-content-2`
+- `base-content`
+- `base-content-2`
 
 ![Content Example](/content-example.png)
 

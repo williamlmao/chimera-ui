@@ -7,7 +7,7 @@ const ColorTableItem = ({ color }: { color: ColorType }) => {
     <div className="grid grid-cols-12">
       <div className="col-span-1 flex items-center">
         <div
-          className={`w-8 h-8 mx-auto rounded-theme border-2 border-line  ${color.example}`}
+          className={`w-8 h-8 mx-auto rounded-theme border-2 border-line ${color.example}`}
         ></div>
       </div>
       <div className="p-2 col-span-3">

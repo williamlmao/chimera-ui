@@ -5,16 +5,21 @@ module.exports = {
   jit: true,
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,md,mdx}",
-    "./components/**/*.{js,ts,jsx,tsx}",
-    "./examples/**/*.{js,ts,jsx,tsx}",
+    "./components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./utils/**/*.{js,ts,jsx,tsx,mdx}",
+    "./examples/**/*.{js,ts,jsx,tsx,mdx}",
     "./nextra-theme-docs/**/*.{js,tsx}",
     "./theme.config.jsx",
     "../../packages/ui/**/*{.js,.ts,.jsx,.tsx}",
+    "../../packages/chimera-tw-plugin/**/*{.js,.ts,.jsx,.tsx}",
   ],
   theme: {
     extend: {
       transitionProperty: {
         width: "width",
+      },
+      colors: {
+        "base-content-2": "var(--base-content-2)",
       },
     },
   },

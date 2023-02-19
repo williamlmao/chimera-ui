@@ -79,7 +79,6 @@ export type ColorsType = {
   "base-content": ColorType;
   "base-content-2": ColorType;
   "base-content-3": ColorType;
-  "base-content-inverse": ColorType;
   overlay: ColorType;
   "overlay-focus": ColorType;
   "overlay-2": ColorType;
@@ -87,7 +86,6 @@ export type ColorsType = {
   "overlay-content": ColorType;
   "overlay-content-2": ColorType;
   "overlay-content-3": ColorType;
-  "overlay-content-inverse": ColorType;
   input: ColorType;
   "input-focus": ColorType;
   "input-content": ColorType;
@@ -99,37 +97,31 @@ export type ColorsType = {
   "primary-content": ColorType;
   "primary-subtle": ColorType;
   "primary-subtle-content": ColorType;
-  "primary-content-inverse": ColorType;
   secondary: ColorType;
   "secondary-focus": ColorType;
   "secondary-content": ColorType;
   "secondary-subtle": ColorType;
   "secondary-subtle-content": ColorType;
-  "secondary-content-inverse": ColorType;
   info: ColorType;
   "info-focus": ColorType;
   "info-content": ColorType;
   "info-subtle": ColorType;
   "info-subtle-content": ColorType;
-  "info-content-inverse": ColorType;
   success: ColorType;
   "success-focus": ColorType;
   "success-content": ColorType;
   "success-subtle": ColorType;
   "success-subtle-content": ColorType;
-  "success-content-inverse": ColorType;
   danger: ColorType;
   "danger-focus": ColorType;
   "danger-content": ColorType;
   "danger-subtle": ColorType;
   "danger-subtle-content": ColorType;
-  "danger-content-inverse": ColorType;
   warning: ColorType;
   "warning-focus": ColorType;
   "warning-content": ColorType;
   "warning-subtle": ColorType;
   "warning-subtle-content": ColorType;
-  "warning-content-inverse": ColorType;
 };
 
 export const colors: ColorsType = {
@@ -229,20 +221,6 @@ export const colors: ColorsType = {
     type: "supporting",
     reference: "base-content",
   },
-  "base-content-inverse": {
-    name: "base-content-inverse",
-    displayName: "base-content-inverse",
-    description:
-      "The inverse of base-content. Used for situations where base-content is not providing enough contrast against the background.",
-    cssVariable: "--base-content-inverse",
-    example: "text-base-content-inverse",
-    usage: "text-base-content-inverse",
-    contrast: ["base", "base-2", "base-3"],
-    value: "hsl(0, 0%, 75%)",
-    adjustment: [0, 0, 30],
-    type: "supporting",
-    reference: "base-content",
-  },
   overlay: {
     name: "overlay",
     displayName: "overlay / overlay",
@@ -303,7 +281,7 @@ export const colors: ColorsType = {
     description:
       "The main overlay text color. This is the most prominent color on your overlay.",
     cssVariable: "--overlay-content",
-    example: "text-overlay-content",
+    example: "bg-overlay-content",
     usage: "text-overlay-content",
     contrast: ["overlay", "overlay-2", "overlay-3"],
     value: "hsl(0, 0%, 0%)",
@@ -317,7 +295,7 @@ export const colors: ColorsType = {
     description:
       "The second overlay text color. This is the second most prominent color on your overlay. Often used for labels.",
     cssVariable: "--overlay-content-2",
-    example: "text-overlay-content-2",
+    example: "bg-overlay-content-2",
     usage: "text-overlay-content-2",
     contrast: ["overlay", "overlay-2", "overlay-3"],
     value: "hsl(0, 0%, 40%)",
@@ -331,25 +309,13 @@ export const colors: ColorsType = {
     description:
       "The third overlay text color. Used for very small details, less important information that needs to be visually distinguished from content or content-2.",
     cssVariable: "--overlay-content-3",
-    example: "text-overlay-content-3",
+    example: "bg-overlay-content-3",
     usage: "text-overlay-content-3",
     contrast: ["overlay", "overlay-2", "overlay-3"],
     value: "hsl(0, 0%, 60%)",
     type: "supporting",
     reference: "overlay-content",
     adjustment: [0, 0, 20],
-  },
-  "overlay-content-inverse": {
-    name: "overlay-content-inverse",
-    displayName: "overlay-content-inverse",
-    description: "Overlay content contrast color",
-    cssVariable: "--overlay-content-inverse",
-    example: "text-overlay-content-inverse",
-    usage: "text-overlay-content-inverse",
-    contrast: ["overlay-content", "overlay-content-2", "overlay-content-3"],
-    value: "hsl(0, 0%, 100%)",
-    type: "supporting",
-    reference: "overlay-content",
   },
   line: {
     name: "line",
@@ -487,26 +453,12 @@ export const colors: ColorsType = {
     reference: "primary",
     adjustment: [0, 10, 95],
   },
-  "primary-content-inverse": {
-    name: "primary-content-inverse",
-    displayName: "primary-content-inverse",
-    description:
-      "The inverse of primary-content. Used for content on bg-primary-subtle or situations where primary-content does not provide enough contrast.",
-    cssVariable: "--primary-content-inverse",
-    example: "bg-primary-content-inverse",
-    usage: "bg-primary-content-inverse",
-    contrast: ["primary-content"],
-    value: "hsl(0, 0%, 0%)",
-    type: "supporting",
-    reference: "primary-content",
-    adjustment: [0, 10, 95],
-  },
   "primary-subtle-content": {
     name: "primary-subtle-content",
     displayName: "primary-subtle-content",
     description: "Used for content on bg-primary-subtle.",
     cssVariable: "--primary-subtle-content",
-    example: "text-primary-subtle-content",
+    example: "bg-primary-subtle-content",
     usage: "text-primary-subtle-content",
     contrast: ["primary-content"],
     value: "hsl(0, 0%, 0%)",
@@ -559,7 +511,7 @@ export const colors: ColorsType = {
     displayName: "secondary-subtle-content",
     description: "Used for content on bg-secondary-subtle.",
     cssVariable: "--secondary-subtle-content",
-    example: "text-secondary-subtle-content",
+    example: "bg-secondary-subtle-content",
     usage: "text-secondary-subtle-content",
     contrast: ["secondary-content"],
     value: "hsl(0, 0%, 0%)",
@@ -578,20 +530,6 @@ export const colors: ColorsType = {
     value: "hsl(0, 0%, 100%)",
     type: "supporting",
     reference: "secondary",
-    adjustment: [0, 10, 95],
-  },
-  "secondary-content-inverse": {
-    name: "secondary-content-inverse",
-    displayName: "secondary-content-inverse",
-    description:
-      "The inverse of secondary-content. Used for content on bg-secondary-subtle or situations where secondary-content does not provide enough contrast.",
-    cssVariable: "--secondary-content-inverse",
-    example: "bg-secondary-content-inverse",
-    usage: "bg-secondary-content-inverse",
-    contrast: ["secondary-content"],
-    value: "hsl(0, 0%, 0%)",
-    type: "supporting",
-    reference: "secondary-content",
     adjustment: [0, 10, 95],
   },
   info: {
@@ -640,7 +578,7 @@ export const colors: ColorsType = {
     displayName: "info-subtle-content",
     description: "Used for content on bg-info-subtle.",
     cssVariable: "--info-subtle-content",
-    example: "text-info-subtle-content",
+    example: "bg-info-subtle-content",
     usage: "text-info-subtle-content",
     contrast: ["info-content"],
     value: "hsl(0, 0%, 0%)",
@@ -660,20 +598,6 @@ export const colors: ColorsType = {
     type: "supporting",
     reference: "info",
     adjustment: [0, 10, 95],
-  },
-  "info-content-inverse": {
-    name: "info-content-inverse",
-    displayName: "info-content-inverse",
-    description:
-      "The inverse of info-content. Used for content on bg-info-subtle or situations where info-content does not provide enough contrast.",
-    cssVariable: "--info-content-inverse",
-    example: "bg-info-content-inverse",
-    usage: "bg-info-content-inverse",
-    contrast: ["info-content"],
-    value: "hsl(212, 98%, 16%)",
-    adjustment: [0, 10, 95],
-    type: "supporting",
-    reference: "info-content",
   },
   danger: {
     name: "danger",
@@ -721,7 +645,7 @@ export const colors: ColorsType = {
     displayName: "danger-subtle-content",
     description: "Used for content on bg-danger-subtle.",
     cssVariable: "--danger-subtle-content",
-    example: "text-danger-subtle-content",
+    example: "bg-danger-subtle-content",
     usage: "text-danger-subtle-content",
     contrast: ["danger-content"],
     value: "hsl(0, 0%, 0%)",
@@ -742,20 +666,7 @@ export const colors: ColorsType = {
     adjustment: [0, 10, 95],
     reference: "danger",
   },
-  "danger-content-inverse": {
-    name: "danger-content-inverse",
-    displayName: "danger-content-inverse",
-    description:
-      "The inverse of danger-content. Used for content on bg-danger-subtle or situations where danger-content does not provide enough contrast.",
-    cssVariable: "--danger-content-inverse",
-    example: "bg-danger-content-inverse",
-    usage: "bg-danger-content-inverse",
-    type: "supporting",
-    contrast: ["danger-content"],
-    value: "hsl(355, 93%, 17%)",
-    adjustment: [0, 10, 95],
-    reference: "danger-content",
-  },
+
   success: {
     name: "success",
     displayName: "success",
@@ -802,7 +713,7 @@ export const colors: ColorsType = {
     displayName: "success-subtle-content",
     description: "Used for content on bg-success-subtle.",
     cssVariable: "--success-subtle-content",
-    example: "text-success-subtle-content",
+    example: "bg-success-subtle-content",
     usage: "text-success-subtle-content",
     contrast: ["success-content"],
     value: "hsl(0, 0%, 0%)",
@@ -822,20 +733,6 @@ export const colors: ColorsType = {
     adjustment: [0, 10, 95],
     type: "supporting",
     reference: "success",
-  },
-  "success-content-inverse": {
-    name: "success-content-inverse",
-    displayName: "success-content-inverse",
-    description:
-      "The inverse of success-content. Used for content on bg-success-subtle or situations where success-content does not provide enough contrast.",
-    cssVariable: "--success-content-inverse",
-    example: "bg-success-content-inverse",
-    usage: "bg-success-content-inverse",
-    contrast: ["success-content"],
-    value: "hsl(159, 76%, 16%)",
-    adjustment: [0, 10, 95],
-    type: "supporting",
-    reference: "success-content",
   },
 
   warning: {
@@ -884,7 +781,7 @@ export const colors: ColorsType = {
     displayName: "warning-subtle-content",
     description: "Used for content on bg-warning-subtle.",
     cssVariable: "--warning-subtle-content",
-    example: "text-warning-subtle-content",
+    example: "bg-warning-subtle-content",
     usage: "text-warning-subtle-content",
     contrast: ["warning-content"],
     value: "hsl(0, 0%, 0%)",
@@ -904,19 +801,5 @@ export const colors: ColorsType = {
     adjustment: [0, 10, 95],
     type: "supporting",
     reference: "warning",
-  },
-  "warning-content-inverse": {
-    name: "warning-content-inverse",
-    displayName: "warning-content-inverse",
-    description:
-      "The inverse of warning-content. Used for content on bg-warning-subtle or situations where warning-content does not provide enough contrast.",
-    cssVariable: "--warning-content-inverse",
-    example: "bg-warning-content-inverse",
-    usage: "bg-warning-content-inverse",
-    contrast: ["warning-content"],
-    value: "hsl(0, 0%, 15%)",
-    adjustment: [0, 10, 95],
-    type: "supporting",
-    reference: "warning-content",
   },
 };
