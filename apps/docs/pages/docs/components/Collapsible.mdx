@@ -9,8 +9,13 @@ radix:
 
 import React from "react";
 import { Showcase } from "chimera-tw";
-import { CollapsibleDemo } from "../../../components/demo/CollapsibleDemo";
+import { CollapsibleDemo as CollapsibleDemoComponent } from "../../../components/demo/CollapsibleDemo";
+import CollapsibleDemo from "!!raw-loader!../../../components/demo/CollapsibleDemo.tsx";
 
 ## Usage
 
-    <CollapsibleDemo />
+<Showcase>
+  <Showcase.Preview code={CollapsibleDemo}>
+    <CollapsibleDemoComponent />
+  </Showcase.Preview>
+</Showcase>

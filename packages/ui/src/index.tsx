@@ -5,6 +5,7 @@ export { Avatar } from "./Avatar";
 export { Button } from "./Button";
 export { Checkbox } from "./Checkbox";
 export { Collapsible } from "./Collapsible";
+export { Dialog } from "./Dialog";
 export { Popover } from "./Popover";
 export { Showcase } from "./Showcase";
 export { ThemePicker } from "./ThemePicker";

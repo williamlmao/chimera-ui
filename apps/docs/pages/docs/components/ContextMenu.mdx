@@ -1,21 +1,14 @@
 import React from "react";
 import { Showcase, ContextMenu } from "chimera-tw";
+import { ContextMenuDemo as ContextMenuDemoComponent } from "@/components/demo/ContextMenuDemo";
+import ContextMenuDemo from "!!raw-loader!@/components/demo/ContextMenuDemo.tsx";
 
 ## Usage
 
+<input type="text" className="focus:ring-0 focus:ring-offset-0" />
+
 <Showcase>
-  <Showcase.Preview>
-
-     <ContextMenu.Root>
-      <ContextMenu.Trigger>Click Me</ContextMenu.Trigger>
-      <ContextMenu.Portal>
-        <ContextMenu.Content>
-        <ContextMenu.Item>
-          Yo
-        </ContextMenu.Item>
-        </ContextMenu.Content>
-      </ContextMenu.Portal>
-    </ContextMenu.Root>
-
+  <Showcase.Preview code={ContextMenuDemo}>
+    <ContextMenuDemoComponent />
   </Showcase.Preview>
 </Showcase>
