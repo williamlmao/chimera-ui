@@ -1,6 +1,9 @@
 import { Fragment } from "react";
 import { useRouter } from "next/router";
 import { useConfig } from "nextra-theme-docs";
+import Link from "next/link";
+import { Button } from "chimera-tw";
+import { Code } from "@/components/Code";
 
 const config = {
   logo: (
@@ -85,10 +88,76 @@ c-8 -87 -31 -216 -56 -319 -24 -98 -78 -255 -94 -275 -7 -8 -16 -26 -20 -40
     console.log(frontMatter);
     return (
       <main className="">
-        <h1 className="nx-mt-2 nx-text-4xl nx-font-bold nx-tracking-tight">
+        <h1 className="mt-2 text-5xl font-bold tracking-tight">
           {frontMatter?.title}
         </h1>
-        <p>{frontMatter?.description}</p>
+        <p className="text-xl my-4">{frontMatter?.description}</p>
+        {frontMatter?.radix && (
+          <div className="flex gap-4">
+            <Link href={frontMatter.radix.link}>
+              <Button
+                className="rounded-xl flex items-center gap-2 h-6"
+                size="xs"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="10"
+                  height="10"
+                  viewBox="0 0 25 25"
+                  fill="none"
+                >
+                  <path
+                    d="M12 25C7.58173 25 4 21.4183 4 17C4 12.5817 7.58173 9 12 9V25Z"
+                    fill="currentcolor"
+                  ></path>
+                  <path d="M12 0H4V8H12V0Z" fill="currentcolor"></path>
+                  <path
+                    d="M17 8C19.2091 8 21 6.20914 21 4C21 1.79086 19.2091 0 17 0C14.7909 0 13 1.79086 13 4C13 6.20914 14.7909 8 17 8Z"
+                    fill="currentcolor"
+                  ></path>
+                </svg>
+                Radix Docs
+              </Button>
+            </Link>
+            <Link href={frontMatter.radix.link}>
+              <Button
+                className="rounded-xl flex items-center gap-2 h-6"
+                size="xs"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="10"
+                  height="10"
+                  viewBox="0 0 25 25"
+                  fill="none"
+                >
+                  <path
+                    d="M12 25C7.58173 25 4 21.4183 4 17C4 12.5817 7.58173 9 12 9V25Z"
+                    fill="currentcolor"
+                  ></path>
+                  <path d="M12 0H4V8H12V0Z" fill="currentcolor"></path>
+                  <path
+                    d="M17 8C19.2091 8 21 6.20914 21 4C21 1.79086 19.2091 0 17 0C14.7909 0 13 1.79086 13 4C13 6.20914 14.7909 8 17 8Z"
+                    fill="currentcolor"
+                  ></path>
+                </svg>
+                API Reference
+              </Button>
+            </Link>
+          </div>
+        )}
+        <hr className="my-4 mb-8" />
+        {frontMatter?.component && (
+          <div className="my-4">
+            <h2 className="nx-font-semibold nx-tracking-tight nx-mt-10 nx-border-b nx-pb-1 nx-text-3xl nx-border-neutral-200/70 contrast-more:nx-border-neutral-400 dark:nx-border-primary-100/10 contrast-more:dark:nx-border-neutral-400">
+              Import
+            </h2>
+
+            <div className="my-4">
+              <Code>{`import { ${frontMatter.component} } from 'chimera-tw'`}</Code>
+            </div>
+          </div>
+        )}
         <div className="">{children}</div>
       </main>
     );

@@ -1,14 +1,23 @@
+---
+title: Alert Dialog
+description: A modal dialog that interrupts the user with important content and expects a response.
+component: AlertDialog
+radix:
+  link: https://www.radix-ui.com/docs/primitives/components/alert-dialog
+  api: https://www.radix-ui.com/docs/primitives/components/alert-dialog#api-reference
+---
+
 import React from "react";
-import { AlertDialog, Showcase } from "chimera-tw";
+import { AlertDialog, Button, Showcase } from "chimera-tw";
 import { InfoCircledIcon } from "@radix-ui/react-icons";
 
-## Basic Example
+## Usage
 
 <Showcase>
   <Showcase.Preview>
     <AlertDialog.Root>
       <AlertDialog.Trigger asChild>
-        <button className="Button violet">Delete account</button>
+        <Button variant="destructive">Delete Account</Button>
       </AlertDialog.Trigger>
       <AlertDialog.Portal>
         <AlertDialog.Overlay className="AlertDialogOverlay" />

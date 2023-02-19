@@ -34,52 +34,59 @@ Showcase.displayName = "Showcase";
  *
  * @param componentPreviewClassName Default: bg-gradient-to-tr from-pink-300 via-orange-200 to-red-300 text-on-surface p-4 rounded-md flex items-center justify-center gap-4 mb-4
  * @param codePreviewClassName Default: bg-gray-800 p-4 rounded-md
+ * @param code If code is provided, it will be displayed. Otherwise, it will be generated from children.
  * @returns
  */
 const Preview = ({
   children,
   componentPreviewClassName,
   codePreviewClassName,
+  code,
 }: {
   children: React.ReactNode;
   componentPreviewClassName: string;
   codePreviewClassName: string;
+  code?: string;
 }) => {
   const [copied, setCopied] = React.useState(false);
 
   const childrenArray = Array.isArray(children) ? children : [children];
-  const childrenCode = childrenArray
-    .map((child) => {
-      if (React.isValidElement(child)) {
-        return reactElementToJSXString(child, {
-          displayName: (element) => {
-            if (React.isValidElement(element)) {
-              // Check if type of element is a string
-              if (typeof element?.type === "string") {
-                return element?.type;
-              }
-              // @ts-ignore
-              if (typeof element?.type?.displayName === "string") {
+  let childrenCode: string;
+  if (!code) {
+    // Generate code from children
+    code = childrenArray
+      .map((child) => {
+        if (React.isValidElement(child)) {
+          return reactElementToJSXString(child, {
+            displayName: (element) => {
+              if (React.isValidElement(element)) {
+                // Check if type of element is a string
+                if (typeof element?.type === "string") {
+                  return element?.type;
+                }
                 // @ts-ignore
-                return element?.type.displayName;
-              }
-              if (typeof element?.type.name === "string") {
-                return element?.type.name;
-              }
+                if (typeof element?.type?.displayName === "string") {
+                  // @ts-ignore
+                  return element?.type.displayName;
+                }
+                if (typeof element?.type.name === "string") {
+                  return element?.type.name;
+                }
 
-              return "NoDisplayName";
-            }
-          },
-        });
-      }
-    })
-    .join("\n");
+                return "NoDisplayName";
+              }
+            },
+          });
+        }
+      })
+      .join("\n") as string;
+  }
 
   return (
     <div>
       <div
         className={twMerge(
-          "bg-gradient-to-tr from-base-2 via-base to-base-2 text-base-content p-4 py-10 rounded-md flex items-center justify-center gap-4 mb-4 relative",
+          "bg-gradient-to-tr from-base-2 via-base to-base-3 text-base-content p-4 rounded-md flex items-center justify-center gap-4 mb-4 relative",
           componentPreviewClassName
         )}
       >
@@ -96,7 +103,7 @@ const Preview = ({
       >
         <Button
           onClick={() => {
-            navigator.clipboard.writeText(childrenCode);
+            navigator.clipboard.writeText(code || "");
             setCopied(true);
             setTimeout(() => {
               setCopied(false);
@@ -106,7 +113,7 @@ const Preview = ({
         >
           {copied ? "Copied!" : "Copy"}
         </Button>
-        <code>{childrenCode}</code>
+        <code>{code}</code>
       </pre>
     </div>
   );
@@ -116,7 +123,7 @@ Showcase.Preview = Preview;
 
 const Code = ({ children }: { children: React.ReactNode }) => {
   return (
-    <div className="bg-base text-base-content p-2  rounded-md">{children}</div>
+    <div className="bg-base text-base-content p-2 rounded-md">{children}</div>
   );
 };
 Code.displayName = "Showcase.Code";

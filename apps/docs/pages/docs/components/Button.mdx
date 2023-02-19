@@ -1,38 +1,36 @@
+---
+title: Button
+description: It's just a button.
+component: Button
+---
+
 import { Button, Showcase } from "chimera-tw";
+import ButtonDemo from "!!raw-loader!@/components/demo/ButtonDemo";
 
-# Button
-
-## Basic
+## Basic Usage
 
 <Showcase>
   <Showcase.Preview>
-    <Button>Button</Button>
-    <Button disabled>Button</Button>
+    <Button>Click Me</Button>
   </Showcase.Preview>
 </Showcase>
 
-## Colors
-
-Notice how the theme switcher will not affect the button colors. The themes will still affect the border radius though!
+## Variants
 
 <Showcase>
   <Showcase.Preview>
-    <Button className="bg-green-700">Button</Button>
-    <Button className="bg-purple-700">Button</Button>
-    <Button className="bg-teal-700">Button</Button>
-  </Showcase.Preview>
-</Showcase>
-
-## Sizes
-
-<Showcase>
-  <Showcase.Preview>
-    <div className="flex flex-col gap-4 w-full">
-      <Button className="p-1 text-xs">Button</Button>
-      <Button className="w-24">Button</Button>
-      <Button className="w-36">Button</Button>
-      <Button className="w-56">Button</Button>
-      <Button className="w-full">Button</Button>
+    <div className="flex flex-wrap gap-4">
+      <Button>Primary</Button>
+      <Button variant="subtle">Subtle</Button>
+      <Button variant="outline">Outline</Button>
+      <Button variant="secondary">Secondary</Button>
+      <Button variant="secondary-subtle">Secondary Subtle</Button>
+      <Button variant="secondary-outline">Secondary Outline</Button>
+      <Button variant="gradient">Gradient</Button>
+      <Button variant="destructive">Destructive</Button>
+      <Button variant="success">Success</Button>
+      <Button variant="info">Info</Button>
+      <Button variant="warning">Warning</Button>
     </div>
   </Showcase.Preview>
 </Showcase>
