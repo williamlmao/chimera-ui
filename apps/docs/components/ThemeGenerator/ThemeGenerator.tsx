@@ -125,7 +125,6 @@ export const ThemeGenerator = () => {
         {step === 3 ? (
           <>
             <CopyCss themeColors={themeColors} />
-            <CopyTailwindConfig themeColors={themeColors} />
           </>
         ) : (
           <Preview />
