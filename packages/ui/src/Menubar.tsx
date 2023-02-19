@@ -35,7 +35,7 @@ const Root = React.forwardRef<
   <MenubarPrimitive.Root
     ref={ref}
     className={cn(
-      "flex h-10 items-center space-x-1 rounded-md border border-line bg-overlay p-1 ",
+      "flex h-10 items-center space-x-1 rounded-md border border-line bg-overlay ",
       className
     )}
     {...props}
@@ -111,7 +111,7 @@ const Content = React.forwardRef<
         alignOffset={alignOffset}
         sideOffset={sideOffset}
         className={cn(
-          "z-50 min-w-[12rem] overflow-hidden rounded-md border border-line bg-base p-1 text-base-content shadow-md animate-in slide-in-from-top-1 ",
+          "z-50 min-w-[12rem] overflow-hidden rounded-md border border-line bg-overlay text-overlay-content shadow-md animate-in slide-in-from-top-1 ",
           className
         )}
         {...props}
@@ -130,7 +130,7 @@ const Item = React.forwardRef<
   <MenubarPrimitive.Item
     ref={ref}
     className={cn(
-      "relative cursor-default bg-overlay select-none rounded-sm py-1.5 px-2 text-sm font-medium outline-none focus:bg-primary focus:text-primary-content data-[disabled]:pointer-events-none data-[disabled]:opacity-50 ",
+      "relative cursor-default bg-overlay select-none rounded-sm py-1.5 px-2 text-sm font-medium outline-none focus:bg-primary focus:text-primary-content data-[disabled]:pointer-events-none data-[disabled]:opacity-50 m-1",
       inset && "pl-8",
       className
     )}

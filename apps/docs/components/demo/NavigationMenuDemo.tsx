@@ -42,75 +42,65 @@ const components: { title: string; href: string; description: string }[] = [
 
 export const NavigationMenuDemo = () => {
   return (
-    <div className="">hi</div>
-    // <Showcase>
-    //   <Showcase.Preview>
-    //     <div className="">
-    //       {" "}
-    //       <NavigationMenu.Root>
-    //         <NavigationMenu.List>
-    //           <NavigationMenu.Item>
-    //             <NavigationMenu.Trigger>Getting started</NavigationMenu.Trigger>
-    //             <NavigationMenu.Content>
-    //               <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
-    //                 <li className="row-span-3">
-    //                   <NavigationMenu.Link asChild>
-    //                     <a
-    //                       className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-rose-500 to-indigo-700 p-6 no-underline outline-none focus:shadow-md"
-    //                       href="/"
-    //                     >
-    //                       <div className="mt-4 mb-2 text-lg font-medium text-white">
-    //                         shadcn/ui
-    //                       </div>
-    //                       <p className="text-sm leading-tight text-white/90">
-    //                         Beautifully designed components built with Radix UI
-    //                         and Tailwind CSS.
-    //                       </p>
-    //                     </a>
-    //                   </NavigationMenu.Link>
-    //                 </li>
-    //                 <ListItem href="/docs" title="Introduction">
-    //                   Re-usable components built using Radix UI and Tailwind
-    //                   CSS.
-    //                 </ListItem>
-    //                 <ListItem href="/docs/installation" title="Installation">
-    //                   How to install dependencies and structure your app.
-    //                 </ListItem>
-    //                 <ListItem
-    //                   href="/docs/primitives/typography"
-    //                   title="Typography"
-    //                 >
-    //                   Styles for headings, paragraphs, lists...etc
-    //                 </ListItem>
-    //               </ul>
-    //             </NavigationMenu.Content>
-    //           </NavigationMenu.Item>
-    //           <NavigationMenu.Item>
-    //             <NavigationMenu.Trigger>Components</NavigationMenu.Trigger>
-    //             <NavigationMenu.Content>
-    //               <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
-    //                 {components.map((component) => (
-    //                   <ListItem
-    //                     key={component.title}
-    //                     title={component.title}
-    //                     href={component.href}
-    //                   >
-    //                     {component.description}
-    //                   </ListItem>
-    //                 ))}
-    //               </ul>
-    //             </NavigationMenu.Content>
-    //           </NavigationMenu.Item>
-    //           <NavigationMenu.Item>
-    //             <Link href="/docs" legacyBehavior passHref>
-    //               <NavigationMenu.Link>Documentation</NavigationMenu.Link>
-    //             </Link>
-    //           </NavigationMenu.Item>
-    //         </NavigationMenu.List>
-    //       </NavigationMenu.Root>
-    //     </div>
-    //   </Showcase.Preview>
-    // </Showcase>
+    <div className="">
+      <NavigationMenu.Root>
+        <NavigationMenu.List>
+          <NavigationMenu.Item>
+            <NavigationMenu.Trigger>Getting started</NavigationMenu.Trigger>
+            <NavigationMenu.Content>
+              <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
+                <li className="row-span-3">
+                  <NavigationMenu.Link asChild>
+                    <a
+                      className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-rose-500 to-indigo-700 p-6 no-underline outline-none focus:shadow-md"
+                      href="/"
+                    >
+                      <div className="mt-4 mb-2 text-lg font-medium text-white">
+                        Chimera UI
+                      </div>
+                      <p className="text-sm leading-tight text-white/90">
+                        Beautifully designed components built with Radix UI and
+                        Tailwind CSS.
+                      </p>
+                    </a>
+                  </NavigationMenu.Link>
+                </li>
+                <ListItem href="/docs" title="Introduction">
+                  Re-usable components built using Radix UI and Tailwind CSS.
+                </ListItem>
+                <ListItem href="/docs/installation" title="Installation">
+                  How to install dependencies and structure your app.
+                </ListItem>
+                <ListItem href="/docs/primitives/typography" title="Typography">
+                  Styles for headings, paragraphs, lists...etc
+                </ListItem>
+              </ul>
+            </NavigationMenu.Content>
+          </NavigationMenu.Item>
+          <NavigationMenu.Item>
+            <NavigationMenu.Trigger>Components</NavigationMenu.Trigger>
+            <NavigationMenu.Content>
+              <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
+                {components.map((component) => (
+                  <ListItem
+                    key={component.title}
+                    title={component.title}
+                    href={component.href}
+                  >
+                    {component.description}
+                  </ListItem>
+                ))}
+              </ul>
+            </NavigationMenu.Content>
+          </NavigationMenu.Item>
+          <NavigationMenu.Item>
+            <Link href="/docs" legacyBehavior passHref>
+              <NavigationMenu.Link>Documentation</NavigationMenu.Link>
+            </Link>
+          </NavigationMenu.Item>
+        </NavigationMenu.List>
+      </NavigationMenu.Root>
+    </div>
   );
 };
 
@@ -124,13 +114,13 @@ const ListItem = React.forwardRef<
         <a
           ref={ref}
           className={cn(
-            "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-slate-100 focus:bg-slate-100 dark:hover:bg-slate-700 dark:focus:bg-slate-700",
+            "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-overlay-focus focus:bg-overlay-focus",
             className
           )}
           {...props}
         >
           <div className="text-sm font-medium leading-none">{title}</div>
-          <p className="text-sm leading-snug text-slate-500 line-clamp-2 dark:text-slate-400">
+          <p className="text-sm leading-snug text-overlay-content-2 line-clamp-2 ">
             {children}
           </p>
         </a>
