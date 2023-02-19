@@ -86,7 +86,7 @@ const Preview = ({
     <div>
       <div
         className={twMerge(
-          "bg-gradient-to-tr from-base-2 via-base to-base-3 text-base-content p-4 rounded-md flex items-center justify-center gap-4 mb-4 relative",
+          "bg-base border border-line text-base-content p-4 rounded-md flex items-center justify-center gap-4 mb-4 relative",
           componentPreviewClassName
         )}
       >
