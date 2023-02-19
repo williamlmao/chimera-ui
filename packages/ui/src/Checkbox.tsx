@@ -8,7 +8,7 @@ export const Checkbox = ({ className }: { className: string }) => {
   return (
     <Checkbox.Root
       className={cn(
-        "peer h-4 w-4 shrink-0 rounded-sm border border-line focus:outline-none focus:ring-2 focus:ring-line-focus focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 ",
+        "peer h-4 w-4 shrink-0 rounded-sm border border-line focus:outline-none focus:ring-2 focus:ring-line-focus focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 bg-input",
         className
       )}
     >
