@@ -9,19 +9,16 @@
   "ContextMenu": "Context Menu",
   "Dialog": "Dialog",
   "DropdownMenu": "Dropdown Menu",
-
+  "Input": "Input",
   "Label": "Label",
   "Menubar": "Menubar",
   "NavigationMenu": "Navigation Menu",
   "Popover": "Popover",
-  "ThemePicker": "Theme Picker",
   "Tooltip": "Tooltip",
   "Progress": "Progress",
-
   "RadioGroup": "Radio Group",
   "Select": "Select",
   "Switch": "Switch",
   "Tabs": "Tabs",
-  "Input": "Input",
   "Toggle": "Toggle"
 }
