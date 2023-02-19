@@ -11,7 +11,7 @@ import React from "react";
 import { Checkbox, Showcase } from "chimera-tw";
 import { CheckIcon } from "@radix-ui/react-icons";
 
-## Usage
+## Simple Usage
 
 <Showcase>
   <Showcase.Preview>
@@ -28,17 +28,15 @@ import { CheckIcon } from "@radix-ui/react-icons";
   </Showcase.Preview>
 </Showcase>
 
-## Using subcomponents and custom icon
+## Subcomponent Usage
 
 <Showcase>
   <Showcase.Preview>
     <div className="flex items-center space-x-2">
-      <div style={{ display: "flex", alignItems: "center" }}>
-        <Checkbox />
-        <label className="Label" htmlFor="c1">
-          Accept terms and conditions.
-        </label>
-      </div>
+      <Checkbox.Root className="w-8 h-8">
+        <Checkbox.Indicator>X</Checkbox.Indicator>
+      </Checkbox.Root>
+      <label>See how the indicator can be customized?</label>
     </div>
   </Showcase.Preview>
 </Showcase>
