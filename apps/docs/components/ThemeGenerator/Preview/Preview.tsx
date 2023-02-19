@@ -7,6 +7,7 @@ import { Card } from "./Card";
 import { DropDownExample } from "./DropdownExample";
 import { Header } from "./Header";
 import { Landing } from "./Landing";
+import { SelectExample } from "./SelectExample";
 
 export const Preview = () => {
   return (
@@ -51,6 +52,7 @@ export const Preview = () => {
           <div className="flex gap-8 items-center">
             <DropDownExample />
             <AlertDialogExample />
+            <SelectExample />
           </div>
         </div>
 

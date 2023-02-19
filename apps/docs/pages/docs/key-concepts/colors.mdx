@@ -1,4 +1,4 @@
-import { ColorTable, colorSystem } from "@/components/ColorTables";
+import { ColorTable } from "@/components/ColorTables";
 import { ThemePicker } from "chimera-tw";
 
 # Color System
@@ -79,46 +79,58 @@ You'll notice there are a LOT of colors in this color system. Don't be afraid! M
 
 Base colors are used for backgrounds.
 
-<ColorTable colors={colorSystem.base} />
+<ColorTable colorPrefix="base" />
 
 ### Overlay
 
 Overlay colors are used for background colors of floating elements like modals, dropdowns, menus, etc. They should be similar but distinct from base colors that they will be on top of.
 
-<ColorTable colors={colorSystem.overlay} />
+<ColorTable colorPrefix="overlay" />
+
+### Input
+
+Input colors are used for input elements like text inputs, textareas, etc. They should be similar but distinct from base colors that they will be on top of.
+
+<ColorTable colorPrefix="input" />
+
+### Line
+
+Line colors are used for borders, dividers, etc. They should be similar but distinct from base colors that they will be on top of.
+
+<ColorTable colorPrefix="line" />
 
 ### Primary
 
 Primary colors are used for the main actions in your interface, think call to action buttons, links, etc. Primary should be distinct, and is most likely one of your brand colors.
 
-<ColorTable colors={colorSystem.primary} />
+<ColorTable colorPrefix="primary" />
 
 ### Secondary
 
 Secondary colors are used for actions of lower priority than primary. Secondary is also good for other elements that you want to highlight, such as tags, less important buttons, icons, etc.
 
-<ColorTable colors={colorSystem.secondary} />
+<ColorTable colorPrefix="secondary" />
 
 ### Info
 
 Info colors are used for informational elements, such as alerts, icons, etc.
 
-<ColorTable colors={colorSystem.info} />
+<ColorTable colorPrefix="info" />
 
 ### Success
 
 Success colors are used for success elements, such as alerts, icons, etc.
 
-<ColorTable colors={colorSystem.success} />
+<ColorTable colorPrefix="success" />
 
 ### Error
 
 Error colors are used for error elements, such as alerts, icons, etc.
 
-<ColorTable colors={colorSystem.error} />
+<ColorTable colorPrefix="danger" />
 
 ### Warning
 
 Warning colors are used for warning elements, such as alerts, icons, etc.
 
-<ColorTable colors={colorSystem.warning} />
+<ColorTable colorPrefix="warning" />

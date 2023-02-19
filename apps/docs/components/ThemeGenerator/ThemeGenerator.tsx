@@ -160,7 +160,7 @@ const Sidebar = ({
   return (
     <div
       className={clsx(
-        " relative flex flex-col transition-all duration-200  @container border-line border rounded-md mr-4",
+        " relative flex flex-col transition-all duration-200  @container border-line border gap-2 rounded-md mr-4",
         {
           "w-2/5 p-4": sidebarExpanded,
           "w-[40px] no-scrollbar": !sidebarExpanded,
@@ -181,10 +181,10 @@ const Sidebar = ({
         />
       </button>
       <div className=" hidden @[50px]:block">
-        <div className="font-bold text-xl">{`Step ${step} : ${
+        <div className="font-bold text-xl mb-2">{`Step ${step} : ${
           stepTitle[step as keyof typeof stepTitle]
         }`}</div>
-        <div className="">
+        <div className="text-sm">
           {stepDescription[step as keyof typeof stepDescription]}
         </div>
       </div>
@@ -194,7 +194,7 @@ const Sidebar = ({
         {step > 1 && (
           <Button
             className="hidden @[10px]:block w-full"
-            variant="secondary-outline"
+            variant="grey"
             onClick={() => {
               setStep(step - 1);
             }}
