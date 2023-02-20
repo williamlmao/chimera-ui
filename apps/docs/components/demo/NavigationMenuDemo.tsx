@@ -1,6 +1,6 @@
 import * as React from "react";
 import Link from "next/link";
-import { NavigationMenu, cn, Showcase } from "chimera-tw";
+import { NavigationMenu, cn, Showcase } from "@chimera-ui/components";
 
 const components: { title: string; href: string; description: string }[] = [
   {

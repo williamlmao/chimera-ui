@@ -11,7 +11,7 @@ module.exports = {
     "./nextra-theme-docs/**/*.{js,tsx}",
     "./theme.config.jsx",
     "../../packages/ui/**/*{.js,.ts,.jsx,.tsx}",
-    "../../packages/chimera-tw-plugin/**/*{.js,.ts,.jsx,.tsx}",
+    "../../packages/@chimera-ui/tw-plugin/**/*{.js,.ts,.jsx,.tsx}",
   ],
   theme: {
     extend: {
@@ -25,6 +25,6 @@ module.exports = {
   },
   plugins: [
     require("@tailwindcss/container-queries"),
-    require("chimera-tw-plugin"),
+    require("@chimera-ui/tw-plugin"),
   ],
 };

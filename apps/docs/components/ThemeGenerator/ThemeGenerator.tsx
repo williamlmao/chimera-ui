@@ -1,6 +1,6 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { colors, ColorsType, setSupportingColors } from "@/utils/colors";
-import { Button } from "chimera-tw";
+import { Button } from "@chimera-ui/components";
 import { clsx } from "clsx";
 import Color from "color";
 import { ChevronLeft, Clipboard, ClipboardCheck } from "lucide-react";

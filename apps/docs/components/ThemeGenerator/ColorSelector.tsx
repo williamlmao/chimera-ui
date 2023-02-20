@@ -1,6 +1,6 @@
 "use client";
 import { ColorType } from "@/utils/colors";
-import { Popover } from "chimera-tw";
+import { Popover } from "@chimera-ui/components";
 import clsx from "clsx";
 import { ChromePicker } from "react-color";
 export const ColorSelector = ({

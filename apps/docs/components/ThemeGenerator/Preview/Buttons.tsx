@@ -1,4 +1,4 @@
-import { Button } from "chimera-tw";
+import { Button } from "@chimera-ui/components";
 
 export const Buttons = () => {
   return (

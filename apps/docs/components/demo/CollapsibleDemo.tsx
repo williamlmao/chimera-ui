@@ -1,6 +1,6 @@
 import React from "react";
 import { RowSpacingIcon, Cross2Icon } from "@radix-ui/react-icons";
-import { Button, Showcase, Collapsible } from "chimera-tw";
+import { Button, Showcase, Collapsible } from "@chimera-ui/components";
 
 export const CollapsibleDemo = () => {
   const [open, setOpen] = React.useState(false);

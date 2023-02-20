@@ -3,9 +3,17 @@
     "title": "Documentation",
     "type": "page"
   },
+  "theme": {
+    "title": "Theme Generator",
+    "type": "page",
+    "href": "/docs/theme"
+  },
   "index": {
     "title": "Introduction",
     "type": "page",
-    "display": "hidden"
+    "display": "hidden",
+    "theme": {
+      "layout": "raw"
+    }
   }
 }

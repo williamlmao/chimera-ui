@@ -1,4 +1,4 @@
-import { Select } from "chimera-tw";
+import { Select } from "@chimera-ui/components";
 
 export const SelectExample = () => {
   return (

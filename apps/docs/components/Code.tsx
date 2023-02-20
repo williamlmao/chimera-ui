@@ -1,4 +1,4 @@
-import { Button } from "chimera-tw";
+import { Button } from "@chimera-ui/components";
 import React from "react";
 
 export const Code = ({ children }: { children: string }) => {

@@ -1,4 +1,4 @@
-import { AlertDialog, Button } from "chimera-tw";
+import { AlertDialog, Button } from "@chimera-ui/components";
 
 export const AlertDialogExample = () => {
   return (

@@ -1,4 +1,4 @@
-import { ThemePicker } from "chimera-tw";
+import { ThemePicker } from "@chimera-ui/components";
 import { ColorType, ColorsType } from "@/utils/colors";
 import { colors } from "@/utils/colors";
 

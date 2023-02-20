@@ -1,5 +1,5 @@
 {
-  "name": "chimera-tw-plugin",
+  "name": "@chimera-ui/tw-plugin",
   "version": "0.0.0",
   "description": "",
   "main": "index.js",

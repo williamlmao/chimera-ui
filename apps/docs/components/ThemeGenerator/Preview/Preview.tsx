@@ -1,5 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
-import { Button } from "chimera-tw";
+import { Button } from "@chimera-ui/components";
 import { AlertDialogExample } from "./AlertDialogExample";
 import { Alerts } from "./Alerts";
 import { Buttons } from "./Buttons";

@@ -1,5 +1,5 @@
 ---
-"chimera-tw": minor
+"@chimera-ui/components": minor
 ---
 
 Initial publish

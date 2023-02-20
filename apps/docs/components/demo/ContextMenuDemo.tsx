@@ -1,4 +1,4 @@
-import { Button, ContextMenu } from "chimera-tw";
+import { Button, ContextMenu } from "@chimera-ui/components";
 import { useState } from "react";
 import {
   CheckIcon,

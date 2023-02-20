@@ -1,5 +1,5 @@
 import { HamburgerMenuIcon } from "@radix-ui/react-icons";
-import { Button, DropdownMenu } from "chimera-tw";
+import { Button, DropdownMenu } from "@chimera-ui/components";
 import {
   Cloud,
   CreditCard,

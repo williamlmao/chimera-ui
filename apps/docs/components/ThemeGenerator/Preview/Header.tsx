@@ -2,7 +2,7 @@
 
 import { DropDownExample } from "./DropdownExample";
 import { Sprout } from "lucide-react";
-import { Input } from "chimera-tw";
+import { Input } from "@chimera-ui/components";
 
 export const Header = () => {
   return (

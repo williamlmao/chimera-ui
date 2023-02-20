@@ -1,6 +1,6 @@
 {
-  "name": "chimera-tw",
-  "version": "0.0.9",
+  "name": "@chimera-ui/components",
+  "version": "0.0.0",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",

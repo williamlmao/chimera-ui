@@ -7,24 +7,24 @@ import Link from 'next/link'
 
 This guide assumes you already have a React project with Tailwind configured.
 
-1. `npm install chimera-tw chimera-tw-plugin`
+1. `npm install @chimera-ui/components @chimera-ui/tw-plugin`
 2. Modify your `tailwind.config.js` to include:
-   - `"./node_modules/chimera-tw/dist/**/*.{js,mjs}",` in the `content` array
-   - `require("chimera-tw-plugin")` in the `plugins` array
 
-```js
-module.exports = {
-  content: [
-    "./pages/**/*.{js,ts,jsx,tsx,md,mdx}",
-    "./components/**/*.{js,ts,jsx,tsx}",
-    "./node_modules/chimera-tw/dist/**/*.{js,mjs}", // This line is important! If you don't include this, Chimera's styles will be purged
-    ,
-  ],
-  plugins: [
-    require("chimera-tw-plugin"), // This is important! This extends your tailwind theme to consume the CSS variables.
-  ],
-};
-```
+   - `"./node_modules/@chimera-ui/components/dist/**/*.{js,mjs}",` in the `content` array
+   - `require("@chimera-ui/tw-plugin")` in the `plugins` array
+   - ```js
+     module.exports = {
+       content: [
+         "./pages/**/*.{js,ts,jsx,tsx,md,mdx}",
+         "./components/**/*.{js,ts,jsx,tsx}",
+         "./node_modules/@chimera-ui/components/dist/**/*.{js,mjs}", // This line is important! If you don't include this, Chimera's styles will be purged
+         ,
+       ],
+       plugins: [
+         require("@chimera-ui/tw-plugin"), // This is important! This extends your tailwind theme to consume the CSS variables.
+       ],
+     };
+     ```
 
 3. Use the <Link href="/docs/theme" className="text-primary underline">theme generator</Link> to generate CSS themes. Add the CSS variables to your global css file.
 
@@ -32,6 +32,7 @@ module.exports = {
 <summary>Click this dropdown for an example of what your CSS file should look like. The first theme you put after `:root` is used by default. If your site does not use multiple themes, this is all you need. To switch between multiple themes, you just need to update the `data-theme` attribute on `<html>` using javascript.</summary>
 
 ```
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
