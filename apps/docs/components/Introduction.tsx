@@ -1,4 +1,4 @@
-import { Button } from "chimera-tw";
+import { Button } from "@chimera-ui/components";
 import Link from "next/link";
 
 const features = [
@@ -106,7 +106,7 @@ const features = [
 
 const Hero = () => {
   return (
-    <div className="flex flex-col items-center justify-center text-center mt-24">
+    <div className="flex flex-col items-center justify-center text-center mt-24 max-w-[900px]">
       <div className="text-5xl font-extrabold">
         {
           "Fully customizable components that you probably won't need to customize"
@@ -118,7 +118,7 @@ const Hero = () => {
 
 export const Introduction = () => {
   return (
-    <div className="flex flex-col items-center">
+    <div className="flex flex-col items-center h-screen p-12">
       <Hero />
       <div className="flex gap-6 flex-wrap my-8 justify-center">
         {features.map((feature) => (
@@ -130,9 +130,14 @@ export const Introduction = () => {
           </div>
         ))}
       </div>
-      <Link href="/docs/introduction">
-        <Button>Documentation</Button>
-      </Link>
+      <div className="flex flex-col items-center gap-4">
+        <code className="bg-base-2 border-line border h-10 rounded-md flex items-center p-2">
+          npm install @chimera-tw/components
+        </code>
+        <Link href="/docs/introduction">
+          <Button>Documentation</Button>
+        </Link>
+      </div>
     </div>
   );
 };
