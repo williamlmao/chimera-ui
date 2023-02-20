@@ -120,9 +120,9 @@ export const Introduction = () => {
   return (
     <div className="flex flex-col items-center h-screen p-12">
       <Hero />
-      <div className="flex gap-6 flex-wrap my-8 justify-center">
+      <div className="grid grid-cols-3 grid-rows-2 p-12">
         {features.map((feature) => (
-          <div className="flex items-center justify-center  px-4 py-2">
+          <div className="flex items-center justify-start  px-4 py-2">
             {feature?.icon}
             <div className="ml-4 text-xs leading-6 font-medium text-base-content-2">
               {feature.title}
@@ -131,11 +131,8 @@ export const Introduction = () => {
         ))}
       </div>
       <div className="flex flex-col items-center gap-4">
-        <code className="bg-base-2 border-line border h-10 rounded-md flex items-center p-2">
-          npm install @chimera-tw/components
-        </code>
-        <Link href="/docs/introduction">
-          <Button>Documentation</Button>
+        <Link href="/docs/install">
+          <Button>Get Started</Button>
         </Link>
       </div>
     </div>
