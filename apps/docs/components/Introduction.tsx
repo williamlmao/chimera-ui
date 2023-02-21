@@ -144,9 +144,9 @@ export const Introduction = () => {
   return (
     <div className="flex flex-col items-center h-screen p-4 md:p-12">
       <Hero />
-      <div className="grid grid-cols-2 grid-rows-3 md:grid-cols-3 md:grid-rows-2 p-4 md:p-12 gap-1 md:gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 md:grid-rows-3 lg:grid-cols-3 lg:grid-rows-2 p-4 md:p-12 gap-2 md:gap-4 my-4">
         {features.map((feature) => (
-          <div className="flex items-center justify-center px-4 py-2 border-line border rounded-md">
+          <div className="flex items-center justify-start sm:justify-center px-2 py-1 md:px-4 md:py-2 border-line border rounded-md">
             <div className="min-w-6">{feature?.icon}</div>
 
             <div className="ml-4 text-xs leading-6 font-medium">
