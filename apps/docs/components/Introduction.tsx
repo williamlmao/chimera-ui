@@ -149,7 +149,7 @@ export const Introduction = () => {
           <div className="flex items-center justify-center px-4 py-2 border-line border rounded-md">
             <div className="min-w-6">{feature?.icon}</div>
 
-            <div className="ml-4 text-xs leading-6 font-medium text-base-content-2">
+            <div className="ml-4 text-xs leading-6 font-medium">
               {feature.title}
             </div>
           </div>
