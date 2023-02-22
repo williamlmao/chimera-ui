@@ -147,7 +147,10 @@ const config = {
             "A beautiful, accessible, and customizable UI library for React + Tailwind"
           }
         />
-        <meta property="og:image" content="/chimera-og-image.png" />
+        <meta
+          property="og:image"
+          content={frontMatter.image || "/chimera-og-image.png"}
+        />
         <meta property="og:title" content="Chimera UI" />
       </>
     );
