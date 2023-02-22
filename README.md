@@ -97,3 +97,7 @@ See official docs for more information
      ```
 
 3. Use the <Link href="/docs/theme" className="text-primary underline">theme generator</Link> to generate CSS themes. Add the CSS variables to your global css file.
+
+## Philosophy
+
+I wanted to keep

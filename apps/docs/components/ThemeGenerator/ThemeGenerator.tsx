@@ -65,7 +65,7 @@ export const ThemeGenerator = () => {
   };
 
   return (
-    <div className="flex w-full h-[80vh] mt-8">
+    <div className="flex flex-col md:flex-row w-full md:h-[80vh] mt-8 gap-4">
       <Sidebar step={step} setStep={setStep}>
         <div className="flex flex-col gap-1 my-2 overflow-y-auto bg-slate-300 bg-opacity-20 items-center @[50px]:items-start rounded-md">
           {Object.keys(themeColors).map((color) => {
@@ -161,7 +161,7 @@ const Sidebar = ({
       className={clsx(
         " relative flex flex-col transition-all duration-200  @container border-line border gap-2 rounded-md mr-4",
         {
-          "w-2/5 p-4": sidebarExpanded,
+          "w-full md:w-2/5 p-4 max-h-[600px] md:max-h-full": sidebarExpanded,
           "w-[40px] no-scrollbar": !sidebarExpanded,
         }
       )}

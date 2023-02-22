@@ -138,12 +138,17 @@ const config = {
       <>
         <meta
           property="og:url"
-          content={`https://https://chimera-ui.com/${asPath}`}
+          content={`https://https://chimera-ui.com${asPath || ""}`}
         />
         <meta
           property="og:description"
-          content={frontMatter.description || "A Tailwind + React UI Library"}
+          content={
+            frontMatter.description ||
+            "A beautiful, accessible, and customizable UI library for React + Tailwind"
+          }
         />
+        <meta property="og:image" content="/chimera-og-image.png" />
+        <meta property="og:title" content="Chimera UI" />
       </>
     );
   },
