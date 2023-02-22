@@ -5,6 +5,106 @@ import Link from "next/link";
 import { Button } from "@chimera-ui/components";
 import { Code } from "@/components/Code";
 import { Logo } from "@/components/Logo";
+import {
+  Download,
+  Palette,
+  Key,
+  Component,
+  Sprout,
+  HelpCircle,
+  Coins,
+} from "lucide-react";
+
+// Used to generate the sidebar. The key is the sidebar title. This might be problematic when changing page titles in _meta.json and forgetting to update it here, but I can't think of a better way to do it for now.
+const pages = {
+  Introduction: {
+    icon: <Sprout />,
+  },
+  Installation: {
+    icon: <Download />,
+  },
+  "Key Concepts": {
+    icon: <Key />,
+  },
+  Components: {
+    icon: <Component />,
+  },
+  "Theme Generator": {
+    icon: <Palette />,
+  },
+  FAQ: {
+    icon: <HelpCircle />,
+  },
+  Credits: {
+    icon: <Coins />,
+  },
+  Accordion: {
+    radix: true,
+  },
+  "Alert Dialog": {
+    radix: true,
+  },
+  AspectRatio: {
+    radix: true,
+  },
+  Avatar: {
+    radix: true,
+  },
+  Button: {
+    radix: false,
+  },
+  Checkbox: {
+    radix: true,
+  },
+  Collapsible: {
+    radix: true,
+  },
+  "Context Menu": {
+    radix: true,
+  },
+  Dialog: {
+    radix: true,
+  },
+  "Dropdown Menu": {
+    radix: true,
+  },
+  Input: {
+    radix: true,
+  },
+  Label: {
+    radix: true,
+  },
+  Menubar: {
+    radix: true,
+  },
+  "Navigation Menu": {
+    radix: true,
+  },
+  Popover: {
+    radix: true,
+  },
+  Tooltip: {
+    radix: true,
+  },
+  Progress: {
+    radix: true,
+  },
+  "Radio Group": {
+    radix: true,
+  },
+  Select: {
+    radix: true,
+  },
+  Switch: {
+    radix: true,
+  },
+  Tabs: {
+    radix: true,
+  },
+  Toggle: {
+    radix: true,
+  },
+};
 
 const config = {
   logo: <Logo />,
@@ -154,6 +254,39 @@ const config = {
         <meta property="og:title" content="Chimera UI" />
       </>
     );
+  },
+  sidebar: {
+    titleComponent({ title }) {
+      return (
+        <div className="flex items-center gap-2">
+          {pages?.[title]?.icon && (
+            <div className="w-[25px] h-[25px]  flex items-center border rounded-md p-1">
+              {pages[title].icon}
+            </div>
+          )}
+          {title}
+          {pages?.[title]?.radix && (
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="10"
+              height="10"
+              viewBox="0 0 25 25"
+              fill="none"
+            >
+              <path
+                d="M12 25C7.58173 25 4 21.4183 4 17C4 12.5817 7.58173 9 12 9V25Z"
+                fill="currentcolor"
+              ></path>
+              <path d="M12 0H4V8H12V0Z" fill="currentcolor"></path>
+              <path
+                d="M17 8C19.2091 8 21 6.20914 21 4C21 1.79086 19.2091 0 17 0C14.7909 0 13 1.79086 13 4C13 6.20914 14.7909 8 17 8Z"
+                fill="currentcolor"
+              ></path>
+            </svg>
+          )}
+        </div>
+      );
+    },
   },
   // ...
 };
