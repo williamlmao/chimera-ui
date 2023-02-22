@@ -1,1 +1,203 @@
-# Dark / Light Mode
+---
+title: Themeing
+description: Chimera is the easiest way to configure beautiful light & dark modes or multi-theme support in Tailwind!
+image: "/chimera-theme-gen-image.png"
+---
+
+## How Themeing works in Chimera
+
+It all starts with the `data-theme` attribute on the `html` element. The snippet below is configured to use the `dark` theme.
+
+```html
+<html data-theme="dark">
+  <!-- .... -->
+</html>
+```
+
+Chimera is unopinionated about how you set the `data-theme` attribute. You can use [javascript to update it](https://www.w3schools.com/jsref/met_element_setattribute.asp), or you can use a library such as [next-themes](https://github.com/pacocoursey/next-themes), which automatically handles reading the user's system preference and updating the `data-theme` attribute for you.
+
+So how does your site know what colors to use for `dark`? Here's what the `@chimera-ui/tw-plugin` is doing under the hood.
+
+```js
+theme: {
+  extend: {
+    colors: {
+      base: "var(--base)"; // Tailwind is being extended to include a `base` color, which is set to the CSS variable `--base`. '--base' has to be defined in your CSS.
+    }
+  }
+}
+```
+
+You then define the colors for those variables in your CSS. Luckily, the [theme generator](/docs/theme) makes that super easy!
+
+So in summary, when you define `bg-primary`, here's what is happening:
+
+1. The `@chimera-ui/tw-plugin` tells Tailwind that `primary` is a color, and that it should use the CSS variable `--primary` for that color.
+2. In your CSS, you have defined the values for `--primary`. Maybe you've defined it to be `#000000` for the `dark` theme, and `#ffffff` for the `light` theme. You have also defined attribute selectors such as `html[data-theme="dark"]` to tell your CSS which colors to use for which theme.
+3. When you change the `data-theme` attribute, that tells CSS which set of colors to give to Tailwind, which then tells your component what color it should be.
+
+If you want to learn more, check out this [awesome video from Tailwind Labs](https://www.youtube.com/watch?v=MAtaT8BZEAo&t=1113s&ab_channel=TailwindLabs), which is where I learned this approach.
+
+## How to set up light / dark mode (Next.js)
+
+1. Use the [theme generator](/docs/theme) to generate a light and dark theme. Add the generated CSS to your globals.css file.
+
+<details>
+  <summary>Click to see example CSS</summary>
+
+```css
+/* globals.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* :root will be your default theme */
+@layer base {
+  :root {
+    --base: hsl(0, 0%, 97%);
+    --base-focus: hsl(0, 0%, 81%);
+    --base-2: hsl(0, 0%, 93%);
+    --base-2-focus: hsl(0, 0%, 89%);
+    --base-content: hsl(0, 0%, 9%);
+    --base-content-2: hsl(0, 0%, 20%);
+    --base-content-3: hsl(0, 0%, 42%);
+    --overlay: hsl(0, 0%, 90%);
+    --overlay-focus: hsl(0, 0%, 72%);
+    --overlay-2: hsl(0, 0%, 83%);
+    --overlay-2-focus: hsl(0, 0%, 72%);
+    --overlay-content: hsl(0, 0%, 9%);
+    --overlay-content-2: hsl(0, 0%, 20%);
+    --overlay-content-3: hsl(0, 0%, 31%);
+    --line: hsl(0, 0%, 88.2%);
+    --line-focus: hsl(0, 0%, 73.2%);
+    --input: hsl(0, 0%, 100%);
+    --input-focus: hsl(0, 0%, 100%);
+    --input-content: hsl(0, 0%, 15%);
+    --input-content-2: hsl(0, 0%, 37%);
+    --primary: hsl(293, 83%, 47%);
+    --primary-focus: hsl(126, 100%, 40.5%);
+    --primary-subtle: hsl(126, 100%, 73.5%);
+    --primary-content: hsl(126, 100%, 0%);
+    --primary-subtle-content: hsl(126, 100%, 0%);
+    --secondary: hsl(60, 97%, 50%);
+    --secondary-focus: hsl(60, 97%, 44.5%);
+    --secondary-subtle: hsl(60, 97%, 77.5%);
+    --secondary-subtle-content: hsl(60, 97%, 0%);
+    --secondary-content: hsl(60, 97%, 0%);
+    --info: hsl(212, 50%, 40%);
+    --info-focus: hsl(212, 50%, 34.5%);
+    --info-subtle: hsl(212, 50%, 67.5%);
+    --info-subtle-content: hsl(212, 50%, 0%);
+    --info-content: hsl(212, 50%, 100%);
+    --danger: hsl(0, 75%, 42%);
+    --danger-focus: hsl(0, 75%, 36.5%);
+    --danger-subtle: hsl(0, 75%, 69.5%);
+    --danger-subtle-content: hsl(0, 75%, 0%);
+    --danger-content: hsl(0, 75%, 100%);
+    --success: hsl(159, 61%, 41%);
+    --success-focus: hsl(159, 61%, 35.5%);
+    --success-subtle: hsl(159, 61%, 16%);
+    --success-subtle-content: hsl(159, 61%, 100%);
+    --success-content: hsl(159, 61%, 0%);
+    --warning: hsl(49, 95%, 53%);
+    --warning-focus: hsl(49, 95%, 47.5%);
+    --warning-subtle: hsl(49, 95%, 28%);
+    --warning-subtle-content: hsl(49, 95%, 100%);
+    --warning-content: hsl(49, 95%, 0%);
+  }
+
+  [data-theme="dark"] {
+    --base: hsl(120, 2%, 10%);
+    --base-focus: hsl(120, 2%, 27.6%);
+    --base-2: hsl(120, 2%, 14.4%);
+    --base-2-focus: hsl(120, 2%, 18.8%);
+    --base-content: hsl(120, 2%, 100%);
+    --base-content-2: hsl(120, 2%, 90%);
+    --base-content-3: hsl(120, 2%, 70%);
+    --overlay: hsl(120, 2%, 17.7%);
+    --overlay-focus: hsl(120, 2%, 37.5%);
+    --overlay-2: hsl(120, 2%, 25.4%);
+    --overlay-2-focus: hsl(120, 2%, 37.5%);
+    --overlay-content: hsl(120, 2%, 100%);
+    --overlay-content-2: hsl(120, 2%, 90%);
+    --overlay-content-3: hsl(120, 2%, 80%);
+    --line: hsl(120, 2%, 1.2%);
+    --line-focus: hsl(120, 2%, 17.7%);
+    --input: hsl(120, 2%, 13.3%);
+    --input-focus: hsl(120, 2%, 13.3%);
+    --input-content: hsl(120, 2%, 100%);
+    --input-content-2: hsl(120, 2%, 80%);
+    --primary: hsl(126, 100%, 46%);
+    --primary-focus: hsl(126, 100%, 40.5%);
+    --primary-subtle: hsl(126, 100%, 73.5%);
+    --primary-content: hsl(126, 100%, 0%);
+    --primary-subtle-content: hsl(126, 100%, 0%);
+    --secondary: hsl(60, 97%, 50%);
+    --secondary-focus: hsl(60, 97%, 44.5%);
+    --secondary-subtle: hsl(60, 97%, 77.5%);
+    --secondary-subtle-content: hsl(60, 97%, 0%);
+    --secondary-content: hsl(60, 97%, 0%);
+    --info: hsl(212, 50%, 40%);
+    --info-focus: hsl(212, 50%, 34.5%);
+    --info-subtle: hsl(212, 50%, 67.5%);
+    --info-subtle-content: hsl(212, 50%, 0%);
+    --info-content: hsl(212, 50%, 100%);
+    --danger: hsl(0, 75%, 42%);
+    --danger-focus: hsl(0, 75%, 36.5%);
+    --danger-subtle: hsl(0, 75%, 69.5%);
+    --danger-subtle-content: hsl(0, 75%, 0%);
+    --danger-content: hsl(0, 75%, 100%);
+    --success: hsl(159, 61%, 41%);
+    --success-focus: hsl(159, 61%, 35.5%);
+    --success-subtle: hsl(159, 61%, 16%);
+    --success-subtle-content: hsl(159, 61%, 100%);
+    --success-content: hsl(159, 61%, 0%);
+    --warning: hsl(49, 95%, 53%);
+    --warning-focus: hsl(49, 95%, 47.5%);
+    --warning-subtle: hsl(49, 95%, 28%);
+    --warning-subtle-content: hsl(49, 95%, 100%);
+    --warning-content: hsl(49, 95%, 0%);
+  }
+}
+```
+
+</details>
+
+2. `npm install next-themes` [(Documentation)](https://github.com/pacocoursey/next-themes)
+3. Add the Theme Provider to your `_app` file as shown below. I recommend using the `defaultTheme="system" enableSystem={true}` props to enable the system theme detection. At this point, you should be able to toggle between light and dark mode by changing your system settings ([mac](https://support.apple.com/guide/mac-help/use-a-light-or-dark-appearance-mchl52e1c2d2/mac)/[windows](https://support.microsoft.com/en-us/windows/change-colors-in-windows-d26ef4d6-819a-581c-1581-493cfcc005fe)).
+
+```jsx
+import { type AppType } from "next/dist/shared/lib/utils";
+import { ThemeProvider } from "next-themes";
+import "../styles/globals.css";
+
+const MyApp: AppType = ({ Component, pageProps }) => {
+  return (
+    <ThemeProvider defaultTheme="system" enableSystem={true}>
+      <Component {...pageProps} />
+    </ThemeProvider>
+  );
+};
+
+export default MyApp;
+```
+
+1. (Optional) Add a theme picker. [Apple's human interface guidelines actually recommend against this](https://developer.apple.com/design/human-interface-guidelines/foundations/dark-mode/). However, if you want to add a theme picker, you can do so by using the `useTheme` hook from `next-themes`. Here's a simple example:
+
+```jsx
+import { useTheme } from "next-themes";
+
+const ThemePicker = () => {
+  const { theme, setTheme } = useTheme();
+
+  return (
+    <button
+      onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+      aria-label="Toggle Dark Mode"
+    >
+      {theme === "dark" ? "🌞" : "🌙"}
+    </button>
+  );
+};
+
+export default ThemePicker;
+```
