@@ -172,6 +172,59 @@
     --warning-subtle-content: hsl(49, 95%, 100%);
     --warning-content: hsl(49, 95%, 0%);
   }
+
+  html[data-theme="bubblegum"] {
+    --base: hsl(180, 98%, 50%);
+    --base-focus: hsl(180, 98%, 34%);
+    --base-2: hsl(180, 98%, 46%);
+    --base-2-focus: hsl(180, 98%, 42%);
+    --base-content: hsl(180, 98%, 0%);
+    --base-content-2: hsl(180, 98%, 11%);
+    --base-content-3: hsl(180, 98%, 33%);
+    --overlay: hsl(180, 98%, 43%);
+    --overlay-focus: hsl(180, 98%, 25%);
+    --overlay-2: hsl(180, 98%, 36%);
+    --overlay-2-focus: hsl(180, 98%, 25%);
+    --overlay-content: hsl(180, 98%, 0%);
+    --overlay-content-2: hsl(180, 98%, 11%);
+    --overlay-content-3: hsl(180, 98%, 22%);
+    --line: hsl(180, 98%, 41.2%);
+    --line-focus: hsl(180, 98%, 26.2%);
+    --input: hsl(180, 98%, 53.3%);
+    --input-focus: hsl(180, 98%, 53.3%);
+    --input-content: hsl(180, 98%, 0%);
+    --input-content-2: hsl(180, 98%, 22%);
+    --primary: hsl(309, 100%, 61%);
+    --primary-focus: hsl(309, 100%, 55.5%);
+    --primary-subtle: hsl(309, 100%, 88.5%);
+    --primary-content: hsl(309, 100%, 100%);
+    --primary-subtle-content: hsl(309, 100%, 0%);
+    --secondary: hsl(227, 88%, 50%);
+    --secondary-focus: hsl(227, 88%, 44.5%);
+    --secondary-subtle: hsl(227, 88%, 77.5%);
+    --secondary-subtle-content: hsl(227, 88%, 0%);
+    --secondary-content: hsl(227, 88%, 100%);
+    --info: hsl(212, 50%, 40%);
+    --info-focus: hsl(212, 50%, 34.5%);
+    --info-subtle: hsl(212, 50%, 67.5%);
+    --info-subtle-content: hsl(212, 50%, 0%);
+    --info-content: hsl(212, 50%, 100%);
+    --danger: hsl(0, 75%, 42%);
+    --danger-focus: hsl(0, 75%, 36.5%);
+    --danger-subtle: hsl(0, 75%, 69.5%);
+    --danger-subtle-content: hsl(0, 75%, 0%);
+    --danger-content: hsl(0, 75%, 100%);
+    --success: hsl(159, 61%, 41%);
+    --success-focus: hsl(159, 61%, 35.5%);
+    --success-subtle: hsl(159, 61%, 16%);
+    --success-subtle-content: hsl(159, 61%, 100%);
+    --success-content: hsl(159, 61%, 0%);
+    --warning: hsl(49, 95%, 53%);
+    --warning-focus: hsl(49, 95%, 47.5%);
+    --warning-subtle: hsl(49, 95%, 28%);
+    --warning-subtle-content: hsl(49, 95%, 100%);
+    --warning-content: hsl(49, 95%, 0%);
+  }
 }
 @layer utilities {
   .flex-center {
