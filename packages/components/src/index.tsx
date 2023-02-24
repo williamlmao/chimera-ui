@@ -2,6 +2,7 @@ export { Accordion } from "./Accordion";
 export { AlertDialog } from "./AlertDialog";
 export { AspectRatio } from "./AspectRatio";
 export { Avatar } from "./Avatar";
+export { Copy } from "./Copy";
 export { Button } from "./Button";
 export { Checkbox } from "./Checkbox";
 export { Collapsible } from "./Collapsible";

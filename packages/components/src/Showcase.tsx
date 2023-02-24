@@ -9,6 +9,7 @@ import reactElementToJSXString from "react-element-to-jsx-string";
 import { twMerge } from "tailwind-merge";
 import { findSubcomponent } from "../utils";
 import { ThemePicker } from "./ThemePicker";
+import { Copy } from "./Copy";
 
 export const Showcase = ({
   children,
@@ -97,22 +98,11 @@ const Preview = ({
       </div>
       <pre
         className={twMerge(
-          "bg-gray-800 text-white p-4 rounded-md",
+          "bg-gray-800 text-white p-4 rounded-md overflow-x-auto",
           codePreviewClassName
         )}
       >
-        <Button
-          onClick={() => {
-            navigator.clipboard.writeText(code || "");
-            setCopied(true);
-            setTimeout(() => {
-              setCopied(false);
-            }, 1000);
-          }}
-          className="absolute top-2 right-2 text-xs px-2 py-1 rounded-md"
-        >
-          {copied ? "Copied!" : "Copy"}
-        </Button>
+        <Copy contentToCopy={code} />
         <code>{code}</code>
       </pre>
     </div>

@@ -42,11 +42,13 @@ const components: { title: string; href: string; description: string }[] = [
 
 export const NavigationMenuDemo = () => {
   return (
-    <div className="">
+    <div className="w-full">
       <NavigationMenu.Root>
         <NavigationMenu.List>
           <NavigationMenu.Item>
-            <NavigationMenu.Trigger>Getting started</NavigationMenu.Trigger>
+            <NavigationMenu.Trigger className="whitespace-nowrap">
+              Getting started
+            </NavigationMenu.Trigger>
             <NavigationMenu.Content>
               <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
                 <li className="row-span-3">
@@ -80,7 +82,7 @@ export const NavigationMenuDemo = () => {
           <NavigationMenu.Item>
             <NavigationMenu.Trigger>Components</NavigationMenu.Trigger>
             <NavigationMenu.Content>
-              <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
+              <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] justify-center">
                 {components.map((component) => (
                   <ListItem
                     key={component.title}
@@ -93,12 +95,14 @@ export const NavigationMenuDemo = () => {
               </ul>
             </NavigationMenu.Content>
           </NavigationMenu.Item>
-          <NavigationMenu.Item>
+          <NavigationMenu.Item className="hidden md:block">
             <Link href="/docs" legacyBehavior passHref>
               <NavigationMenu.Link>Documentation</NavigationMenu.Link>
             </Link>
           </NavigationMenu.Item>
         </NavigationMenu.List>
+
+        <NavigationMenu.Viewport />
       </NavigationMenu.Root>
     </div>
   );

@@ -130,7 +130,7 @@ const config = {
           <div className="flex gap-4">
             <Link href={frontMatter.radix.link}>
               <Button
-                className="rounded-xl flex items-center gap-2 h-6"
+                className="rounded-xl whitespace-nowrap flex items-center gap-2 h-6"
                 size="xs"
               >
                 <svg
@@ -155,7 +155,7 @@ const config = {
             </Link>
             <Link href={frontMatter.radix.link}>
               <Button
-                className="rounded-xl flex items-center gap-2 h-6"
+                className="rounded-xl whitespace-nowrap flex items-center gap-2 h-6"
                 size="xs"
               >
                 <svg
@@ -260,7 +260,7 @@ const config = {
       return (
         <div className="flex items-center gap-2">
           {pages?.[title]?.icon && (
-            <div className="w-[25px] h-[25px]  flex items-center border rounded-md p-1">
+            <div className="w-[25px] h-[25px]  flex items-center border border-gray-500 rounded-md p-1">
               {pages[title].icon}
             </div>
           )}

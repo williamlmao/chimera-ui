@@ -1,23 +1,12 @@
-import { Button } from "@chimera-ui/components";
+import { Button, Copy } from "@chimera-ui/components";
 import React from "react";
 
 export const Code = ({ children }: { children: string }) => {
   const [copied, setCopied] = React.useState(false);
 
   return (
-    <pre className={"bg-gray-800 text-white p-4 rounded-md"}>
-      <Button
-        onClick={() => {
-          navigator.clipboard.writeText(children || "");
-          setCopied(true);
-          setTimeout(() => {
-            setCopied(false);
-          }, 1000);
-        }}
-        className="absolute top-2 right-2 text-xs px-2 py-1 rounded-md max-h-6"
-      >
-        {copied ? "Copied!" : "Copy"}
-      </Button>
+    <pre className={"bg-gray-800 text-white p-4 rounded-md overflow-auto"}>
+      <Copy contentToCopy={children} className="bg-gray-900" />
       <code>{children}</code>
     </pre>
   );

@@ -15,28 +15,33 @@ import { InfoCircledIcon } from "@radix-ui/react-icons";
 
 <Showcase>
   <Showcase.Preview>
- <Accordion.Root className="AccordionRoot" type="single" defaultValue="item-1" collapsible>
-    <Accordion.Item className="AccordionItem" value="item-1">
-      <Accordion.Trigger>Is it accessible?</Accordion.Trigger>
-      <Accordion.Content>Yes. It adheres to the WAI-ARIA design pattern.</Accordion.Content>
-    </Accordion.Item>
-
-    <Accordion.Item className="AccordionItem" value="item-2">
-      <Accordion.Trigger>Is it unstyled?</Accordion.Trigger>
-      <Accordion.Content>
-        Yes. It's unstyled by default, giving you freedom over the look and feel.
-      </Accordion.Content>
-    </Accordion.Item>
-
-    <Accordion.Item disableDefaultStyles={true} className="AccordionItem" value="item-3">
-      <Accordion.Trigger>Can it be animated?</Accordion.Trigger>
-      <Accordion.Content className="Accordion.Content">
-        <div  className="AccordionContentText">
-          Yes! You can animate the Accordion with CSS or JavaScript.
-        </div>
-      </Accordion.Content>
-    </Accordion.Item>
-
-  </Accordion.Root>
+    <Accordion.Root
+      className="AccordionRoot w-[400px]"
+      type="single"
+      defaultValue="item-1"
+      collapsible
+    >
+      <Accordion.Item className="AccordionItem" value="item-1">
+        <Accordion.Trigger>Is it accessible?</Accordion.Trigger>
+        <Accordion.Content>
+          Yes. It adheres to the WAI-ARIA design pattern.
+        </Accordion.Content>
+      </Accordion.Item>
+      <Accordion.Item className="AccordionItem" value="item-2">
+        <Accordion.Trigger>Is it unstyled?</Accordion.Trigger>
+        <Accordion.Content>
+          Yes. It's unstyled by default, giving you freedom over the look and
+          feel.
+        </Accordion.Content>
+      </Accordion.Item>
+      <Accordion.Item className="AccordionItem" value="item-3">
+        <Accordion.Trigger>Can it be animated?</Accordion.Trigger>
+        <Accordion.Content className="Accordion.Content">
+          <div className="AccordionContentText w-full">
+            Yes! You can animate the Accordion with CSS or JavaScript.
+          </div>
+        </Accordion.Content>
+      </Accordion.Item>
+    </Accordion.Root>
   </Showcase.Preview>
 </Showcase>

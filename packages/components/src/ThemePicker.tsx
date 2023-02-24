@@ -53,8 +53,8 @@ const ThemeButton = ({
 
 const themes = [
   {
-    value: "tresleches",
-    label: "Tres Leches",
+    value: "chimera",
+    label: "Chimera",
   },
   {
     value: "zookeper",
@@ -63,10 +63,6 @@ const themes = [
   {
     value: "gunmetal",
     label: "Gunmetal",
-  },
-  {
-    value: "custom-theme",
-    label: "Custom Theme",
   },
 ];
 
