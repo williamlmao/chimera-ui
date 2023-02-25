@@ -1,6 +1,6 @@
 import * as RadixPopover from "@radix-ui/react-popover";
 import * as React from "react";
-import { twMerge } from "tailwind-merge";
+import { cn } from "../utils";
 
 export const Popover = ({
   buttonContent,
@@ -45,17 +45,16 @@ Popover.Root = Root;
 
 /**
  *
- * @param className Default: `px-2 py-1 w-fit bg-primary  text-on-primary rounded-md`
+ * @param className Default: `px-2`
  * @returns
  */
-
 const Trigger = React.forwardRef<
   React.ElementRef<typeof RadixPopover.Trigger>,
   React.ComponentPropsWithoutRef<typeof RadixPopover.Trigger>
 >((props, forwardedRef) => {
   return (
     <RadixPopover.Trigger
-      className={twMerge(
+      className={cn(
         "px-2 py-1 w-fit bg-primary hover:bg-primary-focus text-primary-content rounded-md",
         props.className
       )}
@@ -66,7 +65,6 @@ const Trigger = React.forwardRef<
     </RadixPopover.Trigger>
   );
 });
-
 Trigger.displayName = "Popover.Trigger";
 Popover.Trigger = Trigger;
 
@@ -84,7 +82,7 @@ const Content = React.forwardRef<
     <RadixPopover.Content
       {...props}
       ref={forwardedRef}
-      className={twMerge(
+      className={cn(
         "p-4 flex items-center justify-center bg-overlay text-overlay-content mx-2 max-w-[300px] rounded-md",
         props.className
       )}
@@ -97,9 +95,8 @@ Content.displayName = "Popover.Content";
 Popover.Content = Content;
 
 const Arrow = ({ className }: { className?: string }) => {
-  return <RadixPopover.Arrow className={twMerge("fill-overlay", className)} />;
+  return <RadixPopover.Arrow className={cn("fill-overlay", className)} />;
 };
-
 Arrow.displayName = "Popover.Arrow";
 Popover.Arrow = Arrow;
 
@@ -111,7 +108,7 @@ const Close = React.forwardRef<
     <RadixPopover.Close
       {...props}
       ref={forwardedRef}
-      className={twMerge("absolute top-1 right-3", props.className)}
+      className={cn("absolute top-1 right-3", props.className)}
     >
       {props.children}
     </RadixPopover.Close>
