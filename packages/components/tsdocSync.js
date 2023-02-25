@@ -33,8 +33,10 @@ files.forEach((file) => {
       blockNameFirstLetterIsUppercase;
     const containsTsDoc = codeblock.includes("/**");
     const containsDefaultClassName = codeblock.includes("cn(");
-
-    if (!isComponent || !containsDefaultClassName) return codeblock;
+    const isMainComponent = codeblock.includes("export const");
+    // Do not run any updates on main components, as users do not need to know the default styling since they would be unable to edit it at deeper levels anyways
+    if (!isComponent || !containsDefaultClassName || isMainComponent)
+      return codeblock;
     const constCount = (codeblock.match(/const/g) || []).length;
     if (constCount >= 2) {
       console.log(
