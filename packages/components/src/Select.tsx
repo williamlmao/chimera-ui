@@ -21,6 +21,7 @@ Select.Group = Group;
 const Value = SelectPrimitive.Value;
 Value.displayName = "Select.Value";
 Select.Value = Value;
+
 const Trigger = React.forwardRef<
   React.ElementRef<typeof SelectPrimitive.Trigger>,
   React.ComponentPropsWithoutRef<typeof SelectPrimitive.Trigger>
@@ -77,6 +78,7 @@ const Label = React.forwardRef<
 ));
 Label.displayName = SelectPrimitive.Label.displayName;
 Select.Label = Label;
+
 const Item = React.forwardRef<
   React.ElementRef<typeof SelectPrimitive.Item>,
   React.ComponentPropsWithoutRef<typeof SelectPrimitive.Item>
@@ -100,6 +102,7 @@ const Item = React.forwardRef<
 ));
 Item.displayName = SelectPrimitive.Item.displayName;
 Select.Item = Item;
+
 const Separator = React.forwardRef<
   React.ElementRef<typeof SelectPrimitive.Separator>,
   React.ComponentPropsWithoutRef<typeof SelectPrimitive.Separator>

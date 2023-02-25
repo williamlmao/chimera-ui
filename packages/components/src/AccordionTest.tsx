@@ -15,8 +15,8 @@ Root.displayName = AccordionPrimitive.Root.displayName;
 Accordion.Root = Root;
 
 /**
- * Default Classes: ~ "border-b border-b-line" ~
- * sdiofh
+ * @prop {string} className - Default:'border-b border-b-line'
+ * Some description about the Item
  */
 const Item = React.forwardRef<
   React.ElementRef<typeof AccordionPrimitive.Item>,
@@ -28,13 +28,9 @@ const Item = React.forwardRef<
     {...props}
   />
 ));
-Item.displayName = "Accordion.Item";
+Item.displayName = AccordionPrimitive.Item.displayName;
 Accordion.Item = Item;
 
-/**
- * Default Classes: ~ "flex flex-1 items-center justify-between py-4 font-medium transition-all hover:underline [&[data-state=open]>svg]:rotate-180 w-fit" ~
- *
- */
 const Trigger = React.forwardRef<
   React.ElementRef<typeof AccordionPrimitive.Trigger>,
   React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Trigger>
@@ -57,7 +53,6 @@ Trigger.displayName = AccordionPrimitive.Trigger.displayName;
 Accordion.Trigger = Trigger;
 
 /**
- * Default Classes: ~ "overflow-hidden text-sm transition-all data-[state=open]:animate-accordion-down data-[state=closed]:animate-accordion-up w-fit" ~
  * Some other content
  */
 const Content = React.forwardRef<
