@@ -3,6 +3,10 @@ import * as SliderPrimitive from "@radix-ui/react-slider";
 
 import { cn } from "../utils";
 
+/**
+ * Default Classes: ~ "relative flex w-full touch-none select-none items-center" ~
+ *
+ */
 const Slider = React.forwardRef<
   React.ElementRef<typeof SliderPrimitive.Root>,
   React.ComponentPropsWithoutRef<typeof SliderPrimitive.Root>

@@ -16,7 +16,7 @@ export const Copy = ({
   successIcon,
 }: {
   className?: string;
-  defaultClassName: string;
+  defaultClassName?: string;
   contentToCopy: string;
   copyIcon?: React.ReactNode;
   successIcon?: React.ReactNode;

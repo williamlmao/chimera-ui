@@ -25,6 +25,10 @@ export const Switch = ({
 );
 Switch.displayName = "Switch";
 
+/**
+ * Default Classes: ~ "peer inline-flex h-[24px] w-[44px] shrink-0 cursor-pointer items-center rounded-full border-2 border-transparent transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 data-[state=unchecked]:bg-slate-200 data-[state=checked]:bg-primary" ~
+ *
+ */
 const Root = React.forwardRef<
   React.ElementRef<typeof SwitchPrimitives.Root>,
   React.ComponentPropsWithoutRef<typeof SwitchPrimitives.Root>
@@ -43,6 +47,10 @@ const Root = React.forwardRef<
 Root.displayName = "Switch.Root";
 Switch.Root = Root;
 
+/**
+ * Default Classes: ~ "pointer-events-none block h-5 w-5 rounded-full bg-white shadow-lg ring-0 transition-transform data-[state=unchecked]:translate-x-0 data-[state=checked]:translate-x-5" ~
+ *
+ */
 const Thumb = React.forwardRef<
   React.ElementRef<typeof SwitchPrimitives.Thumb>,
   React.ComponentPropsWithoutRef<typeof SwitchPrimitives.Thumb>

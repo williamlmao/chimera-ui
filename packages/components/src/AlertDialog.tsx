@@ -15,6 +15,15 @@ const Trigger = AlertDialogPrimitive.Trigger;
 Trigger.displayName = "AlertDialog.Trigger";
 AlertDialog.Trigger = Trigger;
 
+/**
+ * Default Classes: ~ undefined ~
+ * Default Classes: ~ undefined ~
+ * Default Classes: ~ undefined ~
+ * Default Classes: ~ undefined ~
+ * Default Classes: ~ undefined ~
+ * Default Classes: ~ undefined ~
+ *
+ */
 const Portal = ({
   className,
   children,
@@ -29,6 +38,10 @@ const Portal = ({
 Portal.displayName = "AlertDialog.Portal";
 AlertDialog.Portal = Portal;
 
+/**
+ * Default Classes: ~ "fixed inset-0 z-50 bg-black/50 backdrop-blur-sm transition-opacity animate-in fade-in" ~
+ *
+ */
 const Overlay = React.forwardRef<
   React.ElementRef<typeof AlertDialogPrimitive.Overlay>,
   React.ComponentPropsWithoutRef<typeof AlertDialogPrimitive.Overlay>
@@ -45,6 +58,10 @@ const Overlay = React.forwardRef<
 Overlay.displayName = "AlertDialog.Overlay";
 AlertDialog.Overlay = Overlay;
 
+/**
+ * Default Classes: ~ "fixed z-50 grid w-full max-w-lg text-overlay-content scale-100 bg-overlay gap-4 p-6 opacity-100 animate-in fade-in-90 slide-in-from-bottom-10 sm:rounded-md rounded-lg sm:zoom-in-90 sm:slide-in-from-bottom-0 md:w-full" ~
+ *
+ */
 const Content = React.forwardRef<
   React.ElementRef<typeof AlertDialogPrimitive.Content>,
   React.ComponentPropsWithoutRef<typeof AlertDialogPrimitive.Content>
@@ -64,6 +81,10 @@ const Content = React.forwardRef<
 Content.displayName = "AlertDialog.Content";
 AlertDialog.Content = Content;
 
+/**
+ * Default Classes: ~ "flex flex-col space-y-2 text-center sm:text-left" ~
+ *
+ */
 const Header = ({
   className,
   ...props
@@ -79,6 +100,10 @@ const Header = ({
 Header.displayName = "AlertDialog.Header";
 AlertDialog.Header = Header;
 
+/**
+ * Default Classes: ~ "flex flex-col-reverse sm:flex-row sm:justify-end sm:space-x-2" ~
+ *
+ */
 const Footer = ({
   className,
   ...props
@@ -94,6 +119,10 @@ const Footer = ({
 Footer.displayName = "AlertDialog.Footer";
 AlertDialog.Footer = Footer;
 
+/**
+ * Default Classes: ~ "text-lg font-semibold text-overlay-content-2" ~
+ *
+ */
 const Title = React.forwardRef<
   React.ElementRef<typeof AlertDialogPrimitive.Title>,
   React.ComponentPropsWithoutRef<typeof AlertDialogPrimitive.Title>
@@ -107,6 +136,10 @@ const Title = React.forwardRef<
 Title.displayName = "AlertDialog.Title";
 AlertDialog.Title = Title;
 
+/**
+ * Default Classes: ~ "text-sm text-overlay-content" ~
+ *
+ */
 const Description = React.forwardRef<
   React.ElementRef<typeof AlertDialogPrimitive.Description>,
   React.ComponentPropsWithoutRef<typeof AlertDialogPrimitive.Description>
@@ -120,6 +153,10 @@ const Description = React.forwardRef<
 Description.displayName = "AlertDialog.Description";
 AlertDialog.Description = Description;
 
+/**
+ * Default Classes: ~ "inline-flex h-10 items-center justify-center rounded-md bg-danger text-danger-content py-2 px-4 text-sm font-semibold transition-colors hover:bg-danger-focus focus:outline-none focus:ring-2 focus:ring-line-focus focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50" ~
+ *
+ */
 const Action = React.forwardRef<
   React.ElementRef<typeof AlertDialogPrimitive.Action>,
   React.ComponentPropsWithoutRef<typeof AlertDialogPrimitive.Action>
@@ -136,6 +173,10 @@ const Action = React.forwardRef<
 Action.displayName = "AlertDialog.Action";
 AlertDialog.Action = Action;
 
+/**
+ * Default Classes: ~ "mt-2 inline-flex h-10 items-center justify-center rounded-md border border-slate-200 py-2 px-4 text-sm font-semibold text-overlay-content transition-colors hover:bg-overlay-3 focus:outline-none focus:ring-1 focus:ring-line-focus focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50  sm:mt-0" ~
+ *
+ */
 const Cancel = React.forwardRef<
   React.ElementRef<typeof AlertDialogPrimitive.Cancel>,
   React.ComponentPropsWithoutRef<typeof AlertDialogPrimitive.Cancel>

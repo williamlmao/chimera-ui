@@ -1,9 +1,13 @@
 {
   "$schema": "https://turbo.build/schema.json",
   "pipeline": {
+    "prebuild": {
+      "outputs": [],
+      "dependsOn": []
+    },
     "build": {
       "outputs": ["dist/**", ".next/**"],
-      "dependsOn": ["^build"]
+      "dependsOn": ["^prebuild", "^build"]
     },
     "test": {
       "outputs": ["coverage/**"],

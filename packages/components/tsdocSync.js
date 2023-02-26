@@ -4,12 +4,6 @@
 const fs = require("fs");
 const path = require("path");
 
-// const componentName = "Button";
-// var code = fs.readFileSync(
-//   path.join(__dirname, `src/${componentName}.tsx`),
-//   "utf8"
-// );
-
 const files = fs.readdirSync(path.join(__dirname, "src"));
 
 files.forEach((file) => {
@@ -42,7 +36,7 @@ files.forEach((file) => {
       console.log(
         `${componentName}.tsx - ${blockName} --- CODE IS NOT PROPERLY FORMATTED. Make sure there is a line break between subcomponents, otherwise tsdocs cannot be synced. \n`
       );
-      return;
+      return codeblock;
     }
     const tsDoc = codeblock.match(/\/\*\*[\s\S]*?\*\//g)?.[0];
     let updatedTsDoc = tsDoc;
@@ -60,7 +54,7 @@ files.forEach((file) => {
         if (existingTsDocStyles) {
           updatedTsDoc = tsDoc.replace(existingTsDocStyles, defaultStyles);
           updatesMade.push(
-            `${componentName}.${blockName} - defaultStyles updated`
+            `${componentName}.${blockName} - defaultStyles synced`
           );
         }
         if (!existingTsDocStyles) {
@@ -84,13 +78,16 @@ files.forEach((file) => {
     }
     return codeblock;
   });
-  console.log(updatesMade.join("\n"));
-  // const updatedCode = updatedCodeBlocks.join(";\n\n");
-  // console.log("🚀 ~ file: test.js:74 ~ updatedCode:", updatedCode);
 
-  // fs.writeFileSync(
-  //   path.join(__dirname, `src/${componentName}.tsx`),
-  //   updatedCode,
-  //   "utf8"
-  // );
+  if (updatesMade.length > 0) {
+    console.log(updatesMade.join("\n"));
+    const updatedCode = updatedCodeBlocks.join(";\n\n");
+
+    fs.writeFileSync(
+      path.join(__dirname, `src/${componentName}.tsx`),
+      updatedCode,
+      "utf8"
+    );
+    console.log(`${componentName}.tsx - updated! 🎉`);
+  }
 });

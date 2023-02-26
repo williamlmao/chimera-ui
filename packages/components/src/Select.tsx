@@ -22,6 +22,10 @@ const Value = SelectPrimitive.Value;
 Value.displayName = "Select.Value";
 Select.Value = Value;
 
+/**
+ * Default Classes: ~ "flex h-10 w-full items-center justify-between rounded-md border border-line bg-input py-2 px-3 text-sm text-input-content placeholder:text-input-content-2 focus:outline-none focus:ring-2 focus:ring-line focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 " ~
+ *
+ */
 const Trigger = React.forwardRef<
   React.ElementRef<typeof SelectPrimitive.Trigger>,
   React.ComponentPropsWithoutRef<typeof SelectPrimitive.Trigger>
@@ -41,6 +45,10 @@ const Trigger = React.forwardRef<
 Trigger.displayName = SelectPrimitive.Trigger.displayName;
 Select.Trigger = Trigger;
 
+/**
+ * Default Classes: ~ "relative z-50 min-w-[8rem] overflow-hidden rounded-md border border-line bg-overlay text-overlay-content shadow-md animate-in fade-in-80" ~
+ *
+ */
 const Content = React.forwardRef<
   React.ElementRef<typeof SelectPrimitive.Content>,
   React.ComponentPropsWithoutRef<typeof SelectPrimitive.Content>
@@ -63,6 +71,10 @@ const Content = React.forwardRef<
 Content.displayName = SelectPrimitive.Content.displayName;
 Select.Content = Content;
 
+/**
+ * Default Classes: ~ "py-1.5 pr-2 pl-8 text-md font-semibold text-overlay-content-3" ~
+ *
+ */
 const Label = React.forwardRef<
   React.ElementRef<typeof SelectPrimitive.Label>,
   React.ComponentPropsWithoutRef<typeof SelectPrimitive.Label>
@@ -79,6 +91,10 @@ const Label = React.forwardRef<
 Label.displayName = SelectPrimitive.Label.displayName;
 Select.Label = Label;
 
+/**
+ * Default Classes: ~ "relative flex cursor-default select-none items-center rounded-sm py-1.5 pr-2 pl-8 text-sm font-medium outline-none focus:bg-primary focus:text-primary-content data-[disabled]:pointer-events-none data-[disabled]:opacity-50" ~
+ *
+ */
 const Item = React.forwardRef<
   React.ElementRef<typeof SelectPrimitive.Item>,
   React.ComponentPropsWithoutRef<typeof SelectPrimitive.Item>
@@ -103,6 +119,10 @@ const Item = React.forwardRef<
 Item.displayName = SelectPrimitive.Item.displayName;
 Select.Item = Item;
 
+/**
+ * Default Classes: ~ "-mx-1 my-1 h-px bg-line" ~
+ *
+ */
 const Separator = React.forwardRef<
   React.ElementRef<typeof SelectPrimitive.Separator>,
   React.ComponentPropsWithoutRef<typeof SelectPrimitive.Separator>

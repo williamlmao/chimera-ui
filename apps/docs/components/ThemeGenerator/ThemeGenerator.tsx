@@ -202,14 +202,16 @@ const Sidebar = ({
           </Button>
         )}
 
-        <Button
-          className="hidden @[10px]:block w-full"
-          onClick={() => {
-            setStep(step + 1);
-          }}
-        >
-          Next
-        </Button>
+        {step < 3 && (
+          <Button
+            className="hidden @[10px]:block w-full"
+            onClick={() => {
+              setStep(step + 1);
+            }}
+          >
+            Next
+          </Button>
+        )}
       </div>
     </div>
   );
@@ -248,7 +250,9 @@ const CopyCss = ({ themeColors }: { themeColors: ColorsType }) => {
           <Clipboard className="w-4 h-4" />
         )}
       </Button>
-      <code className="px-8">{code}</code>
+      <code className="px-8" id="theme-gen-copy-css">
+        {code}
+      </code>
     </pre>
   );
 };

@@ -98,6 +98,6 @@ See official docs for more information
 
 3. Use the <Link href="/docs/theme" className="text-primary underline">theme generator</Link> to generate CSS themes. Add the CSS variables to your global css file.
 
-## Philosophy
+## Repository
 
-I wanted to keep
+`npm run build` will trigger `prebuild`. In `prebuild`, @chimera-ui/components will run tsdocSync.js, which syncs the classNames from each component to a tsdoc comment above it.

@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "test": "cypress open"
   },
   "dependencies": {
     "@chimera-ui/components": "workspace:*",
@@ -39,6 +40,7 @@
     "@types/color": "^3.0.3",
     "@types/react-resizable": "^3.0.3",
     "autoprefixer": "^10.4.13",
+    "cypress": "^12.7.0",
     "postcss": "^8.4.20",
     "react-docgen": "6.0.0-beta.5",
     "tailwindcss": "^3.2.4"

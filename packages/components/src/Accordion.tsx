@@ -53,7 +53,7 @@ const Trigger = React.forwardRef<
     </AccordionPrimitive.Trigger>
   </AccordionPrimitive.Header>
 ));
-Trigger.displayName = AccordionPrimitive.Trigger.displayName;
+Trigger.displayName = "Accordion.Trigger";
 Accordion.Trigger = Trigger;
 
 /**
@@ -75,5 +75,5 @@ const Content = React.forwardRef<
     <div className="pt-0 pb-4">{children}</div>
   </AccordionPrimitive.Content>
 ));
-Content.displayName = AccordionPrimitive.Content.displayName;
+Content.displayName = "Accordion.Content";
 Accordion.Content = Content;

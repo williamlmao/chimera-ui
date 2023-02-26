@@ -38,6 +38,10 @@ const RadioGroup = DropdownMenuPrimitive.RadioGroup;
 RadioGroup.displayName = "DropdownMenu.RadioGroup";
 DropdownMenu.RadioGroup = RadioGroup;
 
+/**
+ * Default Classes: ~ "flex cursor-default select-none items-center rounded-md-sm py-1.5 px-2 text-sm font-medium outline-none focus:bg-primary focus:text-primary-content data-[state=open]:bg-overlay-focus" ~
+ *
+ */
 const SubTrigger = React.forwardRef<
   React.ElementRef<typeof DropdownMenuPrimitive.SubTrigger>,
   React.ComponentPropsWithoutRef<typeof DropdownMenuPrimitive.SubTrigger> & {
@@ -60,6 +64,10 @@ const SubTrigger = React.forwardRef<
 SubTrigger.displayName = "DropdownMenu.SubTrigger";
 DropdownMenu.SubTrigger = SubTrigger;
 
+/**
+ * Default Classes: ~ "z-50 min-w-[8rem] overflow-hidden rounded-md border border-line bg-overlay text-overlay-content shadow-md animate-in slide-in-from-left-1 " ~
+ *
+ */
 const SubContent = React.forwardRef<
   React.ElementRef<typeof DropdownMenuPrimitive.SubContent>,
   React.ComponentPropsWithoutRef<typeof DropdownMenuPrimitive.SubContent>
@@ -76,6 +84,10 @@ const SubContent = React.forwardRef<
 SubContent.displayName = "DropdownMenu.SubContent";
 DropdownMenu.SubContent = SubContent;
 
+/**
+ * Default Classes: ~ "z-50 min-w-[8rem] overflow-hidden rounded-md border border-line bg-overlay text-overlay-content shadow-md animate-in data-[side=bottom]:slide-in-from-top-2 data-[side=top]:slide-in-from-bottom-2 " ~
+ *
+ */
 const Content = React.forwardRef<
   React.ElementRef<typeof DropdownMenuPrimitive.Content>,
   React.ComponentPropsWithoutRef<typeof DropdownMenuPrimitive.Content>
@@ -95,6 +107,10 @@ const Content = React.forwardRef<
 Content.displayName = "DropdownMenu.Content";
 DropdownMenu.Content = Content;
 
+/**
+ * Default Classes: ~ "relative flex cursor-default select-none items-center rounded-md-sm py-1.5 px-2 bg-overlay text-sm font-medium outline-none focus:bg-primary focus:text-primary-content data-[disabled]:pointer-events-none data-[disabled]:opacity-50 group" ~
+ *
+ */
 const Item = React.forwardRef<
   React.ElementRef<typeof DropdownMenuPrimitive.Item>,
   React.ComponentPropsWithoutRef<typeof DropdownMenuPrimitive.Item> & {
@@ -114,6 +130,10 @@ const Item = React.forwardRef<
 Item.displayName = "DropdownMenu.Item";
 DropdownMenu.Item = Item;
 
+/**
+ * Default Classes: ~ "relative flex cursor-default select-none items-center rounded-md-sm py-1.5 pl-8 pr-2 text-sm font-medium outline-none focus:bg-primary data-[disabled]:pointer-events-none data-[disabled]:opacity-50 " ~
+ *
+ */
 const CheckboxItem = React.forwardRef<
   React.ElementRef<typeof DropdownMenuPrimitive.CheckboxItem>,
   React.ComponentPropsWithoutRef<typeof DropdownMenuPrimitive.CheckboxItem>
@@ -138,6 +158,10 @@ const CheckboxItem = React.forwardRef<
 CheckboxItem.displayName = "DropdownMenu.CheckboxItem";
 DropdownMenu.CheckboxItem = CheckboxItem;
 
+/**
+ * Default Classes: ~ "relative flex cursor-default select-none items-center rounded-md-sm py-1.5 pl-8 pr-2 text-sm font-medium outline-none focus:bg-primary data-[disabled]:pointer-events-none data-[disabled]:opacity-50 " ~
+ *
+ */
 const RadioItem = React.forwardRef<
   React.ElementRef<typeof DropdownMenuPrimitive.RadioItem>,
   React.ComponentPropsWithoutRef<typeof DropdownMenuPrimitive.RadioItem>
@@ -161,6 +185,10 @@ const RadioItem = React.forwardRef<
 RadioItem.displayName = "DropdownMenu.RadioItem";
 DropdownMenu.RadioItem = RadioItem;
 
+/**
+ * Default Classes: ~ "px-2 py-1.5 text-sm font-semibold text-overlay-content" ~
+ *
+ */
 const Label = React.forwardRef<
   React.ElementRef<typeof DropdownMenuPrimitive.Label>,
   React.ComponentPropsWithoutRef<typeof DropdownMenuPrimitive.Label> & {
@@ -180,6 +208,10 @@ const Label = React.forwardRef<
 Label.displayName = "DropdownMenu.Label";
 DropdownMenu.Label = Label;
 
+/**
+ * Default Classes: ~ "-mx-1 my-1 h-px bg-line" ~
+ *
+ */
 const Separator = React.forwardRef<
   React.ElementRef<typeof DropdownMenuPrimitive.Separator>,
   React.ComponentPropsWithoutRef<typeof DropdownMenuPrimitive.Separator>
@@ -193,6 +225,10 @@ const Separator = React.forwardRef<
 Separator.displayName = "DropdownMenu.Separator";
 DropdownMenu.Separator = Separator;
 
+/**
+ * Default Classes: ~ "ml-auto text-xs tracking-widest text-overlay-content-3 group-hover:text-primary-content" ~
+ *
+ */
 const Shortcut = ({
   className,
   ...props

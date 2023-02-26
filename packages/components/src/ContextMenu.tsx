@@ -27,6 +27,10 @@ const RadioGroup = ContextMenuPrimitive.RadioGroup;
 RadioGroup.displayName = "ContextMenu.RadioGroup";
 ContextMenu.RadioGroup = RadioGroup;
 
+/**
+ * Default Classes: ~ "flex cursor-default select-none items-center rounded-md-sm py-1.5 px-2 text-sm font-medium outline-none focus:bg-overlay data-[state=open]:bg-overlay-focus focus:ring-0 focus:ring-offset-0 focus:bg-overlay-focus" ~
+ *
+ */
 const SubTrigger = React.forwardRef<
   React.ElementRef<typeof ContextMenuPrimitive.SubTrigger>,
   React.ComponentPropsWithoutRef<typeof ContextMenuPrimitive.SubTrigger> & {
@@ -49,6 +53,10 @@ const SubTrigger = React.forwardRef<
 SubTrigger.displayName = "ContextMenu.SubTrigger";
 ContextMenu.SubTrigger = SubTrigger;
 
+/**
+ * Default Classes: ~ "z-50 min-w-[8rem] overflow-hidden rounded-md border border-line bg-overlay-2 shadow-theme-md animate-in slide-in-from-left-1 " ~
+ *
+ */
 const SubContent = React.forwardRef<
   React.ElementRef<typeof ContextMenuPrimitive.SubContent>,
   React.ComponentPropsWithoutRef<typeof ContextMenuPrimitive.SubContent>

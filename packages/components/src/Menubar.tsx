@@ -28,6 +28,10 @@ const RadioGroup = MenubarPrimitive.RadioGroup;
 RadioGroup.displayName = "Menubar.RadioGroup";
 Menubar.RadioGroup = RadioGroup;
 
+/**
+ * Default Classes: ~ "flex h-10 items-center space-x-1 rounded-md border border-line bg-overlay " ~
+ *
+ */
 const Root = React.forwardRef<
   React.ElementRef<typeof MenubarPrimitive.Root>,
   React.ComponentPropsWithoutRef<typeof MenubarPrimitive.Root>

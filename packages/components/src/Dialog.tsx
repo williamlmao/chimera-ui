@@ -23,6 +23,15 @@ const DialogTrigger = DialogPrimitive.Trigger;
 DialogTrigger.displayName = "Dialog.Trigger";
 Dialog.Trigger = DialogTrigger;
 
+/**
+ * Default Classes: ~ undefined ~
+ * Default Classes: ~ undefined ~
+ * Default Classes: ~ undefined ~
+ * Default Classes: ~ undefined ~
+ * Default Classes: ~ undefined ~
+ * Default Classes: ~ undefined ~
+ *
+ */
 const Portal = ({
   className,
   children,
@@ -37,6 +46,10 @@ const Portal = ({
 Portal.displayName = "Dialog.Portal";
 Dialog.Portal = Portal;
 
+/**
+ * Default Classes: ~ "fixed inset-0 z-50 bg-black/50 backdrop-blur-sm transition-all duration-100 data-[state=closed]:animate-out data-[state=open]:fade-in data-[state=closed]:fade-out" ~
+ *
+ */
 const Overlay = React.forwardRef<
   React.ElementRef<typeof DialogPrimitive.Overlay>,
   React.ComponentPropsWithoutRef<typeof DialogPrimitive.Overlay>
@@ -53,6 +66,10 @@ const Overlay = React.forwardRef<
 Overlay.displayName = "Dialog.Overlay";
 Dialog.Overlay = Overlay;
 
+/**
+ * Default Classes: ~ "fixed z-50 grid w-full gap-4 rounded-b-lg bg-overlay p-6 animate-in data-[state=open]:fade-in-90 data-[state=open]:slide-in-from-bottom-10 sm:max-w-lg sm:rounded-lg sm:zoom-in-90 data-[state=open]:sm:slide-in-from-bottom-0" ~
+ *
+ */
 const Content = React.forwardRef<
   React.ElementRef<typeof DialogPrimitive.Content>,
   React.ComponentPropsWithoutRef<typeof DialogPrimitive.Content>
@@ -72,6 +89,10 @@ const Content = React.forwardRef<
 Content.displayName = "Dialog.Content";
 Dialog.Content = Content;
 
+/**
+ * Default Classes: ~ "absolute top-0 right-0 z-50 flex items-center justify-center w-8 h-8 rounded-full text-overlay-content hover:text-primary focus:outline-none focus:ring-2 focus:ring-line-focus focus:ring-offset-2" ~
+ *
+ */
 const Close = React.forwardRef<
   React.ElementRef<typeof DialogPrimitive.Close>,
   React.ComponentPropsWithoutRef<typeof DialogPrimitive.Close>
@@ -94,6 +115,10 @@ const Close = React.forwardRef<
 Close.displayName = "Dialog.Close";
 Dialog.Close = Close;
 
+/**
+ * Default Classes: ~ "z-50 w-full flex justify-end" ~
+ *
+ */
 const Confirm = React.forwardRef<
   React.ElementRef<typeof DialogPrimitive.Close>,
   React.ComponentPropsWithoutRef<typeof DialogPrimitive.Close>
@@ -109,6 +134,10 @@ const Confirm = React.forwardRef<
 Confirm.displayName = "Dialog.Confirm";
 Dialog.Confirm = Confirm;
 
+/**
+ * Default Classes: ~ "flex flex-col space-y-2 text-center sm:text-left" ~
+ *
+ */
 const Header = ({
   className,
   ...props
@@ -124,6 +153,10 @@ const Header = ({
 Header.displayName = "Dialog.Header";
 Dialog.Header = Header;
 
+/**
+ * Default Classes: ~ "flex flex-col-reverse sm:flex-row sm:justify-end sm:space-x-2" ~
+ *
+ */
 const Footer = ({
   className,
   ...props
@@ -139,6 +172,10 @@ const Footer = ({
 Footer.displayName = "Dialog.Footer";
 Dialog.Footer = Footer;
 
+/**
+ * Default Classes: ~ "text-lg font-semibold text-overlay-content" ~
+ *
+ */
 const Title = React.forwardRef<
   React.ElementRef<typeof DialogPrimitive.Title>,
   React.ComponentPropsWithoutRef<typeof DialogPrimitive.Title>
@@ -156,6 +193,10 @@ const Title = React.forwardRef<
 Title.displayName = "Dialog.Title";
 Dialog.Title = Title;
 
+/**
+ * Default Classes: ~ "text-sm text-overlay-content-2" ~
+ *
+ */
 const Description = React.forwardRef<
   React.ElementRef<typeof DialogPrimitive.Description>,
   React.ComponentPropsWithoutRef<typeof DialogPrimitive.Description>

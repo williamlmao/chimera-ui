@@ -3,7 +3,6 @@
 // Leaving this here as a reference for using raw-loader
 // import ButtonRaw from "!!raw-loader!../../../packages/ui/src/Button.tsx";
 import React from "react";
-import { Button } from "./ButtonOld";
 // @ts-ignore
 import reactElementToJSXString from "react-element-to-jsx-string";
 import { twMerge } from "tailwind-merge";
