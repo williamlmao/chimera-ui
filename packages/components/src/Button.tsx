@@ -49,14 +49,8 @@ export interface ButtonProps
     VariantProps<typeof buttonVariants> {}
 
 /**
- * Default Classes: ~ undefined ~
- * Default Classes: ~ undefined ~
- * Default Classes: ~ undefined ~
- * Default Classes: ~ undefined ~
- * Default Classes: ~ undefined ~
- * Default Classes: ~ undefined ~
- * Default Classes: ~ undefined ~
- *
+ * Defaults: "inline-flex w-fit items-center justify-center rounded-md text-sm font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-line focus:ring-offset-2"
+ * Each variant has specific defaults: https://github.com/williamlmao/chimera-ui/blob/main/packages/components/src/Button.tsx
  */
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
   ({ className, variant, size, ...props }, ref) => {

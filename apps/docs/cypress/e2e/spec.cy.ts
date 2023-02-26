@@ -8,6 +8,7 @@ describe("Docs", () => {
   it("loads all component pages", () => {
     const pages = Object.keys(MetaJson).map((meta) => meta);
     pages.forEach((page) => {
+      if (page === "index") return;
       cy.visit(`docs/components/${page}`);
     });
   });

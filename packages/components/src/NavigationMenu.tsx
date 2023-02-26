@@ -76,15 +76,6 @@ const navigationMenuTriggerStyle = cva(
   "inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors focus:outline-none focus:bg-base-focus disabled:opacity-50  disabled:pointer-events-none bg-transparent hover:bg-base-2    data-[state=open]:bg-base-focus  h-10 py-2 px-4 group"
 );
 
-/**
- * Default Classes: ~ undefined ~
- * Default Classes: ~ undefined ~
- * Default Classes: ~ undefined ~
- * Default Classes: ~ undefined ~
- * Default Classes: ~ undefined ~
- * Default Classes: ~ undefined ~
- *
- */
 const Trigger = React.forwardRef<
   React.ElementRef<typeof NavigationMenuPrimitive.Trigger>,
   React.ComponentPropsWithoutRef<typeof NavigationMenuPrimitive.Trigger>
@@ -128,15 +119,6 @@ const Link = NavigationMenuPrimitive.Link;
 Link.displayName = "NavigationMenu.Link";
 NavigationMenu.Link = Link;
 
-/**
- * Default Classes: ~ undefined ~
- * Default Classes: ~ undefined ~
- * Default Classes: ~ undefined ~
- * Default Classes: ~ undefined ~
- * Default Classes: ~ undefined ~
- * Default Classes: ~ undefined ~
- *
- */
 const Viewport = React.forwardRef<
   React.ElementRef<typeof NavigationMenuPrimitive.Viewport>,
   React.ComponentPropsWithoutRef<typeof NavigationMenuPrimitive.Viewport>

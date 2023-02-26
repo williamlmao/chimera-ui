@@ -57,7 +57,7 @@ files.forEach((file) => {
             `${componentName}.${blockName} - defaultStyles synced`
           );
         }
-        if (!existingTsDocStyles) {
+        if (!existingTsDocStyles && defaultStyles) {
           updatedTsDoc = tsDoc.replace(
             "/**",
             `/**\n * Default Classes: ~ ${defaultStyles} ~`
@@ -67,6 +67,7 @@ files.forEach((file) => {
           );
         }
       } else {
+        if (!defaultStyles) return codeblock;
         updatedTsDoc = `/**\n * Default Classes: ~ ${defaultStyles} ~\n *\n */`;
         updatesMade.push(`${componentName}.${blockName} - tsDoc added`);
       }

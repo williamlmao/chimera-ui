@@ -16,12 +16,6 @@ Trigger.displayName = "AlertDialog.Trigger";
 AlertDialog.Trigger = Trigger;
 
 /**
- * Default Classes: ~ undefined ~
- * Default Classes: ~ undefined ~
- * Default Classes: ~ undefined ~
- * Default Classes: ~ undefined ~
- * Default Classes: ~ undefined ~
- * Default Classes: ~ undefined ~
  *
  */
 const Portal = ({

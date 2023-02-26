@@ -8,6 +8,11 @@
     "type": "page",
     "href": "/docs/theme"
   },
+  "components": {
+    "title": "Components",
+    "type": "page",
+    "href": "/docs/components"
+  },
   "index": {
     "title": "Introduction",
     "type": "page",

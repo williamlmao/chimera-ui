@@ -11,18 +11,23 @@ export const ContextMenu = () => {
 const Root = ContextMenuPrimitive.Root;
 Root.displayName = "ContextMenu.Root";
 ContextMenu.Root = Root;
+
 const Trigger = ContextMenuPrimitive.Trigger;
 Trigger.displayName = "ContextMenu.Trigger";
 ContextMenu.Trigger = Trigger;
+
 const Group = ContextMenuPrimitive.Group;
 Group.displayName = "ContextMenu.Group";
 ContextMenu.Group = Group;
+
 const Portal = ContextMenuPrimitive.Portal;
 Portal.displayName = "ContextMenu.Portal";
 ContextMenu.Portal = Portal;
+
 const Sub = ContextMenuPrimitive.Sub;
 Sub.displayName = "ContextMenu.Sub";
 ContextMenu.Sub = Sub;
+
 const RadioGroup = ContextMenuPrimitive.RadioGroup;
 RadioGroup.displayName = "ContextMenu.RadioGroup";
 ContextMenu.RadioGroup = RadioGroup;
@@ -73,6 +78,10 @@ const SubContent = React.forwardRef<
 SubContent.displayName = "ContextMenu.SubContent";
 ContextMenu.SubContent = SubContent;
 
+/**
+ * Default Classes: ~ "z-50 min-w-[8rem] overflow-hidden rounded-md border border-line bg-overlay text-overlay-content shadow-theme-md animate-in fade-in-80" ~
+ *
+ */
 const Content = React.forwardRef<
   React.ElementRef<typeof ContextMenuPrimitive.Content>,
   React.ComponentPropsWithoutRef<typeof ContextMenuPrimitive.Content>
@@ -90,6 +99,11 @@ const Content = React.forwardRef<
 ));
 Content.displayName = "ContextMenu.Content";
 ContextMenu.Content = Content;
+
+/**
+ * Default Classes: ~ "relative group flex cursor-default select-none items-center rounded-md py-1.5 px-2 text-sm font-medium outline-none focus:bg-primary text-overlay-content focus:text-primary-content data-[disabled]:pointer-events-none data-[disabled]:opacity-50 focus:ring-0 focus:ring-offset-0 m-1" ~
+ *
+ */
 const Item = React.forwardRef<
   React.ElementRef<typeof ContextMenuPrimitive.Item>,
   React.ComponentPropsWithoutRef<typeof ContextMenuPrimitive.Item> & {
@@ -108,6 +122,11 @@ const Item = React.forwardRef<
 ));
 Item.displayName = "ContextMenu.Item";
 ContextMenu.Item = Item;
+
+/**
+ * Default Classes: ~ "relative group flex cursor-default select-none items-center rounded-md-sm py-1.5 pl-8 pr-2 text-sm font-medium outline-none focus:bg-overlay data-[disabled]:pointer-events-none data-[disabled]:opacity-50 focus:ring-0 focus:ring-offset-0 focus:bg-primary focus:text-primary-content" ~
+ *
+ */
 const CheckboxItem = React.forwardRef<
   React.ElementRef<typeof ContextMenuPrimitive.CheckboxItem>,
   React.ComponentPropsWithoutRef<typeof ContextMenuPrimitive.CheckboxItem>
@@ -133,6 +152,10 @@ const CheckboxItem = React.forwardRef<
 CheckboxItem.displayName = "ContextMenu.CheckboxItem";
 ContextMenu.CheckboxItem = CheckboxItem;
 
+/**
+ * Default Classes: ~ "relative flex group cursor-default select-none items-center rounded-md-sm py-1.5 pl-8 pr-2 text-sm font-medium outline-none focus:bg-overlay data-[disabled]:pointer-events-none data-[disabled]:opacity-50 focus:ring-0 focus:ring-offset-0 focus:bg-primary focus:text-primary-content" ~
+ *
+ */
 const RadioItem = React.forwardRef<
   React.ElementRef<typeof ContextMenuPrimitive.RadioItem>,
   React.ComponentPropsWithoutRef<typeof ContextMenuPrimitive.RadioItem>
@@ -155,6 +178,11 @@ const RadioItem = React.forwardRef<
 ));
 RadioItem.displayName = "ContextMenu.RadioItem";
 ContextMenu.RadioItem = RadioItem;
+
+/**
+ * Default Classes: ~ "px-2 py-1.5 text-sm font-semibold text-overlay-content " ~
+ *
+ */
 const Label = React.forwardRef<
   React.ElementRef<typeof ContextMenuPrimitive.Label>,
   React.ComponentPropsWithoutRef<typeof ContextMenuPrimitive.Label> & {
@@ -173,6 +201,11 @@ const Label = React.forwardRef<
 ));
 Label.displayName = "ContextMenu.Label";
 ContextMenu.Label = Label;
+
+/**
+ * Default Classes: ~ "-mx-1 my-1 h-px bg-line" ~
+ *
+ */
 const Separator = React.forwardRef<
   React.ElementRef<typeof ContextMenuPrimitive.Separator>,
   React.ComponentPropsWithoutRef<typeof ContextMenuPrimitive.Separator>
@@ -185,6 +218,11 @@ const Separator = React.forwardRef<
 ));
 Separator.displayName = "ContextMenu.Separator";
 ContextMenu.Separator = Separator;
+
+/**
+ * Default Classes: ~ "ml-auto text-xs tracking-widest text-overlay-content-2 text-opacity-70 group-focus:text-primary-content" ~
+ *
+ */
 const Shortcut = ({
   className,
   ...props

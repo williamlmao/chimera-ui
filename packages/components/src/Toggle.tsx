@@ -25,15 +25,6 @@ const toggleVariants = cva(
   }
 );
 
-/**
- * Default Classes: ~ undefined ~
- * Default Classes: ~ undefined ~
- * Default Classes: ~ undefined ~
- * Default Classes: ~ undefined ~
- * Default Classes: ~ undefined ~
- * Default Classes: ~ undefined ~
- *
- */
 const Toggle = React.forwardRef<
   React.ElementRef<typeof TogglePrimitive.Root>,
   React.ComponentPropsWithoutRef<typeof TogglePrimitive.Root> &

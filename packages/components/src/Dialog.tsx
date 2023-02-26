@@ -23,15 +23,6 @@ const DialogTrigger = DialogPrimitive.Trigger;
 DialogTrigger.displayName = "Dialog.Trigger";
 Dialog.Trigger = DialogTrigger;
 
-/**
- * Default Classes: ~ undefined ~
- * Default Classes: ~ undefined ~
- * Default Classes: ~ undefined ~
- * Default Classes: ~ undefined ~
- * Default Classes: ~ undefined ~
- * Default Classes: ~ undefined ~
- *
- */
 const Portal = ({
   className,
   children,
