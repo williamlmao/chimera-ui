@@ -3,6 +3,10 @@ import * as SeparatorPrimitive from "@radix-ui/react-separator";
 
 import { cn } from "../utils";
 
+/**
+ * Default Classes: ~ "bg-slate-200 " ~
+ *
+ */
 const Separator = React.forwardRef<
   React.ElementRef<typeof SeparatorPrimitive.Root>,
   React.ComponentPropsWithoutRef<typeof SeparatorPrimitive.Root>

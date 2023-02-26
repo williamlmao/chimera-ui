@@ -7,7 +7,9 @@
     "web": "turbo run dev --filter",
     "clean": "turbo run clean && rm -rf node_modules",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "prebuild": "turbo run prebuild --filter=@chimera-ui/components",
     "changeset": "changeset",
+    "test": "turbo run test --filter=docs",
     "version-packages": "changeset version",
     "release": "turbo run build --filter=docs^... && changeset publish"
   },

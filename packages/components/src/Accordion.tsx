@@ -14,24 +14,27 @@ const Root = AccordionPrimitive.Root;
 Root.displayName = AccordionPrimitive.Root.displayName;
 Accordion.Root = Root;
 
+/**
+ * Default Classes: ~ "border-b border-b-line" ~
+ * sdiofh
+ */
 const Item = React.forwardRef<
   React.ElementRef<typeof AccordionPrimitive.Item>,
   React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Item>
 >(({ className, ...props }, ref) => (
   <AccordionPrimitive.Item
     ref={ref}
-    className={cn(
-      {
-        "border-b border-b-line ": true,
-      },
-      className
-    )}
+    className={cn("border-b border-b-line", className)}
     {...props}
   />
 ));
-Item.displayName = AccordionPrimitive.Item.displayName;
+Item.displayName = "Accordion.Item";
 Accordion.Item = Item;
 
+/**
+ * Default Classes: ~ "flex flex-1 items-center justify-between py-4 font-medium transition-all hover:underline [&[data-state=open]>svg]:rotate-180 w-fit" ~
+ *
+ */
 const Trigger = React.forwardRef<
   React.ElementRef<typeof AccordionPrimitive.Trigger>,
   React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Trigger>
@@ -50,9 +53,13 @@ const Trigger = React.forwardRef<
     </AccordionPrimitive.Trigger>
   </AccordionPrimitive.Header>
 ));
-Trigger.displayName = AccordionPrimitive.Trigger.displayName;
+Trigger.displayName = "Accordion.Trigger";
 Accordion.Trigger = Trigger;
 
+/**
+ * Default Classes: ~ "overflow-hidden text-sm transition-all data-[state=open]:animate-accordion-down data-[state=closed]:animate-accordion-up w-fit" ~
+ * Some other content
+ */
 const Content = React.forwardRef<
   React.ElementRef<typeof AccordionPrimitive.Content>,
   React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Content>
@@ -68,5 +75,5 @@ const Content = React.forwardRef<
     <div className="pt-0 pb-4">{children}</div>
   </AccordionPrimitive.Content>
 ));
-Content.displayName = AccordionPrimitive.Content.displayName;
+Content.displayName = "Accordion.Content";
 Accordion.Content = Content;

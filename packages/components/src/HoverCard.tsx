@@ -7,6 +7,10 @@ const HoverCard = HoverCardPrimitive.Root;
 
 const HoverCardTrigger = HoverCardPrimitive.Trigger;
 
+/**
+ * Default Classes: ~ "z-50 w-64 rounded-md border border-line bg-white p-4 shadow-theme-md outline-none animate-in zoom-in-90  " ~
+ *
+ */
 const HoverCardContent = React.forwardRef<
   React.ElementRef<typeof HoverCardPrimitive.Content>,
   React.ComponentPropsWithoutRef<typeof HoverCardPrimitive.Content>

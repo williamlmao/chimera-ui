@@ -21,5 +21,9 @@
   "Select": "Select",
   "Switch": "Switch",
   "Tabs": "Tabs",
-  "Toggle": "Toggle"
+  "Toggle": "Toggle",
+  "index": {
+    "title": "Components",
+    "display": "hidden"
+  }
 }

@@ -8,6 +8,10 @@ export const RadioGroup = () => {
   return <></>;
 };
 
+/**
+ * Default Classes: ~ "grid gap-2" ~
+ *
+ */
 const Root = React.forwardRef<
   React.ElementRef<typeof RadioGroupPrimitive.Root>,
   React.ComponentPropsWithoutRef<typeof RadioGroupPrimitive.Root>
@@ -23,6 +27,10 @@ const Root = React.forwardRef<
 Root.displayName = "RadioGroup.Root";
 RadioGroup.Root = Root;
 
+/**
+ * Default Classes: ~ " h-4 w-4 rounded-full border border-line text-base-content hover:border-primary focus:outline-none focus:ring-2 focus:ring-line-focus focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50" ~
+ *
+ */
 const Item = React.forwardRef<
   React.ElementRef<typeof RadioGroupPrimitive.Item>,
   React.ComponentPropsWithoutRef<typeof RadioGroupPrimitive.Item>
@@ -43,6 +51,10 @@ const Item = React.forwardRef<
 Item.displayName = "RadioGroup.Item";
 RadioGroup.Item = Item;
 
+/**
+ * Default Classes: ~ "h-2.5 w-2.5 fill-primary" ~
+ *
+ */
 const Indicator = React.forwardRef<
   React.ElementRef<typeof RadioGroupPrimitive.Indicator>,
   React.ComponentPropsWithoutRef<typeof RadioGroupPrimitive.Indicator>

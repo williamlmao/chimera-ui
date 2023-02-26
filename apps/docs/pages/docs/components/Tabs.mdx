@@ -21,9 +21,9 @@ import { InfoCircledIcon } from "@radix-ui/react-icons";
         <Tabs.Trigger value="password">Password</Tabs.Trigger>
       </Tabs.List>
       <Tabs.Content value="account">
-        <p className="text-sm text-base-content">
-          Make changes to your account here. Click save when you're done.
-        </p>
+        <span className="text-sm text-base-content">
+            Make changes to your account here. Click save when you're done.
+        </span>
         <div className="grid gap-2 py-4">
           <div className="space-y-1">
             <Label htmlFor="name">Name</Label>
@@ -39,9 +39,9 @@ import { InfoCircledIcon } from "@radix-ui/react-icons";
         </div>
       </Tabs.Content>
       <Tabs.Content value="password">
-        <p className="text-sm text-base-content">
+        <span className="text-sm text-base-content">
           Change your password here. After saving, you'll be logged out.
-        </p>
+        </span>
         <div className="grid gap-2 py-4">
           <div className="space-y-1">
             <Label htmlFor="current">Current password</Label>
@@ -57,5 +57,6 @@ import { InfoCircledIcon } from "@radix-ui/react-icons";
         </div>
       </Tabs.Content>
     </Tabs.Root>
+
   </Showcase.Preview>
 </Showcase>

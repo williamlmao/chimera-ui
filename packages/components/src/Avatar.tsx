@@ -43,6 +43,10 @@ const Root = React.forwardRef<RootElement, RootProps>((props, forwardedRef) => {
 Root.displayName = "Avatar.Root";
 Avatar.Root = Root;
 
+/**
+ * Default Classes: ~ "aspect-square object-cover h-full w-full" ~
+ *
+ */
 const Image = React.forwardRef<
   React.ElementRef<typeof AvatarPrimitive.Image>,
   React.ComponentPropsWithoutRef<typeof AvatarPrimitive.Image>
@@ -56,6 +60,10 @@ const Image = React.forwardRef<
 Image.displayName = "Avatar.Image";
 Avatar.Image = Image;
 
+/**
+ * Default Classes: ~ "flex h-full w-full items-center justify-center rounded-full bg-base-content text-base" ~
+ *
+ */
 const Fallback = React.forwardRef<
   React.ElementRef<typeof AvatarPrimitive.Fallback>,
   React.ComponentPropsWithoutRef<typeof AvatarPrimitive.Fallback>

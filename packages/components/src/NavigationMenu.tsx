@@ -9,6 +9,10 @@ export const NavigationMenu = () => {
   return <></>;
 };
 
+/**
+ * Default Classes: ~ "relative z-10 flex flex-1 items-center justify-center" ~
+ *
+ */
 const Root = React.forwardRef<
   React.ElementRef<typeof NavigationMenuPrimitive.Root>,
   React.ComponentPropsWithoutRef<typeof NavigationMenuPrimitive.Root>
@@ -28,6 +32,10 @@ const Root = React.forwardRef<
 Root.displayName = "NavigationMenu.Root";
 NavigationMenu.Root = Root;
 
+/**
+ * Default Classes: ~ "group flex flex-1 list-none items-center justify-center" ~
+ *
+ */
 const List = React.forwardRef<
   React.ElementRef<typeof NavigationMenuPrimitive.List>,
   React.ComponentPropsWithoutRef<typeof NavigationMenuPrimitive.List>
@@ -44,6 +52,10 @@ const List = React.forwardRef<
 List.displayName = "NavigationMenu.List";
 NavigationMenu.List = List;
 
+/**
+ * Default Classes: ~ "group flex flex-1 items-center justify-center relative" ~
+ *
+ */
 const Item = React.forwardRef<
   React.ElementRef<typeof NavigationMenuPrimitive.Item>,
   React.ComponentPropsWithoutRef<typeof NavigationMenuPrimitive.Item>
@@ -83,6 +95,10 @@ const Trigger = React.forwardRef<
 Trigger.displayName = "NavigationMenu.Trigger";
 NavigationMenu.Trigger = Trigger;
 
+/**
+ * Default Classes: ~ "data-[motion=from-start]:animate-enterFromLeft data-[motion=from-end]:animate-enterFromRight data-[motion=to-start]:animate-exitToLeft data-[motion=to-end]:animate-exitToRight absolute" ~
+ *
+ */
 const Content = React.forwardRef<
   React.ElementRef<typeof NavigationMenuPrimitive.Content>,
   React.ComponentPropsWithoutRef<typeof NavigationMenuPrimitive.Content>
@@ -125,6 +141,10 @@ const Viewport = React.forwardRef<
 Viewport.displayName = "NavigationMenu.Viewport";
 NavigationMenu.Viewport = Viewport;
 
+/**
+ * Default Classes: ~ "top-full z-[1] flex h-1.5 items-end justify-center overflow-hidden data-[state=visible]:animate-in data-[state=hidden]:animate-out data-[state=visible]:fade-in data-[state=hidden]:fade-out" ~
+ *
+ */
 const Indicator = React.forwardRef<
   React.ElementRef<typeof NavigationMenuPrimitive.Indicator>,
   React.ComponentPropsWithoutRef<typeof NavigationMenuPrimitive.Indicator>

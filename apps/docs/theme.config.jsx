@@ -44,7 +44,7 @@ const pages = {
   "Alert Dialog": {
     radix: true,
   },
-  AspectRatio: {
+  "Aspect Ratio": {
     radix: true,
   },
   Avatar: {

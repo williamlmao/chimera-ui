@@ -16,6 +16,10 @@ export const Checkbox = ({ className }: { className: string }) => {
 
 Checkbox.displayName = "Checkbox";
 
+/**
+ * Default Classes: ~ "peer h-4 w-4 shrink-0 rounded-sm border border-line focus:outline-none focus:ring-2 focus:ring-line-focus focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 bg-input" ~
+ *
+ */
 const Root = React.forwardRef<
   React.ElementRef<typeof CheckboxPrimitive.Root>,
   React.ComponentPropsWithoutRef<typeof CheckboxPrimitive.Root>
@@ -35,6 +39,10 @@ const Root = React.forwardRef<
 Root.displayName = "Checkbox.Root";
 Checkbox.Root = Root;
 
+/**
+ * Default Classes: ~ "flex items-center justify-center" ~
+ *
+ */
 const Indicator = React.forwardRef<
   React.ElementRef<typeof CheckboxPrimitive.Indicator>,
   React.ComponentPropsWithoutRef<typeof CheckboxPrimitive.Indicator>
