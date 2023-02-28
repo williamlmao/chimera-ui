@@ -1,16 +1,12 @@
 {
   "name": "@chimera-ui/components",
-  "version": "0.1.0",
+  "version": "0.3.0",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
   "sideEffects": [
     "**/*.css"
   ],
-  "exports": {
-    ".": "./dist",
-    "./styles.css": "./dist/index.css"
-  },
   "license": "MIT",
   "files": [
     "dist/**"
