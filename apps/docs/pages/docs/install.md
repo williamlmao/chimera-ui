@@ -2,6 +2,8 @@
 title: "Installation"
 ---
 
+## General Installation
+
 import { Callout } from 'nextra-theme-docs'
 import Link from 'next/link'
 
@@ -152,3 +154,20 @@ html[data-theme="zookeper"] {
 ```
 
 </details>
+
+## Remix
+
+Installing with remix requires one additional step.
+
+In `remix.config.js` you need to add the `serverDependenciesToBundle` option. Read more [here](https://remix.run/docs/en/v1/pages/gotchas#importing-esm-packages).
+
+```
+/** @type {import('@remix-run/dev').AppConfig} */
+module.exports = {
+  future: {
+    unstable_tailwind: true,
+  },
+  ignoredRouteFiles: ["**/.*"],
+  serverDependenciesToBundle: ["@chimera-ui/components"],
+};
+```
