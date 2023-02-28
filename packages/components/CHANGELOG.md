@@ -1,5 +1,11 @@
 # @chimera-ui/components
 
+## 0.4.0
+
+### Minor Changes
+
+- Added more detail to button intellisense
+
 ## 0.3.0
 
 ### Minor Changes
