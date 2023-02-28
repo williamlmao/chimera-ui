@@ -1,5 +1,11 @@
 # @chimera-ui/components
 
+## 0.3.0
+
+### Minor Changes
+
+- 1874a09: Fixed issue with Remix where exports in package.json was breaking remix builds
+
 ## 0.1.0
 
 ### Minor Changes
