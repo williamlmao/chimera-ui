@@ -5,4 +5,9 @@
 ### Minor Changes
 
 - d9fa560: Initial publish
-- efd2e64: Exposes default classes in intellisense
+
+## 0.2.0
+
+### Minor Changes
+
+- Added default classes to intellisense for any subcomponents that have them.
