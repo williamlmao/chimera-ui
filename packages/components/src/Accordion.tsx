@@ -11,7 +11,7 @@ export const Accordion = (
 };
 
 const Root = AccordionPrimitive.Root;
-Root.displayName = AccordionPrimitive.Root.displayName;
+Root.displayName = "Accordion.Root";
 Accordion.Root = Root;
 
 /**

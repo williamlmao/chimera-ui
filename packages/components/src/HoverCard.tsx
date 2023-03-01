@@ -26,6 +26,6 @@ const HoverCardContent = React.forwardRef<
     {...props}
   />
 ));
-HoverCardContent.displayName = HoverCardPrimitive.Content.displayName;
+HoverCardContent.displayName = "HoverCard.Content";
 
 export { HoverCard, HoverCardTrigger, HoverCardContent };

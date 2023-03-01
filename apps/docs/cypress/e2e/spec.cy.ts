@@ -5,13 +5,26 @@ describe("Docs", () => {
     cy.visit("/");
   });
 
-  it("loads all component pages", () => {
-    const pages = Object.keys(MetaJson).map((meta) => meta);
-    pages.forEach((page) => {
-      if (page === "index") return;
+  const pages = Object.keys(MetaJson).map((meta) => meta);
+  pages.forEach((page) => {
+    if (page === "index") return;
+    it(`loads ${page} page`, () => {
       cy.visit(`docs/components/${page}`);
+      it("Should not contain NoDisplayName", () => {
+        cy.contains("</NoDisplayName>").should("not.exist");
+      });
     });
   });
+
+  // it("loads all component pages", () => {
+  //   const pages = Object.keys(MetaJson).map((meta) => meta);
+  //   pages.forEach((page) => {
+  //     if (page === "index") return;
+  //     cy.visit(`docs/components/${page}`);
+
+  //     cy.contains("NoDisplayName").should("not.exist");
+  //   });
+  // });
 
   it("theme generator generates can click through", () => {
     /* ==== Generated with Cypress Studio ==== */

@@ -42,7 +42,7 @@ const Trigger = React.forwardRef<
     <ChevronDown className="h-4 w-4 opacity-50" />
   </SelectPrimitive.Trigger>
 ));
-Trigger.displayName = SelectPrimitive.Trigger.displayName;
+Trigger.displayName = "Select.Trigger";
 Select.Trigger = Trigger;
 
 /**
@@ -68,7 +68,7 @@ const Content = React.forwardRef<
     </SelectPrimitive.Content>
   </SelectPrimitive.Portal>
 ));
-Content.displayName = SelectPrimitive.Content.displayName;
+Content.displayName = "Select.Content";
 Select.Content = Content;
 
 /**
@@ -88,7 +88,7 @@ const Label = React.forwardRef<
     {...props}
   />
 ));
-Label.displayName = SelectPrimitive.Label.displayName;
+Label.displayName = "Select.Label";
 Select.Label = Label;
 
 /**
@@ -116,7 +116,7 @@ const Item = React.forwardRef<
     <SelectPrimitive.ItemText>{children}</SelectPrimitive.ItemText>
   </SelectPrimitive.Item>
 ));
-Item.displayName = SelectPrimitive.Item.displayName;
+Item.displayName = "Select.Item";
 Select.Item = Item;
 
 /**
@@ -133,5 +133,5 @@ const Separator = React.forwardRef<
     {...props}
   />
 ));
-Separator.displayName = SelectPrimitive.Separator.displayName;
+Separator.displayName = "Select.Separator";
 Select.Separator = Separator;
