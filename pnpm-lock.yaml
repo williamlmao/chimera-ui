@@ -87,7 +87,6 @@ importers:
 
   packages/components:
     specifiers:
-      '@headlessui/react': ^1.7.7
       '@radix-ui/react-accessible-icon': ^1.0.1
       '@radix-ui/react-accordion': ^1.1.0
       '@radix-ui/react-alert-dialog': ^1.0.2
@@ -134,7 +133,6 @@ importers:
       tsup: ^6.5.0
       typescript: ^4.5.3
     dependencies:
-      '@headlessui/react': 1.7.7_biqbaboplfbrettd7655fr4n2y
       '@radix-ui/react-accessible-icon': 1.0.1_biqbaboplfbrettd7655fr4n2y
       '@radix-ui/react-accordion': 1.1.0_biqbaboplfbrettd7655fr4n2y
       '@radix-ui/react-alert-dialog': 1.0.2_ib3m5ricvtkl2cll7qpr2f6lvq
@@ -189,9 +187,9 @@ importers:
       eslint-config-turbo: latest
       eslint-plugin-react: 7.29.4
     dependencies:
-      eslint-config-next: 13.2.1_7kw3g6rralp5ps6mg3uyzz6azm
+      eslint-config-next: 13.2.3_7kw3g6rralp5ps6mg3uyzz6azm
       eslint-config-prettier: 8.6.0_eslint@8.34.0
-      eslint-config-turbo: 0.0.8_eslint@8.34.0
+      eslint-config-turbo: 0.0.9_eslint@8.34.0
       eslint-plugin-react: 7.29.4_eslint@8.34.0
 
   packages/tailwind-config:
@@ -957,8 +955,8 @@ packages:
       glob: 7.1.7
     dev: false
 
-  /@next/eslint-plugin-next/13.2.1:
-    resolution: {integrity: sha512-r0i5rcO6SMAZtqiGarUVMr3k256X0R0j6pEkKg4PxqUW+hG0qgMxRVAJsuoRG5OBFkCOlSfWZJ0mP9fQdCcyNg==}
+  /@next/eslint-plugin-next/13.2.3:
+    resolution: {integrity: sha512-QmMPItnU7VeojI1KnuwL9SLFWEwmaNHNlnOGpoTwdLoSiP9sc8KYiAHWEc4/44L+cAdCxcZYvn7frcRNP5l84Q==}
     dependencies:
       glob: 7.1.7
     dev: false
@@ -3845,8 +3843,8 @@ packages:
       - supports-color
     dev: false
 
-  /eslint-config-next/13.2.1_7kw3g6rralp5ps6mg3uyzz6azm:
-    resolution: {integrity: sha512-2GAx7EjSiCzJN6H2L/v1kbYrNiwQxzkyjy6eWSjuhAKt+P6d3nVNHGy9mON8ZcYd72w/M8kyMjm4UB9cvijgrw==}
+  /eslint-config-next/13.2.3_7kw3g6rralp5ps6mg3uyzz6azm:
+    resolution: {integrity: sha512-kPulHiQEHGei9hIaaNGygHRc0UzlWM+3euOmYbxNkd2Nbhci5rrCDeMBMPSV8xgUssphDGmwDHWbk4VZz3rlZQ==}
     peerDependencies:
       eslint: ^7.23.0 || ^8.0.0
       typescript: '>=3.3.1'
@@ -3854,7 +3852,7 @@ packages:
       typescript:
         optional: true
     dependencies:
-      '@next/eslint-plugin-next': 13.2.1
+      '@next/eslint-plugin-next': 13.2.3
       '@rushstack/eslint-patch': 1.2.0
       '@typescript-eslint/parser': 5.48.1_7kw3g6rralp5ps6mg3uyzz6azm
       eslint: 8.34.0
@@ -3879,13 +3877,13 @@ packages:
       eslint: 8.34.0
     dev: false
 
-  /eslint-config-turbo/0.0.8_eslint@8.34.0:
-    resolution: {integrity: sha512-ijj6uv0QX2kWahg3OYnTK1/q4MueXsqY2uE4MP9yeUA5CzVhL7GU+biKlv1BfMMqPltixHUcpZoW4yyNLCnMiw==}
+  /eslint-config-turbo/0.0.9_eslint@8.34.0:
+    resolution: {integrity: sha512-j1cTdx3tRmKo0csyfQKhpuT8dynK9oddbK5nmrShoMpXI2qMbxHLYH7MWAid4FmJN8rYympy3VKw5U63Yazycg==}
     peerDependencies:
       eslint: '>6.6.0'
     dependencies:
       eslint: 8.34.0
-      eslint-plugin-turbo: 0.0.8_eslint@8.34.0
+      eslint-plugin-turbo: 0.0.9_eslint@8.34.0
     dev: false
 
   /eslint-import-resolver-node/0.3.6:
@@ -4192,8 +4190,8 @@ packages:
       string.prototype.matchall: 4.0.8
     dev: false
 
-  /eslint-plugin-turbo/0.0.8_eslint@8.34.0:
-    resolution: {integrity: sha512-pExSCmjWw/KFKb3/0PVqxiWb30FbcwDEf6kKv3alvNBSVEzDHalyAGHc9klbLSG+nFmbkfNE3Ky/UHDryCqt8g==}
+  /eslint-plugin-turbo/0.0.9_eslint@8.34.0:
+    resolution: {integrity: sha512-fEsuSnYU3GLtT+s66mUuzDL1LaSieIx5uk3tPO0ToGv7hI2XzOfP24aPkQItTBGl7kq2JaVkRzPwcnfz8hkp0w==}
     peerDependencies:
       eslint: '>6.6.0'
     dependencies:
