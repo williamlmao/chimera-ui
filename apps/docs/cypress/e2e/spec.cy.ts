@@ -10,8 +10,9 @@ describe("Docs", () => {
     if (page === "index") return;
     it(`loads ${page} page`, () => {
       cy.visit(`docs/components/${page}`);
-      it("Should not contain NoDisplayName", () => {
+      it("Should not contain NoDisplayName or <A>", () => {
         cy.contains("</NoDisplayName>").should("not.exist");
+        cy.contains("<A>").should("not.exist"); // <A> can show up if you assign displayname to parent component but not subcomponents.
       });
     });
   });

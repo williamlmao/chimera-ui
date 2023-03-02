@@ -193,7 +193,7 @@ const Sidebar = ({
         {step > 1 && (
           <Button
             className="hidden @[10px]:block w-full"
-            variant="grey"
+            variant="gray"
             onClick={() => {
               setStep(step - 1);
             }}

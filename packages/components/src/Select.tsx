@@ -11,7 +11,7 @@ export const Select = () => {
 };
 
 const Root = SelectPrimitive.Root;
-Select.displayName = "Select.Root";
+Root.displayName = "Select.Root";
 Select.Root = Root;
 
 const Group = SelectPrimitive.Group;
