@@ -66,7 +66,7 @@ c-8 -87 -31 -216 -56 -319 -24 -98 -78 -255 -94 -275 -7 -8 -16 -26 -20 -40
 ## Features
 
 - Fully accessible components, with Radix Primitives under the hood.
-- Includes additinal components beyond Radix, such as Button and Input.
+- Includes additional components beyond Radix, such as Button and Input.
 - Components come pre-styled. Styles can be easily overwritten with Tailwind (Chimera uses tw-merge under the hood).
 - Semantic color system built in. No more guessing what color to use, just use the same semantic color names across all your projects.
 - Theme generator that quickly generates CSS themes for you.
