@@ -24,7 +24,7 @@ const Portal = ({
   ...props
 }: AlertDialogPrimitive.AlertDialogPortalProps) => (
   <AlertDialogPrimitive.Portal className={cn(className)} {...props}>
-    <div className="fixed inset-0 z-50 flex items-end justify-center sm:items-center">
+    <div className='fixed inset-0 z-50 flex items-end justify-center sm:items-center'>
       {children}
     </div>
   </AlertDialogPrimitive.Portal>
@@ -178,7 +178,7 @@ const Cancel = React.forwardRef<
   <AlertDialogPrimitive.Cancel
     ref={ref}
     className={cn(
-      "mt-2 inline-flex h-10 items-center justify-center rounded-md border border-slate-200 py-2 px-4 text-sm font-semibold text-overlay-content transition-colors hover:bg-overlay-3 focus:outline-none focus:ring-1 focus:ring-line-focus focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50  sm:mt-0",
+      "inline-flex h-10 items-center justify-center rounded-md border border-slate-200 py-2 px-4 text-sm font-semibold text-overlay-content transition-colors hover:bg-overlay-3 focus:outline-none focus:ring-1 focus:ring-line-focus focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50  sm:mt-0",
       className
     )}
     {...props}
