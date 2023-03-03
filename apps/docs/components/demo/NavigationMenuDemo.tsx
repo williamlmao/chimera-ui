@@ -5,7 +5,7 @@ import { NavigationMenu, cn, Showcase } from "@chimera-ui/components";
 const components: { title: string; href: string; description: string }[] = [
   {
     title: "Alert Dialog",
-    href: "/docs/primitives/alert-dialog",
+    href: "/docs/components/AlertDialog ",
     description:
       "A modal dialog that interrupts the user with important content and expects a response.",
   },
@@ -17,7 +17,7 @@ const components: { title: string; href: string; description: string }[] = [
   },
   {
     title: "Progress",
-    href: "/docs/primitives/progress",
+    href: "/docs/components/Progress",
     description:
       "Displays an indicator showing the completion progress of a task, typically displayed as a progress bar.",
   },
@@ -28,13 +28,13 @@ const components: { title: string; href: string; description: string }[] = [
   },
   {
     title: "Tabs",
-    href: "/docs/primitives/tabs",
+    href: "/docs/components/Tabs",
     description:
       "A set of layered sections of content—known as tab panels—that are displayed one at a time.",
   },
   {
     title: "Tooltip",
-    href: "/docs/primitives/tooltip",
+    href: "/docs/components/Tooltip",
     description:
       "A popup that displays information related to an element when the element receives keyboard focus or the mouse hovers over it.",
   },
@@ -67,10 +67,10 @@ export const NavigationMenuDemo = () => {
                     </a>
                   </NavigationMenu.Link>
                 </li>
-                <ListItem href="/docs" title="Introduction">
+                <ListItem href="/docs/introduction" title="Introduction">
                   Re-usable components built using Radix UI and Tailwind CSS.
                 </ListItem>
-                <ListItem href="/docs/installation" title="Installation">
+                <ListItem href="/docs/install " title="Installation">
                   How to install dependencies and structure your app.
                 </ListItem>
                 <ListItem href="/docs/primitives/typography" title="Typography">
@@ -96,7 +96,7 @@ export const NavigationMenuDemo = () => {
             </NavigationMenu.Content>
           </NavigationMenu.Item>
           <NavigationMenu.Item className="hidden md:block">
-            <Link href="/docs" legacyBehavior passHref>
+            <Link href="/docs/introduction" legacyBehavior passHref>
               <NavigationMenu.Link>Documentation</NavigationMenu.Link>
             </Link>
           </NavigationMenu.Item>
