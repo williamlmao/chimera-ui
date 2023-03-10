@@ -112,7 +112,6 @@ export const ThemeGenerator = () => {
                 >
                   <ColorSelector
                     color={themeColors[color as keyof typeof themeColors]}
-                    step={step}
                     handleColorChange={handleColorChange}
                   />
                 </div>

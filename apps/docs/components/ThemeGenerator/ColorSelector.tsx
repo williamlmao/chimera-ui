@@ -6,11 +6,9 @@ import { ChromePicker } from "react-color";
 export const ColorSelector = ({
   color,
   handleColorChange,
-  step,
 }: {
   color: ColorType;
   handleColorChange: (color: string, value: string) => void;
-  step: number;
 }) => {
   const handleChange = (pickerValue: any) => {
     handleColorChange(color.name, pickerValue.hex);
