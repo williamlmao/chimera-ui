@@ -39,11 +39,26 @@ const Trigger = React.forwardRef<
     {...props}
   >
     {children}
-    <ChevronDown className="h-4 w-4 opacity-50" />
+    {/* <ChevronDown className="h-4 w-4 opacity-50" /> */}
   </SelectPrimitive.Trigger>
 ));
 Trigger.displayName = "Select.Trigger";
 Select.Trigger = Trigger;
+
+const Icon = React.forwardRef<
+  React.ElementRef<typeof SelectPrimitive.Icon>,
+  React.ComponentPropsWithoutRef<typeof SelectPrimitive.Icon>
+>(({ className, ...props }, ref) => (
+  <SelectPrimitive.Icon
+    ref={ref}
+    className={cn("h-4 w-4 opacity-50", className)}
+    {...props}
+  >
+    {props.children || <ChevronDown className="h-4 w-4 opacity-50" />}
+  </SelectPrimitive.Icon>
+));
+Icon.displayName = "Select.Icon";
+Select.Icon = Icon;
 
 /**
  * Default Classes: ~ "relative z-50 min-w-[8rem] overflow-hidden rounded-md border border-line bg-overlay text-overlay-content shadow-md animate-in fade-in-80" ~

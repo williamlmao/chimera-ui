@@ -108,6 +108,7 @@ const pages = {
 
 const config = {
   logo: <Logo />,
+
   docsRepositoryBase:
     "https://github.com/williamlmao/chimera-ui/blob/main/apps/docs",
   project: {

@@ -38,5 +38,6 @@ module.exports = {
   plugins: [
     require("@tailwindcss/container-queries"),
     require("@chimera-ui/tw-plugin"),
+    require("@tailwindcss/line-clamp"),
   ],
 };
