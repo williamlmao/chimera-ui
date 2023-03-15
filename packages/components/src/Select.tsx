@@ -45,6 +45,10 @@ const Trigger = React.forwardRef<
 Trigger.displayName = "Select.Trigger";
 Select.Trigger = Trigger;
 
+/**
+ * Default Classes: ~ "h-4 w-4 opacity-50" ~
+ *
+ */
 const Icon = React.forwardRef<
   React.ElementRef<typeof SelectPrimitive.Icon>,
   React.ComponentPropsWithoutRef<typeof SelectPrimitive.Icon>

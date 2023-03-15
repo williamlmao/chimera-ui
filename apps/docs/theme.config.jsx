@@ -117,6 +117,10 @@ const config = {
   toc: {
     extraContent: <Fragment></Fragment>,
   },
+  nextThemes: {
+    forcedTheme: "dark",
+  },
+  darkMode: false,
   main: ({ children }) => {
     // eslint-disable-next-line react-hooks/rules-of-hooks
     const { frontMatter } = useConfig();

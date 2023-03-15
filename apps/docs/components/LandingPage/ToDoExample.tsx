@@ -144,7 +144,6 @@ const ToDoItemsMockData = [
 
 export const TodoExample = () => {
   const [selectedItem, setSelectedItem] = useState<ToDoItem | null>(null);
-  const [filterStarred, setFilterStarred] = useState(false);
   const [sortDir, setSortDir] = useState<"asc" | "desc">("asc");
   const [peopleFilter, setPeopleFilter] = useState({
     Will: false,
@@ -156,11 +155,9 @@ export const TodoExample = () => {
     <div className="w-full bg-base rounded-md shadow-md relative @container">
       <Dialog.Root
         open={!!selectedItem}
-        className="max-w-[100px]"
         onOpenChange={(open: boolean) => {
           if (!open) setSelectedItem(null);
         }}
-        onOpenAutoFocus={(event: Event) => event.preventDefault()}
       >
         <Dialog.Overlay />
         <Dialog.Content className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] gap-0">

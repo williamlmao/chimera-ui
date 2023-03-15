@@ -6,11 +6,13 @@ export const Code = ({ children }: { children: string }) => {
 
   return (
     <pre
-      className={"bg-gray-800 text-white p-4 rounded-md overflow-auto group"}
+      className={
+        "bg-base-2 text-base-content p-4 rounded-md overflow-auto group w-full"
+      }
     >
       <Copy
         contentToCopy={children}
-        className="bg-gray-900 text-white hidden group-hover:block"
+        className="bg-primary text-primary-content hidden group-hover:block"
       />
       <code>{children}</code>
     </pre>
