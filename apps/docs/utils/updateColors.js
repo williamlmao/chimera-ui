@@ -1,130 +1,4 @@
-import Color from "color";
-
-const isDescendantOfMainColor = (
-  colorName: string,
-  mainColor: string,
-  colors: ColorsType
-): boolean => {
-  const colorObj = colors[colorName as keyof typeof colors];
-  if (colorObj.reference === mainColor) return true;
-  if (colorObj.reference) {
-    return isDescendantOfMainColor(colorObj.reference, mainColor, colors);
-  }
-  return false;
-};
-
-/**
- *
- * @param themeColors
- * @param mainColor If mainColor is passed in, only modify colors that are supporting colors of mainColor.
- * @returns
- */
-export const setSupportingColors = (
-  themeColors: ColorsType,
-  mainColor?: string
-) => {
-  themeColors = { ...themeColors };
-  // Iterate through themeColors.
-  // For each color, if it is a supporting color, set its value according to adjustment against the main color.
-  Object.entries(themeColors).forEach(([colorName, colorObj]) => {
-    if (
-      !isDescendantOfMainColor(colorName, colorObj.reference || "", themeColors)
-    )
-      return;
-    if (colorObj.type === "supporting" && colorObj.adjustment) {
-      const mainColor = Color(
-        themeColors[colorObj.reference as keyof typeof themeColors].value
-      );
-      const direction = mainColor.isLight() ? "darken" : "lighten";
-
-      // Color, the npm package we are using does not have a great way to adjust lumincance other than a percentage, which does not work for white and blacks.
-      // Each color in the colors object has an adjustment value that is applied to its reference color.
-      const newValue =
-        direction === "lighten" || colorObj.dontAccountForDirection
-          ? mainColor
-              .lightness(mainColor.object().l + colorObj.adjustment[2] * 1.1) // Darker colors need more adjustment
-              .hsl()
-          : mainColor
-              .lightness(mainColor.object().l + colorObj.adjustment[2] * -1)
-              .hsl();
-
-      themeColors[colorName as keyof typeof themeColors].value = newValue
-        .hsl()
-        .string();
-    }
-  });
-  return themeColors;
-};
-
-export type ColorType = {
-  name: string;
-  displayName: string;
-  description: string;
-  cssVariable: string;
-  example: string;
-  usage: string;
-  contrast?: string[];
-  value: string;
-  type: "main" | "supporting";
-  dontAccountForDirection?: boolean; // For colors like primary, light -> dark or dark -> light don't matter and raw adjustment should
-  reference?: string;
-  adjustment?: [number, number, number]; // hsl
-};
-
-export type ColorsType = {
-  base: ColorType;
-  "base-focus": ColorType;
-  "base-2": ColorType;
-  "base-2-focus": ColorType;
-  "base-content": ColorType;
-  "base-content-2": ColorType;
-  "base-content-3": ColorType;
-  overlay: ColorType;
-  "overlay-focus": ColorType;
-  "overlay-2": ColorType;
-  "overlay-2-focus": ColorType;
-  "overlay-content": ColorType;
-  "overlay-content-2": ColorType;
-  "overlay-content-3": ColorType;
-  input: ColorType;
-  "input-focus": ColorType;
-  "input-content": ColorType;
-  "input-content-2": ColorType;
-  line: ColorType;
-  "line-focus": ColorType;
-  primary: ColorType;
-  "primary-focus": ColorType;
-  "primary-content": ColorType;
-  "primary-subtle": ColorType;
-  "primary-subtle-content": ColorType;
-  secondary: ColorType;
-  "secondary-focus": ColorType;
-  "secondary-content": ColorType;
-  "secondary-subtle": ColorType;
-  "secondary-subtle-content": ColorType;
-  info: ColorType;
-  "info-focus": ColorType;
-  "info-content": ColorType;
-  "info-subtle": ColorType;
-  "info-subtle-content": ColorType;
-  success: ColorType;
-  "success-focus": ColorType;
-  "success-content": ColorType;
-  "success-subtle": ColorType;
-  "success-subtle-content": ColorType;
-  danger: ColorType;
-  "danger-focus": ColorType;
-  "danger-content": ColorType;
-  "danger-subtle": ColorType;
-  "danger-subtle-content": ColorType;
-  warning: ColorType;
-  "warning-focus": ColorType;
-  "warning-content": ColorType;
-  "warning-subtle": ColorType;
-  "warning-subtle-content": ColorType;
-};
-
-export const colors: ColorsType = {
+const colors = {
   base: {
     name: "base",
     displayName: "base",
@@ -134,7 +8,7 @@ export const colors: ColorsType = {
     example: "bg-base",
     usage: "bg-base",
     contrast: ["base-content", "base-content-2", "base-content-3"],
-    value: "hsl(240, 7%, 11%)",
+    value: "hsl(60, 5%, 96%)",
     type: "main",
   },
   "base-focus": {
@@ -146,7 +20,7 @@ export const colors: ColorsType = {
     example: "bg-base-focus",
     usage: "bg-base-focus",
     contrast: ["base-content", "base-content-2", "base-content-focus"],
-    value: "hsl(240, 7%, 28.6%)",
+    value: "hsl(60, 5%, 80%)",
     type: "supporting",
     reference: "base",
     adjustment: [0, 0, 16],
@@ -160,7 +34,7 @@ export const colors: ColorsType = {
     example: "bg-base-2",
     usage: "bg-base-2",
     contrast: ["base-content", "base-content-2", "base-content-3"],
-    value: "hsl(240, 7%, 15.4%)",
+    value: "hsl(60, 5%, 92%)",
     type: "supporting",
     reference: "base",
     adjustment: [0, 0, 4],
@@ -174,7 +48,7 @@ export const colors: ColorsType = {
     example: "bg-base-2-focus",
     usage: "bg-base-2-focus",
     contrast: ["base-content", "base-content-2", "base-content-focus"],
-    value: "hsl(240, 7%, 19.8%)",
+    value: "hsl(60, 5%, 88%)",
     type: "supporting",
     reference: "base-2",
     adjustment: [0, 0, 4],
@@ -188,7 +62,7 @@ export const colors: ColorsType = {
     example: "bg-base-content",
     usage: "bg-base-content",
     contrast: ["base", "base-2", "base-3"],
-    value: "hsl(240, 7%, 100%)",
+    value: "hsl(60, 5%, 8%)",
     type: "supporting",
     reference: "base",
     adjustment: [0, 0, 88],
@@ -202,7 +76,7 @@ export const colors: ColorsType = {
     example: "bg-base-content-2",
     usage: "bg-base-content-2",
     contrast: ["base", "base-2", "base-3"],
-    value: "hsl(240, 7%, 90%)",
+    value: "hsl(60, 5%, 19",
     adjustment: [0, 0, 10],
     type: "supporting",
     reference: "base-content",
@@ -216,7 +90,7 @@ export const colors: ColorsType = {
     example: "bg-base-content-3",
     usage: "bg-base-content-3",
     contrast: ["base", "base-2", "base-3"],
-    value: "hsl(240, 7%, 70%)",
+    value: "hsl(60, 5%, 41%)",
     adjustment: [0, 0, 30],
     type: "supporting",
     reference: "base-content",
@@ -230,7 +104,7 @@ export const colors: ColorsType = {
     example: "bg-overlay",
     usage: "bg-overlay",
     contrast: ["overlay-content", "overlay-content-2", "overlay-content-3"],
-    value: "hsl(240, 7%, 18.7%)",
+    value: "hsl(60, 5%, 89%)",
     type: "supporting",
     reference: "base",
     adjustment: [0, 0, 7],
@@ -243,7 +117,7 @@ export const colors: ColorsType = {
     example: "bg-overlay-focus",
     usage: "bg-overlay-focus",
     contrast: ["overlay-content", "overlay-content-2", "overlay-content-3"],
-    value: "hsl(240, 7%, 38.5%)",
+    value: "hsl(60, 5%, 71%)",
     type: "supporting",
     reference: "overlay",
     adjustment: [0, 0, 18],
@@ -257,7 +131,7 @@ export const colors: ColorsType = {
     example: "bg-overlay-2",
     usage: "bg-overlay-2",
     contrast: ["overlay-content", "overlay-content-2", "overlay-content-3"],
-    value: "hsl(240, 7%, 26.4%)",
+    value: "hsl(60, 5%, 82%)",
     type: "supporting",
     reference: "overlay",
     adjustment: [0, 0, 7],
@@ -270,7 +144,7 @@ export const colors: ColorsType = {
     example: "bg-overlay-2-focus",
     usage: "bg-overlay-2-focus",
     contrast: ["overlay-content", "overlay-content-2", "overlay-content-3"],
-    value: "hsl(240, 7%, 38.5%)",
+    value: "hsl(49, 50%, 94%)",
     type: "supporting",
     reference: "overlay",
     adjustment: [0, 0, 18],
@@ -284,7 +158,7 @@ export const colors: ColorsType = {
     example: "bg-overlay-content",
     usage: "text-overlay-content",
     contrast: ["overlay", "overlay-2", "overlay-3"],
-    value: "hsl(240, 7%, 100%)",
+    value: "hsl(0, 0%, 0%)",
     type: "supporting",
     reference: "base",
     adjustment: [0, 0, 88],
@@ -298,7 +172,7 @@ export const colors: ColorsType = {
     example: "bg-overlay-content-2",
     usage: "text-overlay-content-2",
     contrast: ["overlay", "overlay-2", "overlay-3"],
-    value: "hsl(240, 7%, 90%)",
+    value: "hsl(0, 0%, 40%)",
     type: "supporting",
     reference: "overlay-content",
     adjustment: [0, 0, 10],
@@ -312,7 +186,7 @@ export const colors: ColorsType = {
     example: "bg-overlay-content-3",
     usage: "text-overlay-content-3",
     contrast: ["overlay", "overlay-2", "overlay-3"],
-    value: "hsl(240, 7%, 80%)",
+    value: "hsl(0, 0%, 60%)",
     type: "supporting",
     reference: "overlay-content",
     adjustment: [0, 0, 20],
@@ -325,7 +199,7 @@ export const colors: ColorsType = {
     example: "bg-line",
     usage: "divide-y-line",
     contrast: [],
-    value: "hsl(240, 7%, 2.2%)",
+    value: "hsl(51, 59%, 83%)",
     type: "supporting",
     reference: "base",
     adjustment: [5, 10, -8],
@@ -340,7 +214,7 @@ export const colors: ColorsType = {
     example: "bg-line-focus",
     usage: "divide-y-line-focus",
     contrast: [],
-    value: "hsl(240, 7%, 18.7%)",
+    value: "hsl(0, 0%, 0%)",
     type: "supporting",
     reference: "line",
     adjustment: [0, 0, 15],
@@ -353,7 +227,7 @@ export const colors: ColorsType = {
     example: "bg-input",
     usage: "bg-input",
     contrast: ["input-content"],
-    value: "hsl(240, 7%, 14.3%)",
+    value: "hsl(0, 0%, 100%)",
     type: "supporting",
     reference: "base",
     adjustment: [5, 10, 3],
@@ -367,7 +241,7 @@ export const colors: ColorsType = {
     example: "hover:bg-input-focus",
     usage: "bg-input-focus",
     contrast: ["input-content"],
-    value: "hsl(240, 7%, 14.3%)",
+    value: "hsl(0, 0%, 100%)",
     type: "supporting",
     reference: "base",
     adjustment: [5, 10, 3],
@@ -381,7 +255,7 @@ export const colors: ColorsType = {
     example: "bg-input-content",
     usage: "bg-input-content",
     contrast: ["input"],
-    value: "hsl(240, 7%, 100%)",
+    value: "hsl(0, 0%, 45%)",
     type: "supporting",
     reference: "input",
     adjustment: [0, 0, 85],
@@ -395,7 +269,7 @@ export const colors: ColorsType = {
     usage: "bg-input-content-2",
     contrast: ["input"],
     type: "supporting",
-    value: "hsl(240, 7%, 80%)",
+    value: "hsl(0, 0%, 60%)",
     reference: "input-content",
     adjustment: [0, 0, 20],
   },
@@ -408,7 +282,7 @@ export const colors: ColorsType = {
     example: "bg-primary",
     usage: "bg-primary",
     contrast: ["primary-content"],
-    value: "hsl(41, 100%, 51%)",
+    value: "hsl(126, 100%, 46%)",
     type: "main",
   },
   "primary-focus": {
@@ -419,7 +293,7 @@ export const colors: ColorsType = {
     example: "bg-primary-focus",
     usage: "bg-primary-focus",
     contrast: ["primary-content"],
-    value: "hsl(41, 100%, 45.5%)",
+    value: "hsl(0, 68%, 28%)",
     type: "supporting",
     reference: "primary",
     adjustment: [0, 10, -5],
@@ -434,7 +308,7 @@ export const colors: ColorsType = {
     example: "bg-primary-subtle",
     usage: "bg-primary-subtle",
     contrast: ["primary-content"],
-    value: "hsl(41, 100%, 78.5%)",
+    value: "hsl(0, 27%, 76%)",
     adjustment: [0, 10, 25],
     type: "supporting",
     reference: "primary",
@@ -448,7 +322,7 @@ export const colors: ColorsType = {
     example: "bg-primary-content",
     usage: "bg-primary-content",
     contrast: ["primary"],
-    value: "hsl(41, 100%, 0%)",
+    value: "hsl(0, 0%, 100%)",
     type: "supporting",
     reference: "primary",
     adjustment: [0, 10, 95],
@@ -461,7 +335,7 @@ export const colors: ColorsType = {
     example: "bg-primary-subtle-content",
     usage: "text-primary-subtle-content",
     contrast: ["primary-content"],
-    value: "hsl(41, 100%, 0%)",
+    value: "hsl(0, 0%, 0%)",
     type: "supporting",
     reference: "primary-subtle",
     adjustment: [0, 10, 95],
@@ -474,7 +348,7 @@ export const colors: ColorsType = {
     example: "bg-secondary",
     usage: "bg-secondary",
     contrast: ["secondary-content"],
-    value: "hsl(200, 97%, 41%)",
+    value: "hsl(60, 97%, 50%)",
     type: "main",
   },
   "secondary-focus": {
@@ -485,7 +359,7 @@ export const colors: ColorsType = {
     example: "bg-secondary-focus",
     usage: "bg-secondary-focus",
     contrast: ["secondary-content"],
-    value: "hsl(200, 97%, 35.5%)",
+    value: "hsl(210, 76%, 26%)",
     reference: "secondary",
     adjustment: [0, 10, -5],
     dontAccountForDirection: true,
@@ -500,7 +374,7 @@ export const colors: ColorsType = {
     example: "bg-secondary-subtle",
     usage: "bg-secondary-subtle",
     contrast: ["secondary-content"],
-    value: "hsl(200, 97%, 68.5%)",
+    value: "hsl(210, 41%, 73%)",
     adjustment: [0, 10, 25],
     type: "supporting",
     reference: "secondary",
@@ -514,7 +388,7 @@ export const colors: ColorsType = {
     example: "bg-secondary-subtle-content",
     usage: "text-secondary-subtle-content",
     contrast: ["secondary-content"],
-    value: "hsl(200, 97%, 0%)",
+    value: "hsl(0, 0%, 0%)",
     type: "supporting",
     reference: "secondary-subtle",
     adjustment: [0, 10, 95],
@@ -527,7 +401,7 @@ export const colors: ColorsType = {
     example: "bg-secondary-content",
     usage: "bg-secondary-content",
     contrast: ["secondary"],
-    value: "hsl(200, 97%, 100%)",
+    value: "hsl(0, 0%, 100%)",
     type: "supporting",
     reference: "secondary",
     adjustment: [0, 10, 95],
@@ -553,7 +427,7 @@ export const colors: ColorsType = {
     example: "bg-info-focus",
     usage: "bg-info-focus",
     contrast: ["info-content"],
-    value: "hsl(212, 50%, 34.5%)",
+    value: "hsl(212, 77%, 31%)",
     type: "supporting",
     reference: "info",
     adjustment: [0, 10, -5],
@@ -568,7 +442,7 @@ export const colors: ColorsType = {
     example: "bg-info-subtle",
     usage: "bg-info-subtle",
     contrast: ["info-content"],
-    value: "hsl(212, 50%, 67.5%)",
+    value: "hsl(212, 75%, 75%)",
     adjustment: [0, 10, 25],
     type: "supporting",
     reference: "info",
@@ -581,7 +455,7 @@ export const colors: ColorsType = {
     example: "bg-info-subtle-content",
     usage: "text-info-subtle-content",
     contrast: ["info-content"],
-    value: "hsl(212, 50%, 0%)",
+    value: "hsl(0, 0%, 0%)",
     type: "supporting",
     reference: "info-subtle",
     adjustment: [0, 10, 95],
@@ -594,7 +468,7 @@ export const colors: ColorsType = {
     example: "bg-info-content",
     usage: "bg-info-content",
     contrast: ["info"],
-    value: "hsl(212, 50%, 100%)",
+    value: "hsl(0, 0%, 100%)",
     type: "supporting",
     reference: "info",
     adjustment: [0, 10, 95],
@@ -620,7 +494,7 @@ export const colors: ColorsType = {
     example: "bg-danger-focus",
     usage: "bg-danger-focus",
     contrast: ["danger-content"],
-    value: "hsl(0, 75%, 36.5%)",
+    value: "hsl(354, 90%, 27%)",
     type: "supporting",
     reference: "danger",
     adjustment: [0, 10, -5],
@@ -635,7 +509,7 @@ export const colors: ColorsType = {
     example: "bg-danger-subtle",
     usage: "bg-danger-subtle",
     contrast: ["danger-content"],
-    value: "hsl(0, 75%, 69.5%)",
+    value: "hsl(355, 80%, 81%)",
     type: "supporting",
     adjustment: [0, 10, 25],
     reference: "danger",
@@ -648,7 +522,7 @@ export const colors: ColorsType = {
     example: "bg-danger-subtle-content",
     usage: "text-danger-subtle-content",
     contrast: ["danger-content"],
-    value: "hsl(0, 75%, 0%)",
+    value: "hsl(0, 0%, 0%)",
     type: "supporting",
     reference: "danger-subtle",
     adjustment: [0, 10, 95],
@@ -661,11 +535,12 @@ export const colors: ColorsType = {
     example: "bg-danger-content",
     usage: "bg-danger-content",
     contrast: ["danger"],
-    value: "hsl(0, 75%, 100%)",
+    value: "hsl(0, 0%, 100%)",
     type: "supporting",
     adjustment: [0, 10, 95],
     reference: "danger",
   },
+
   success: {
     name: "success",
     displayName: "success",
@@ -687,7 +562,7 @@ export const colors: ColorsType = {
     example: "bg-success-focus",
     usage: "bg-success-focus",
     contrast: ["success-content"],
-    value: "hsl(159, 61%, 35.5%)",
+    value: "hsl(159, 90%, 24%)",
     type: "supporting",
     reference: "success",
     adjustment: [0, 10, -5],
@@ -702,7 +577,7 @@ export const colors: ColorsType = {
     example: "bg-success-subtle",
     usage: "bg-success-subtle",
     contrast: ["success-content"],
-    value: "hsl(159, 61%, 16%)",
+    value: "hsl(159, 42%, 72%)",
     adjustment: [0, 10, 25],
     type: "supporting",
     reference: "success",
@@ -715,7 +590,7 @@ export const colors: ColorsType = {
     example: "bg-success-subtle-content",
     usage: "text-success-subtle-content",
     contrast: ["success-content"],
-    value: "hsl(159, 61%, 100%)",
+    value: "hsl(0, 0%, 0%)",
     type: "supporting",
     reference: "success-subtle",
     adjustment: [0, 10, 95],
@@ -728,11 +603,12 @@ export const colors: ColorsType = {
     example: "bg-success-content",
     usage: "bg-success-content",
     contrast: ["success"],
-    value: "hsl(159, 61%, 0%)",
+    value: "hsl(0, 0%, 100%)",
     adjustment: [0, 10, 95],
     type: "supporting",
     reference: "success",
   },
+
   warning: {
     name: "warning",
     displayName: "warning",
@@ -754,7 +630,7 @@ export const colors: ColorsType = {
     example: "bg-warning-focus",
     usage: "bg-warning-focus",
     contrast: ["warning-content"],
-    value: "hsl(49, 95%, 47.5%)",
+    value: "hsl(47, 100%, 45%)",
     type: "supporting",
     reference: "warning",
     adjustment: [0, 10, -5],
@@ -769,7 +645,7 @@ export const colors: ColorsType = {
     example: "bg-warning-subtle",
     usage: "bg-warning-subtle",
     contrast: ["warning-content"],
-    value: "hsl(49, 95%, 28%)",
+    value: "hsl(48, 42%, 84%)",
     adjustment: [0, 10, 25],
     type: "supporting",
     reference: "warning",
@@ -782,7 +658,7 @@ export const colors: ColorsType = {
     example: "bg-warning-subtle-content",
     usage: "text-warning-subtle-content",
     contrast: ["warning-content"],
-    value: "hsl(49, 95%, 100%)",
+    value: "hsl(0, 0%, 0%)",
     type: "supporting",
     reference: "warning-subtle",
     adjustment: [0, 10, 95],
@@ -795,9 +671,73 @@ export const colors: ColorsType = {
     example: "bg-warning-content",
     usage: "bg-warning-content",
     contrast: ["warning"],
-    value: "hsl(49, 95%, 0%)",
+    value: "hsl(0, 0%, 15%)",
     adjustment: [0, 10, 95],
     type: "supporting",
     reference: "warning",
   },
 };
+
+// Used to update the colors object in colors.tsx
+const newColors = {
+  base: "hsl(240, 7%, 11%)",
+  "base-focus": "hsl(240, 7%, 28.6%)",
+  "base-2": "hsl(240, 7%, 15.4%)",
+  "base-2-focus": "hsl(240, 7%, 19.8%)",
+  "base-content": "hsl(240, 7%, 100%)",
+  "base-content-2": "hsl(240, 7%, 90%)",
+  "base-content-3": "hsl(240, 7%, 70%)",
+  overlay: "hsl(240, 7%, 18.7%)",
+  "overlay-focus": "hsl(240, 7%, 38.5%)",
+  "overlay-2": "hsl(240, 7%, 26.4%)",
+  "overlay-2-focus": "hsl(240, 7%, 38.5%)",
+  "overlay-content": "hsl(240, 7%, 100%)",
+  "overlay-content-2": "hsl(240, 7%, 90%)",
+  "overlay-content-3": "hsl(240, 7%, 80%)",
+  line: "hsl(240, 7%, 2.2%)",
+  "line-focus": "hsl(240, 7%, 18.7%)",
+  input: "hsl(240, 7%, 14.3%)",
+  "input-focus": "hsl(240, 7%, 14.3%)",
+  "input-content": "hsl(240, 7%, 100%)",
+  "input-content-2": "hsl(240, 7%, 80%)",
+  primary: "hsl(41, 100%, 51%)",
+  "primary-focus": "hsl(41, 100%, 45.5%)",
+  "primary-subtle": "hsl(41, 100%, 78.5%)",
+  "primary-content": "hsl(41, 100%, 0%)",
+  "primary-subtle-content": "hsl(41, 100%, 0%)",
+  secondary: "hsl(200, 97%, 41%)",
+  "secondary-focus": "hsl(200, 97%, 35.5%)",
+  "secondary-subtle": "hsl(200, 97%, 68.5%)",
+  "secondary-subtle-content": "hsl(200, 97%, 0%)",
+  "secondary-content": "hsl(200, 97%, 100%)",
+  info: "hsl(212, 50%, 40%)",
+  "info-focus": "hsl(212, 50%, 34.5%)",
+  "info-subtle": "hsl(212, 50%, 67.5%)",
+  "info-subtle-content": "hsl(212, 50%, 0%)",
+  "info-content": "hsl(212, 50%, 100%)",
+  danger: "hsl(0, 75%, 42%)",
+  "danger-focus": "hsl(0, 75%, 36.5%)",
+  "danger-subtle": "hsl(0, 75%, 69.5%)",
+  "danger-subtle-content": "hsl(0, 75%, 0%)",
+  "danger-content": "hsl(0, 75%, 100%)",
+  success: "hsl(159, 61%, 41%)",
+  "success-focus": "hsl(159, 61%, 35.5%)",
+  "success-subtle": "hsl(159, 61%, 16%)",
+  "success-subtle-content": "hsl(159, 61%, 100%)",
+  "success-content": "hsl(159, 61%, 0%)",
+  warning: "hsl(49, 95%, 53%)",
+  "warning-focus": "hsl(49, 95%, 47.5%)",
+  "warning-subtle": "hsl(49, 95%, 28%)",
+  "warning-subtle-content": "hsl(49, 95%, 100%)",
+  "warning-content": "hsl(49, 95%, 0%)",
+};
+
+const updateColors = () => {
+  const updatedColors = { ...colors };
+  Object.keys(newColors).forEach((key) => {
+    updatedColors[key].value = newColors[key];
+  });
+  console.log(updatedColors);
+};
+
+updateColors();
