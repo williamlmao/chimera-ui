@@ -333,10 +333,10 @@ export const ColorSystem = () => {
         </div>
       </div>
       <div className="w-full px-6">
-        <h1 className="text-2xl md:text-4xl font-bold">
+        <h1 className="text-2xl md:text-4xl font-bold  md:text-left">
           A color for every situation
         </h1>
-        <p className="my-6">
+        <p className="my-6  md:text-left">
           {`Chimera themes uses an intuitive semantic color system which uses color modifiers to make it easy to pick the right color in any situation. Putting text on a background of primary? Just use primary-content. Start by picking 3 colors, and the theme generator will take care of generating the 58 variations you might need to reach for.`}
         </p>
       </div>
