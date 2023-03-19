@@ -178,11 +178,13 @@ const Hero = ({
             transition={{ duration: 2, delay: 1 }}
           >
             <Link href="/docs/install">
-              <Button className="mt-8 ">Get Started</Button>
+              <div className="inline-flex w-fit items-center justify-center rounded-md text-sm font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-line focus:ring-offset-2 bg-primary text-primary-content hover:bg-primary-focus h-10 py-2 px-4 mt-8">
+                Get Started
+              </div>
             </Link>
-            <Button className="mt-8" variant="outline">
+            <div className="inline-flex w-fit items-center justify-center rounded-md text-sm font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-line focus:ring-offset-2 h-10 py-2 px-4 mt-8 bg-transparent border border-primary text-primary hover:bg-primary-focus hover:text-primary-content">
               Learn More
-            </Button>
+            </div>
           </motion.div>
         </div>
       </div>
