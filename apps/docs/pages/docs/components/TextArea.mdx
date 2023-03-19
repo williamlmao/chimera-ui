@@ -1,0 +1,20 @@
+---
+title: TextArea
+description: It's just an TextArea field with some styling.
+component: TextArea
+---
+
+import React from "react";
+import { TextArea, Label, Showcase } from "@chimera-ui/components";
+import { InfoCircledIcon } from "@radix-ui/react-icons";
+
+## Usage
+
+<Showcase>
+  <Showcase.Preview>
+    <div className="flex flex-col gap-4 w-[400px]">
+      <Label htmlFor="Description">Description</Label>
+      <TextArea id="Description" />
+    </div>
+  </Showcase.Preview>
+</Showcase>
