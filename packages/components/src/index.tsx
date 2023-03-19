@@ -21,7 +21,7 @@ export { RadioGroup } from "./RadioGroup";
 export { Label } from "./Label";
 export { Select } from "./Select";
 export { Switch } from "./Switch";
-export { Textarea } from "./Textarea";
+export { TextArea } from "./TextArea";
 export { Tabs } from "./Tabs";
 export { Input } from "./Input";
 export { Toggle } from "./Toggle";

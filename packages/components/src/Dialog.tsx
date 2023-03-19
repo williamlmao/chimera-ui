@@ -119,7 +119,7 @@ const Confirm = React.forwardRef<
     className={cn("z-50 w-full flex justify-end", className)}
     {...props}
   >
-    {props.children || <Button variant="success">Confirm</Button>}
+    {props.children || "Confirm"}
   </DialogPrimitive.Close>
 ));
 Confirm.displayName = "Dialog.Confirm";
