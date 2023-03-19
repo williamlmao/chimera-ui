@@ -9,7 +9,7 @@ export interface TextareaProps
  * Default Classes: ~ "flex h-20 w-full rounded-md border border-line bg-input py-2 px-3 text-sm placeholder:text-input-content-2 focus:outline-none focus:ring-2 focus:ring-line-focus focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 " ~
  *
  */
-const Textarea = React.forwardRef<HTMLTextAreaElement, TextareaProps>(
+const TextArea = React.forwardRef<HTMLTextAreaElement, TextareaProps>(
   ({ className, ...props }, ref) => {
     return (
       <textarea
@@ -23,6 +23,6 @@ const Textarea = React.forwardRef<HTMLTextAreaElement, TextareaProps>(
     );
   }
 );
-Textarea.displayName = "Textarea";
+TextArea.displayName = "TextArea";
 
-export { Textarea };
+export { TextArea };
